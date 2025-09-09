@@ -108,9 +108,10 @@ def to_dict(account):
         "name": account.name,
         "email": account.email,
         "role": account.role,
-        "disabled": False
+        "disabled": account.disabled
     }
 
+#The testing case to see if the to_dict() works. 
 def test_account_serialization(setup_account):
     account = setup_account
     expected = {
@@ -119,8 +120,9 @@ def test_account_serialization(setup_account):
         "email":"john.businge@example.com",
         "role": "user",
         "disabled":False
-    }
-    assert to_dict(account) == expected
+    }   
+    #to_dict() is the target method used to check and see if it passes.
+    assert to_dict(account) == expected 
 
 # TODO 2: Test Updating Account Email
 # - Ensure an account’s email can be successfully updated.
