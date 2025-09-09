@@ -92,10 +92,35 @@ Each test should include:
 - **Assertions** to verify expected behavior.
 - A meaningful **commit message** when submitting their PR.
 """
+# ===========================
+# Test: Test account serialization
+# Author: Alex Yamasaki
+# Date: 2025-09-09
+# Description: Ensure account created have default values (roles).
+# ===========================
 
 # TODO 1: Test Default Values
 # - Ensure that new accounts have the correct default values (e.g., `disabled=False`).
 # - Check if an account has no assigned role, it defaults to "user".
+def to_dict(account):
+    return {
+        "id": account.id,
+        "name": account.name,
+        "email": account.email,
+        "role": account.role,
+        "disabled": False
+    }
+
+def test_account_serialization(setup_account):
+    account = setup_account
+    expected = {
+        "id":account.id,
+        "name":"John businge",
+        "email":"john.businge@example.com",
+        "role": "user",
+        "disabled":False
+    }
+    assert to_dict(account) == expected
 
 # TODO 2: Test Updating Account Email
 # - Ensure an account’s email can be successfully updated.
