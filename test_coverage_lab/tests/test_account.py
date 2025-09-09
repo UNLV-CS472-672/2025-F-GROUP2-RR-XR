@@ -102,14 +102,6 @@ Each test should include:
 # TODO 1: Test Default Values
 # - Ensure that new accounts have the correct default values (e.g., `disabled=False`).
 # - Check if an account has no assigned role, it defaults to "user".
-def to_dict(account):
-    return {
-        "id": account.id,
-        "name": account.name,
-        "email": account.email,
-        "role": account.role,
-        "disabled": account.disabled
-    }
 
 #The testing case to see if the to_dict() works. 
 def test_account_serialization(setup_account):
@@ -119,10 +111,14 @@ def test_account_serialization(setup_account):
         "name":"John businge",
         "email":"john.businge@example.com",
         "role": "user",
-        "disabled":False
+        "disabled":False,
+        "phone_number": None,
+        "date_joined": account.date_joined,
+        "balance": 0.0
+    
     }   
     #to_dict() is the target method used to check and see if it passes.
-    assert to_dict(account) == expected 
+    assert account.to_dict() == expected 
 
 # TODO 2: Test Updating Account Email
 # - Ensure an account’s email can be successfully updated.
