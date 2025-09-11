@@ -124,6 +124,26 @@ def test_account_serialization(setup_account):
 # - Ensure an account’s email can be successfully updated.
 # - Verify that the updated email is stored in the database.
 
+# ===========================
+# Test: Account email updated
+# Author: Adrian Janda
+# Date: 2025-09-09
+# Description: Ensure email is updated
+# ===========================
+def test_account_email_updating():
+    """Test default values for new accounts"""
+    account = Account(name="Person One", email="personone@example.com")
+    db.session.add(account)
+    db.session.commit
+
+    #changing email
+    account.email = "personnone@example.com"
+    db.session.commit
+
+    #checking email in database
+    newemail = Account.query.filter_by(name="Person One").first()
+    assert newemail.email == "personnone@example.com"
+
 # TODO 3: Test Finding an Account by ID
 # - Create an account and retrieve it using its ID.
 # - Ensure the retrieved account matches the created one.
