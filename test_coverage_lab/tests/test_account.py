@@ -168,6 +168,7 @@ def test_invalid_email_format_raises_error():
 # - Ensure that passwords are stored as **hashed values**.
 # - Verify that plaintext passwords are never stored in the database.
 
+
 # TODO 6: Test Account Persistence
 # - Create an account, commit the session, and restart the session.
 # - Ensure the account still exists in the database.
