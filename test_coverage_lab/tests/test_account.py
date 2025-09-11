@@ -108,8 +108,8 @@ def test_account_serialization(setup_account):
     account = setup_account
     expected = {
         "id":account.id,
-        "name":"John businge",
-        "email":"john.businge@example.com",
+        "name":account.name,
+        "email":account.email,
         "role": "user",
         "disabled":False,
         "phone_number": None,
