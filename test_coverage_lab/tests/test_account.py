@@ -152,6 +152,18 @@ def test_account_email_updating():
 # - Check that invalid emails (e.g., "not-an-email") raise a validation error.
 # - Ensure accounts without an email cannot be created.
 
+# ===========================
+# Test: Invalid email
+# Author: Bryan Duran
+# Date: 2025-09-11
+# Description: Ensures correct email format
+# ===========================
+def test_invalid_email_format_raises_error():
+    account = Account(name="BadEmailUser", email="not-an-email")    
+    with pytest.raises(DataValidationError) as exc:
+        account.validate_email()
+    assert "Invalid email format" in str(exc.value)
+
 # TODO 5: Test Password Hashing
 # - Ensure that passwords are stored as **hashed values**.
 # - Verify that plaintext passwords are never stored in the database.
