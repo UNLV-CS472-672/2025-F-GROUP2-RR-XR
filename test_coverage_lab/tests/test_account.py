@@ -168,6 +168,24 @@ def test_invalid_email_format_raises_error():
 # - Ensure that passwords are stored as **hashed values**.
 # - Verify that plaintext passwords are never stored in the database.
 
+# ===========================
+# Test: Password Hashing
+# Author: Gerhod Moreno
+# Date: 2025-09-11
+# Description: Checks password stored is a hash value and verifies plaintext is not stored
+# ===========================
+def test_pass_hash():
+    plain_pass = "LetMeIn"
+    account = Account(name = "John Doe")
+    
+    account.set_password(plain_pass)
+    
+    #ensure that the pass word stored is a hash value
+    assert account.password_hash.startswith("pbkdf2:")
+
+    #verify that plain text is never stored as the password
+    assert plain_pass != account.password_hash
+    assert account.check_password(plain_pass)
 
 # TODO 6: Test Account Persistence
 # - Create an account, commit the session, and restart the session.
