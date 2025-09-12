@@ -12,15 +12,6 @@ def counter_exists(name):
   """Check if counter exists"""
   return name in COUNTERS
 
-@app.route('/counters/<name>', methods=["GET","POST"])
-def create_counter(name):
-    """Create a counter"""
-    if counter_exists(name):
-        return jsonify({"error": f"Counter {name} already exists"}), status.HTTP_409_CONFLICT
-    COUNTERS[name] = 0
-    return jsonify({name: COUNTERS[name]}), status.HTTP_201_CREATED
-
-
     ## ===========================
     # Test: Deleting counters that exist and dont exist
     # Author: Adrian Janda
@@ -35,3 +26,29 @@ def delete_counter(name):
     
     del COUNTERS[name]
     return '', status.HTTP_204_NO_CONTENT
+
+@app.route('/counters/<name>', methods=["GET", "POST"])
+def create_counter(name):
+    """Create a counter"""
+    # ===========================
+    # Test: check_duplicated_counter
+    # Author: Alex Yamasaki
+    # Date: 2025-09-10
+    # Description: PREVENT DUPLCIATED counters
+    # ===========================
+    """Check duplicated counter"""
+    if counter_exists(name):
+        return jsonify({"error": f"Counter {name} already exists"}), status.HTTP_409_CONFLICT
+    
+    COUNTERS[name] = 0
+    return jsonify({name: COUNTERS[name]}), status.HTTP_201_CREATED
+
+# ===========================
+# Test: List All Counters
+# Author: Gerhod Moreno
+# Date: 2025-09-12
+# Description: List all counters 
+# ===========================
+@app.route('/counters', methods=["GET"])
+def list_counters():
+   return jsonify(COUNTERS), status.HTTP_200_OK
