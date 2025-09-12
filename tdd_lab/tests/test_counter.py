@@ -30,7 +30,7 @@ class TestCounterEndpoints:
         assert result.status_code == status.HTTP_201_CREATED
 
     ## ===========================
-    # Test: Account email updated
+    # Test: Deleting counters that exist and dont exist
     # Author: Adrian Janda
     # Date: 2025-09-11
     # Description: testing deleting counters
