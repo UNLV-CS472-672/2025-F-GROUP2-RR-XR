@@ -10,6 +10,7 @@ how to call the web service and assert what it should return.
 - The service must be able to update a counter by name.
 - The service must be able to read the counter
 """
+
 import pytest
 from src import app
 from src import status
@@ -27,6 +28,7 @@ class TestCounterEndpoints:
         """It should create a counter"""
         result = client.post('/counters/foo')
         assert result.status_code == status.HTTP_201_CREATED
+
     
     # ===========================
     # Test: check_duplicated_counter
@@ -55,4 +57,19 @@ class TestCounterEndpoints:
 
         #check that there is atleast one counter 
         assert len(counters) > 0
+
+    ## ===========================
+    # Test: Deleting counters that exist and dont exist
+    # Author: Adrian Janda
+    # Date: 2025-09-11
+    # Description: testing deleting counters
+    # ===========================
+    def test_delete_counters(self,client):
+        client.post('/counters/foo')
+        result = client.delete('/counters/foo')
+        assert result.status_code == status.HTTP_204_NO_CONTENT
+
+        result = client.delete('/counters/foo')
+        assert result.status_code == status.HTTP_404_NOT_FOUND
+        
 
