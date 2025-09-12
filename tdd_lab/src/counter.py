@@ -8,10 +8,24 @@ app = Flask(__name__)
 
 COUNTERS = {}
 
-
 def counter_exists(name):
   """Check if counter exists"""
   return name in COUNTERS
+
+    ## ===========================
+    # Test: Deleting counters that exist and dont exist
+    # Author: Adrian Janda
+    # Date: 2025-09-11
+    # Description: creating deleteing function
+    # ===========================
+@app.route('/counters/<name>', methods=['DELETE'])
+def delete_counter(name):
+    """Delete a counter"""
+    if not counter_exists(name):
+        return jsonify({"error": f"Counter {name} does not exists"}), status.HTTP_404_NOT_FOUND
+    
+    del COUNTERS[name]
+    return '', status.HTTP_204_NO_CONTENT
 
 @app.route('/counters/<name>', methods=["GET", "POST"])
 def create_counter(name):
