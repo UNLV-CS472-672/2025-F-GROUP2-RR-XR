@@ -21,6 +21,12 @@ def create_counter(name):
     return jsonify({name: COUNTERS[name]}), status.HTTP_201_CREATED
 
 
+    ## ===========================
+    # Test: Deleting counters that exist and dont exist
+    # Author: Adrian Janda
+    # Date: 2025-09-11
+    # Description: creating deleteing function
+    # ===========================
 @app.route('/counters/<name>', methods=['DELETE'])
 def delete_counter(name):
     """Delete a counter"""
