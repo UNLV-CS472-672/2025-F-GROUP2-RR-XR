@@ -148,6 +148,23 @@ def test_account_email_updating():
 # - Create an account and retrieve it using its ID.
 # - Ensure the retrieved account matches the created one.
 
+# ===========================
+# Test: Finding an Account by ID
+# Author: Eshan Ahmad
+# Date: 2025-09-12
+# Description: Create an account and retrieve it using its ID then ensure the retrieved account matches the created one.
+# ===========================
+def test_find_account_by_ID():
+    account = Account(name="Jane Doe", email="JaneDoe@example.com")
+    db.session.add(account)
+    db.session.commit()
+
+    retrieved = Account.query.get(account.id)
+    assert retrieved.id == account.id
+    assert retrieved.name == account.name
+    assert retrieved.email == account.email
+
+
 # TODO 4: Test Invalid Email Handling
 # - Check that invalid emails (e.g., "not-an-email") raise a validation error.
 # - Ensure accounts without an email cannot be created.
