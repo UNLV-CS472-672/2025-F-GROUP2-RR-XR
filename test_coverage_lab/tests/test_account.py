@@ -92,10 +92,33 @@ Each test should include:
 - **Assertions** to verify expected behavior.
 - A meaningful **commit message** when submitting their PR.
 """
+# ===========================
+# Test: Test account serialization
+# Author: Alex Yamasaki
+# Date: 2025-09-09
+# Description: Ensure account created have default values (roles).
+# ===========================
 
 # TODO 1: Test Default Values
 # - Ensure that new accounts have the correct default values (e.g., `disabled=False`).
 # - Check if an account has no assigned role, it defaults to "user".
+
+#The testing case to see if the to_dict() works. 
+def test_account_serialization(setup_account):
+    account = setup_account
+    expected = {
+        "id":account.id,
+        "name":account.name,
+        "email":account.email,
+        "role": "user",
+        "disabled":False,
+        "phone_number": None,
+        "date_joined": account.date_joined,
+        "balance": 0.0
+    
+    }   
+    #to_dict() is the target method used to check and see if it passes.
+    assert account.to_dict() == expected 
 
 # TODO 2: Test Updating Account Email
 # - Ensure an account’s email can be successfully updated.
@@ -129,9 +152,40 @@ def test_account_email_updating():
 # - Check that invalid emails (e.g., "not-an-email") raise a validation error.
 # - Ensure accounts without an email cannot be created.
 
+# ===========================
+# Test: Invalid email
+# Author: Bryan Duran
+# Date: 2025-09-11
+# Description: Ensures correct email format
+# ===========================
+def test_invalid_email_format_raises_error():
+    account = Account(name="BadEmailUser", email="not-an-email")    
+    with pytest.raises(DataValidationError) as exc:
+        account.validate_email()
+    assert "Invalid email format" in str(exc.value)
+
 # TODO 5: Test Password Hashing
 # - Ensure that passwords are stored as **hashed values**.
 # - Verify that plaintext passwords are never stored in the database.
+
+# ===========================
+# Test: Password Hashing
+# Author: Gerhod Moreno
+# Date: 2025-09-11
+# Description: Checks password stored is a hash value and verifies plaintext is not stored
+# ===========================
+def test_pass_hash():
+    plain_pass = "LetMeIn"
+    account = Account(name = "John Doe")
+    
+    account.set_password(plain_pass)
+    
+    #ensure that the pass word stored is a hash value
+    assert account.password_hash.startswith("pbkdf2:")
+
+    #verify that plain text is never stored as the password
+    assert plain_pass != account.password_hash
+    assert account.check_password(plain_pass)
 
 # TODO 6: Test Account Persistence
 # - Create an account, commit the session, and restart the session.

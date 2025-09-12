@@ -27,8 +27,22 @@ class TestCounterEndpoints:
     def test_create_counter(self, client):
         """It should create a counter"""
         result = client.post('/counters/foo')
-        assert result.status_code == status.HTTP_201_CREATED
-
+        assert result.status_code == status.HTTP_201_CREATED  
+=======
+    
+    # ===========================
+    # Test: check_duplicated_counter
+    # Author: Alex Yamasaki
+    # Date: 2025-09-10
+    # Description: PREVENT DUPLCIATED counters
+    # ===========================
+    def check_duplicated_counter(self, client):
+        #Assume creation is worked
+        client.post('/counters/foo')
+        result = client.post('/counters/foo')
+        assert result.status_code == status.HTTP_409_CONFLICT
+        assert b"Already exists" in result.data
+        
     ## ===========================
     # Test: Account email updated
     # Author: Adrian Janda
@@ -42,4 +56,4 @@ class TestCounterEndpoints:
 
         result = client.delete('/counters/foo')
         assert result.status_code == status.HTTP_404_NOT_FOUND
-        
+      
