@@ -41,4 +41,18 @@ class TestCounterEndpoints:
         assert result.status_code == status.HTTP_409_CONFLICT
         assert b"Already exists" in result.data
         
-    
+    # ===========================
+    # Test: List All Counters
+    # Author: Gerhod Moreno
+    # Date: 2025-09-12
+    # Description: Be able to list out all counters
+    # ===========================
+    def test_list_all_counts(self, client):
+        result = client.get('/counters')
+        #check to see if response was ok
+        assert result.status_code == status.HTTP_200_OK
+        counters = result.get_json()
+
+        #check that there is atleast one counter 
+        assert len(counters) > 0
+
