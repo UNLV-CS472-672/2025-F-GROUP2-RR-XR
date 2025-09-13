@@ -2,8 +2,13 @@ Unity Editor version:    6000.0.57f1 (b7b9860b7bbd)
 Branch:                  6000.0/staging
 Build type:              Release
 Batch mode:              YES
+<<<<<<< HEAD
 macOS version:           Version 26.0 (Build 25A354)
 Darwin version:          25.0.0
+=======
+macOS version:           Version 15.6.1 (Build 24G90)
+Darwin version:          24.6.0
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Architecture:            arm64
 Running under Rosetta:   NO
 Available memory:        16384 MB
@@ -17,11 +22,19 @@ COMMAND LINE ARGUMENTS:
 -name
 AssetImportWorker1
 -projectPath
+<<<<<<< HEAD
 /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
 57664
+=======
+/Users/alyamas/Projects/2025-F-GROUP2-RR-XR
+-logFile
+Logs/AssetImportWorker1.log
+-srvPort
+63945
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 -job-worker-count
 4
 -background-job-worker-count
@@ -29,8 +42,13 @@ Logs/AssetImportWorker1.log
 -gc-helper-count
 1
 -name AssetImport
+<<<<<<< HEAD
 Successfully changed project path to: /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup
 /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup
+=======
+Successfully changed project path to: /Users/alyamas/Projects/2025-F-GROUP2-RR-XR
+/Users/alyamas/Projects/2025-F-GROUP2-RR-XR
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 [UnityMemory] Configuration Parameters - Can be set up in boot.config
     "memorysetup-bucket-allocator-granularity=16"
     "memorysetup-bucket-allocator-bucket-count=8"
@@ -66,6 +84,7 @@ Successfully changed project path to: /Users/alyamas/Projects/2025-F-GROUP2-RR-X
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
+<<<<<<< HEAD
 Player connection [8511948800]  Target information:
 
 Player connection [8511948800]  * "[IP] 192.168.4.59 [Port] 0 [Flags] 2 [Guid] 3086407816 [EditorId] 3086407816 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
@@ -74,6 +93,14 @@ Player connection [8511948800]  * "[IP] 169.254.73.16 [Port] 0 [Flags] 2 [Guid] 
 
 Player connection [8511948800] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8511948800] Host joined alternative multi-casting on [225.0.0.222:34997]...
+=======
+Player connection [8413962432]  Target information:
+
+Player connection [8413962432]  * "[IP] 192.168.4.59 [Port] 0 [Flags] 2 [Guid] 2592147060 [EditorId] 2592147060 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+
+Player connection [8413962432] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8413962432] Host joined alternative multi-casting on [225.0.0.222:34997]...
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 JobSystem: Creating JobQueue using job-worker-count value 4
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,11 +112,19 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 1.06 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Initialize engine version: 6000.0.57f1 (b7b9860b7bbd)
 [Subsystems] Discovering subsystems at path /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup/Assets
+=======
+Refreshing native plugins compatible for Editor in 4.19 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Initialize engine version: 6000.0.57f1 (b7b9860b7bbd)
+[Subsystems] Discovering subsystems at path /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path /Users/alyamas/Projects/2025-F-GROUP2-RR-XR/Assets
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 GfxDevice: creating device client; kGfxThreadingModeNonThreaded
  preferred device: Apple M4 (high power)
 Metal devices available: 1
@@ -100,13 +135,18 @@ Initialize mono
 Mono path[0] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/etc'
+<<<<<<< HEAD
 Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56304
+=======
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56172
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
+<<<<<<< HEAD
 Registered in 0.000894 seconds.
 - Loaded All Assemblies, in  0.154 seconds
 [usbmuxd] Start listen thread
@@ -122,11 +162,28 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.398 seconds
 Domain Reload Profiling: 552ms
 	BeginReloadAssembly (36ms)
+=======
+Registered in 0.004319 seconds.
+- Loaded All Assemblies, in  0.226 seconds
+[usbmuxd] Start listen thread
+[usbmuxd] Listen thread started
+[usbmuxd] Send listen message
+Native extension for iOS target not found
+Native extension for Android target not found
+Android Extension - Scanning For ADB Devices 51 ms
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.286 seconds
+Domain Reload Profiling: 513ms
+	BeginReloadAssembly (79ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
+<<<<<<< HEAD
 	RebuildCommonClasses (17ms)
 	RebuildNativeTypeToScriptingClass (6ms)
 	initialDomainReloadingComplete (20ms)
@@ -148,6 +205,29 @@ Domain Reload Profiling: 552ms
 			BeforeProcessingInitializeOnLoad (29ms)
 			ProcessInitializeOnLoadAttributes (52ms)
 			ProcessInitializeOnLoadMethodAttributes (24ms)
+=======
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (94ms)
+		LoadAssemblies (80ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (91ms)
+			TypeCache.Refresh (90ms)
+				TypeCache.ScanAssembly (82ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (287ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (266ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (149ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (31ms)
+			ProcessInitializeOnLoadAttributes (56ms)
+			ProcessInitializeOnLoadMethodAttributes (28ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -156,8 +236,13 @@ Domain Reload Profiling: 552ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 - Loaded All Assemblies, in  0.209 seconds
 Refreshing native plugins compatible for Editor in 0.44 ms, found 1 plugins.
+=======
+- Loaded All Assemblies, in  0.385 seconds
+Refreshing native plugins compatible for Editor in 0.16 ms, found 2 plugins.
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -167,6 +252,7 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
+<<<<<<< HEAD
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
@@ -202,10 +288,42 @@ Domain Reload Profiling: 408ms
 			BeforeProcessingInitializeOnLoad (39ms)
 			ProcessInitializeOnLoadAttributes (81ms)
 			ProcessInitializeOnLoadMethodAttributes (11ms)
+=======
+- Finished resetting the current domain, in  0.281 seconds
+Domain Reload Profiling: 662ms
+	BeginReloadAssembly (91ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (4ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (32ms)
+	RebuildCommonClasses (24ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (238ms)
+		LoadAssemblies (165ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (104ms)
+			TypeCache.Refresh (88ms)
+				TypeCache.ScanAssembly (79ms)
+			BuildScriptInfoCaches (12ms)
+			ResolveRequiredComponents (2ms)
+	FinalizeReload (281ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (221ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (45ms)
+			ProcessInitializeOnLoadAttributes (148ms)
+			ProcessInitializeOnLoadMethodAttributes (12ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (1ms)
+<<<<<<< HEAD
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -304,13 +422,37 @@ Received Import Request.
   artifactKey: Guid(8342d15911cd34f82929578da3cf2bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
 Start importing Assets/Scripts/ARQRCodeScanner.cs using Guid(8342d15911cd34f82929578da3cf2bde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '154a6773209708f363e58ef2c63a0d3e') in 0.001657208 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+=======
+Launching external process: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Tools/UnityShaderCompiler
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 0.27 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 3821 unused Assets / (0.7 MB). Loaded Objects now: 4325.
+Memory consumption went from 93.1 MB to 92.4 MB.
+Total: 3.609333 ms (FindLiveObjects: 0.293584 ms CreateObjectMapping: 0.097708 ms MarkObjects: 2.801250 ms  DeleteObjects: 0.416750 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 94719.914765 seconds.
+  path: Assets/Settings/Build Profiles/New macOS Profile.asset
+  artifactKey: Guid(86168c0f8b9d8417088f45213d04a7fc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Build Profiles/New macOS Profile.asset using Guid(86168c0f8b9d8417088f45213d04a7fc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '29942d35717ec708471c37edbfd00e76') in 0.080196125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Thread 0x174453000 may have been prematurely finalized
 - Loaded All Assemblies, in  0.169 seconds
 Refreshing native plugins compatible for Editor in 0.38 ms, found 1 plugins.
+=======
+Thread 0x17e89f000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.326 seconds
+Refreshing native plugins compatible for Editor in 0.20 ms, found 2 plugins.
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -318,6 +460,7 @@ Native extension for OSXStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
 Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
@@ -663,6 +806,8 @@ Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
+=======
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
@@ -670,6 +815,7 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.231 seconds
 Domain Reload Profiling: 473ms
 	BeginReloadAssembly (116ms)
@@ -4153,10 +4299,19 @@ Mono: successfully reloaded assembly
 - Finished resetting the current domain, in  0.228 seconds
 Domain Reload Profiling: 500ms
 	BeginReloadAssembly (121ms)
+=======
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.324 seconds
+Domain Reload Profiling: 651ms
+	BeginReloadAssembly (106ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (9ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 		CreateAndSetChildDomain (34ms)
 	RebuildCommonClasses (18ms)
 	RebuildNativeTypeToScriptingClass (6ms)
@@ -4225,14 +4380,54 @@ Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 1871 unused Assets / (2.9 MB). Loaded Objects now: 2424.
 Memory consumption went from 261.2 MB to 258.2 MB.
 Total: 3.737166 ms (FindLiveObjects: 0.097708 ms CreateObjectMapping: 0.032917 ms MarkObjects: 2.636791 ms  DeleteObjects: 0.969542 ms)
+=======
+		CreateAndSetChildDomain (41ms)
+	RebuildCommonClasses (20ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (10ms)
+	LoadAllAssembliesAndSetupDomain (184ms)
+		LoadAssemblies (129ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (80ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (3ms)
+			BuildScriptInfoCaches (66ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (324ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (250ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (13ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (164ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (1ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+Refreshing native plugins compatible for Editor in 0.30 ms, found 2 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4055 unused Assets / (0.8 MB). Loaded Objects now: 4572.
+Memory consumption went from 105.2 MB to 104.4 MB.
+Total: 4.208250 ms (FindLiveObjects: 0.188542 ms CreateObjectMapping: 0.081083 ms MarkObjects: 3.549667 ms  DeleteObjects: 0.388708 ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 
 Prepare: number of updated asset objects reloaded= 0
 ========================================================================
 Received Prepare
 Begin MonoManager ReloadAssembly
+<<<<<<< HEAD
 Thread 0x16fe5b000 may have been prematurely finalized
 - Loaded All Assemblies, in  0.269 seconds
 Refreshing native plugins compatible for Editor in 0.40 ms, found 1 plugins.
+=======
+Thread 0x17e89f000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.496 seconds
+Refreshing native plugins compatible for Editor in 0.59 ms, found 3 plugins.
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -4240,17 +4435,30 @@ Native extension for OSXStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
+=======
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.222 seconds
 Domain Reload Profiling: 492ms
 	BeginReloadAssembly (131ms)
+=======
+- Finished resetting the current domain, in  0.364 seconds
+Domain Reload Profiling: 861ms
+	BeginReloadAssembly (216ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (17ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
+<<<<<<< HEAD
 		CreateAndSetChildDomain (31ms)
 	RebuildCommonClasses (18ms)
 	RebuildNativeTypeToScriptingClass (6ms)
@@ -4277,12 +4485,41 @@ Domain Reload Profiling: 492ms
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (2ms)
+=======
+		CreateAndSetChildDomain (125ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (8ms)
+	initialDomainReloadingComplete (19ms)
+	LoadAllAssembliesAndSetupDomain (232ms)
+		LoadAssemblies (165ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (101ms)
+			TypeCache.Refresh (20ms)
+				TypeCache.ScanAssembly (10ms)
+			BuildScriptInfoCaches (76ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (364ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (289ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (14ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (68ms)
+			ProcessInitializeOnLoadAttributes (191ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (8ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
 WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -4301,18 +4538,42 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+=======
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
+=======
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.55 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
@@ -4331,6 +4592,22 @@ Begin MonoManager ReloadAssembly
 Thread 0x17129b000 may have been prematurely finalized
 - Loaded All Assemblies, in  0.380 seconds
 Refreshing native plugins compatible for Editor in 0.35 ms, found 1 plugins.
+=======
+Refreshing native plugins compatible for Editor in 0.44 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4826 unused Assets / (3.6 MB). Loaded Objects now: 5333.
+Memory consumption went from 120.8 MB to 117.2 MB.
+Total: 5.837084 ms (FindLiveObjects: 0.188125 ms CreateObjectMapping: 0.090042 ms MarkObjects: 3.475708 ms  DeleteObjects: 2.082417 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x17e9ab000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.310 seconds
+Refreshing native plugins compatible for Editor in 0.53 ms, found 3 plugins.
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -4338,10 +4615,17 @@ Native extension for OSXStandalone target not found
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
+=======
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
+<<<<<<< HEAD
 - Finished resetting the current domain, in  0.268 seconds
 Domain Reload Profiling: 649ms
 	BeginReloadAssembly (212ms)
@@ -4375,12 +4659,48 @@ Domain Reload Profiling: 649ms
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (2ms)
+=======
+- Finished resetting the current domain, in  0.351 seconds
+Domain Reload Profiling: 663ms
+	BeginReloadAssembly (92ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (34ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (9ms)
+	LoadAllAssembliesAndSetupDomain (185ms)
+		LoadAssemblies (99ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (106ms)
+			TypeCache.Refresh (53ms)
+				TypeCache.ScanAssembly (45ms)
+			BuildScriptInfoCaches (48ms)
+			ResolveRequiredComponents (3ms)
+	FinalizeReload (352ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (260ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (15ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (61ms)
+			ProcessInitializeOnLoadAttributes (168ms)
+			ProcessInitializeOnLoadMethodAttributes (13ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (24ms)
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
 WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -4399,18 +4719,42 @@ WARNING: Shader If subshaders removal was intentional, you may have forgotten tu
 WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+=======
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
+=======
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
 WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+<<<<<<< HEAD
 Refreshing native plugins compatible for Editor in 0.41 ms, found 1 plugins.
 Preloading 0 native plugins for Editor in 0.00 ms.
 Unloading 13 Unused Serialized files (Serialized files now loaded: 0)
@@ -4434,3 +4778,13 @@ Prepare: number of updated asset objects reloaded= 0
 [usbmuxd] Detached: 27 00008110-00010C6C0A08401E
 [usbmuxd] Attached: 28 00008110-00010C6C0A08401E
 [usbmuxd] Detached: 28 00008110-00010C6C0A08401E
+=======
+Refreshing native plugins compatible for Editor in 0.52 ms, found 3 plugins.
+Preloading 0 native plugins for Editor in 0.00 ms.
+Unloading 15 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 4826 unused Assets / (4.9 MB). Loaded Objects now: 5335.
+Memory consumption went from 127.6 MB to 122.7 MB.
+Total: 4.731250 ms (FindLiveObjects: 0.184417 ms CreateObjectMapping: 0.099000 ms MarkObjects: 2.897291 ms  DeleteObjects: 1.550292 ms)
+
+Prepare: number of updated asset objects reloaded= 4
+>>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
