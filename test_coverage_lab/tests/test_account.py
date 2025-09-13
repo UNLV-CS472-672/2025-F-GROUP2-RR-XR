@@ -191,6 +191,28 @@ def test_pass_hash():
 # - Create an account, commit the session, and restart the session.
 # - Ensure the account still exists in the database.
 
+# ===========================
+# Test: Account Persistence
+# Author: Christopher Vuong
+# Date: 2025-09-12
+# Description: Checks if account exists after session close
+# ===========================
+
+def test_account_persistence():
+    """Test account persistence when closing session"""
+    account = Account(name = "Acc Persist", email = "accpersist@example.com")
+
+    #add account, commit, then close session
+    db.session.add(account)
+    db.session.commit()
+    db.session.remove()
+
+    #start new session and search for the account
+    findaccount = db.session.query(Account).filter_by(name = "Acc Persist", email = "accpersist@example.com").first()
+    #ensure findaccount actually got something
+    assert findaccount.name == "Acc Persist"
+
+
 # TODO 7: Test Searching by Name
 # - Ensure accounts can be searched by their **name**.
 # - Verify that partial name searches return relevant accounts.
