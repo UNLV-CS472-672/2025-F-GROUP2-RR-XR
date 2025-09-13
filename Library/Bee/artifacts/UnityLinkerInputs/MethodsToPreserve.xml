@@ -1,0 +1,7 @@
+<linker>
+	<assembly fullname="UnityEngine.UIModule" ignoreIfMissing="1">
+		<type fullname="UnityEngine.CanvasRenderer">
+			<method name="SetAlpha"/>
+		</type>
+	</assembly>
+</linker>
