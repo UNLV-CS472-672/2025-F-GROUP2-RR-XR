@@ -3,8 +3,13 @@
     {
       "type": "il2cppData",
       "msg": {
+<<<<<<< HEAD
         "build_event_id": "2c1ffb808a3994e919916e4341e4d6be",
         "node_executed": false,
+=======
+        "build_event_id": "7ea044d722a294f4490ae57ee90e520a",
+        "node_executed": true,
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
         "attribute_total_count_eager_static_constructor": 9,
         "attribute_total_count_set_option": 0,
         "attribute_total_count_generate_into_own_cpp_file": 0,
@@ -42,6 +47,7 @@
     {
       "type": "playerBuildTimingData",
       "msg": {
+<<<<<<< HEAD
         "build_event_id": "2c1ffb808a3994e919916e4341e4d6be",
         "build_player": 17888,
         "preprocess_player": 5444,
@@ -50,14 +56,38 @@
         "writing_asset_files": 96,
         "postprocess_built_player": 7075,
         "node_summary_table": []
+=======
+        "build_event_id": "7ea044d722a294f4490ae57ee90e520a",
+        "build_player": 28813,
+        "preprocess_player": 4967,
+        "produce_player_script_assemblies": 432,
+        "build_scripts_dlls": 4,
+        "writing_asset_files": 82,
+        "postprocess_built_player": 20270,
+        "node_summary_table": [
+          {
+            "name": "il2cpp.exe",
+            "duration": 3761
+          },
+          {
+            "name": "UnityLinker.exe",
+            "duration": 2069
+          }
+        ]
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
       },
       "version": 1
     },
     {
       "type": "unityLinkerData",
       "msg": {
+<<<<<<< HEAD
         "build_event_id": "2c1ffb808a3994e919916e4341e4d6be",
         "node_executed": false,
+=======
+        "build_event_id": "7ea044d722a294f4490ae57ee90e520a",
+        "node_executed": true,
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
         "attribute_marked_count_always_link_assembly": 3,
         "attribute_swept_count_always_link_assembly": 0,
         "attribute_total_count_always_link_assembly": 3,
@@ -79,29 +109,52 @@
         "attribute_total_count_dynamic_dependency": 0,
         "attribute_marked_count_dynamic_dependency": 11,
         "attribute_swept_count_dynamic_dependency": -11,
+<<<<<<< HEAD
         "assembly_counts_total_in": 103,
         "assembly_counts_link": 36,
         "assembly_counts_copy": 14,
         "assembly_counts_delete": 53,
         "assembly_counts_total_out": 50,
+=======
+        "assembly_counts_total_in": 102,
+        "assembly_counts_link": 36,
+        "assembly_counts_copy": 13,
+        "assembly_counts_delete": 53,
+        "assembly_counts_total_out": 49,
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
         "unresolved_stubbing_total_count": 0,
         "unresolved_stubbing_missing_interface_method_count": 0,
         "unresolved_stubbing_missing_abstract_class_method_count": 0,
         "unresolved_stubbing_missing_type_count": 0,
         "unresolved_stubbing_missing_method_count": 0,
+<<<<<<< HEAD
         "unrecognized_reflection_access_total_count": 310,
         "unrecognized_reflection_access_core_count": 162,
         "unrecognized_reflection_access_unity_count": 146,
         "unrecognized_reflection_access_user_count": 2,
+=======
+        "unrecognized_reflection_access_total_count": 306,
+        "unrecognized_reflection_access_core_count": 160,
+        "unrecognized_reflection_access_unity_count": 146,
+        "unrecognized_reflection_access_user_count": 0,
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
         "recognized_reflection_access_total_count": 42,
         "recognized_reflection_access_core_count": 29,
         "recognized_reflection_access_unity_count": 13,
         "recognized_reflection_access_user_count": 0,
+<<<<<<< HEAD
         "link_xml_total_count": 10,
         "link_xml_embedded_count": 1,
         "link_xml_embedded_unity_count": 0,
         "link_xml_embedded_user_count": 0,
         "link_xml_file_count": 9,
+=======
+        "link_xml_total_count": 11,
+        "link_xml_embedded_count": 1,
+        "link_xml_embedded_unity_count": 0,
+        "link_xml_embedded_user_count": 0,
+        "link_xml_file_count": 10,
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
         "link_xml_assembly_preserve_all_total_count": 0,
         "link_xml_assembly_preserve_all_unity_count": 0,
         "link_xml_assembly_preserve_all_core_count": 0,

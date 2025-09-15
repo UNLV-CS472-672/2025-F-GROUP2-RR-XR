@@ -2,6 +2,7 @@ Base path: '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents', plugins pa
 Cmd: initializeCompiler
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 Cmd: initializeCompiler
 
@@ -12,3 +13,5 @@ Unhandled exception: Protocol error - failed to read magic number. Error code 0x
 
 Quitting shader compiler process
 >>>>>>> 6dcb63a (Succesfully created work environment and enabled the app to run on an IOS device.)
+=======
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)

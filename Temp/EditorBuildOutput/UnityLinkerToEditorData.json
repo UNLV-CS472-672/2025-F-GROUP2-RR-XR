@@ -228,25 +228,37 @@
           },
           {
             "name": "Mesh",
+<<<<<<< HEAD
             "scenes": [
               "Assets/RebelReality.unity"
             ],
+=======
+            "scenes": [],
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshFilter",
+<<<<<<< HEAD
             "scenes": [
               "Assets/RebelReality.unity"
             ],
+=======
+            "scenes": [],
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
             "dependencyType": 0,
             "icon": null
           },
           {
             "name": "MeshRenderer",
+<<<<<<< HEAD
             "scenes": [
               "Assets/RebelReality.unity"
             ],
+=======
+            "scenes": [],
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
             "dependencyType": 0,
             "icon": null
           },
@@ -372,9 +384,13 @@
           },
           {
             "name": "Sprite",
+<<<<<<< HEAD
             "scenes": [
               "Assets/RebelReality.unity"
             ],
+=======
+            "scenes": [],
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
             "dependencyType": 0,
             "icon": null
           },
@@ -763,6 +779,7 @@
         "name": "Physics",
         "dependencies": [
           {
+<<<<<<< HEAD
             "name": "BoxCollider",
             "scenes": [
               "Assets/RebelReality.unity"
@@ -771,6 +788,8 @@
             "icon": null
           },
           {
+=======
+>>>>>>> 05b6bb7 (Added camera functionality upon a phone device.)
             "name": "Collider",
             "scenes": [],
             "dependencyType": 1,
