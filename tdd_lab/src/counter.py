@@ -12,13 +12,14 @@ def counter_exists(name):
   """Check if counter exists"""
   return name in COUNTERS
 
-    # ===========================
-    # Test: Delete_counters
-    # Author: Adrian
+
+    ## ===========================
+    # Test: Deleting counters that exist and dont exist
+    # Author: Adrian Janda
     # Date: 2025-09-11
-    # Description: Delete Counters
+    # Description: creating deleteing function
     # ===========================
-  
+
 @app.route('/counters/<name>', methods=['DELETE'])
 def delete_counter(name):
     """Delete a counter"""
@@ -27,8 +28,7 @@ def delete_counter(name):
     
     del COUNTERS[name]
     return '', status.HTTP_204_NO_CONTENT
-  
-=======
+
 @app.route('/counters/<name>', methods=["GET", "POST"])
 def create_counter(name):
     """Create a counter"""
@@ -44,3 +44,29 @@ def create_counter(name):
     
     COUNTERS[name] = 0
     return jsonify({name: COUNTERS[name]}), status.HTTP_201_CREATED
+
+# ===========================
+# Test: List All Counters
+# Author: Gerhod Moreno
+# Date: 2025-09-12
+# Description: List all counters 
+# ===========================
+@app.route('/counters', methods=["GET"])
+def list_counters():
+   return jsonify(COUNTERS), status.HTTP_200_OK
+
+# ===========================
+# Test: Increment Counter
+# Author: Christopher Vuong
+# Date: 2025-09-12
+# Description: Increment a counter
+# ===========================
+@app.route('/counters/<name>', methods=["PUT"])
+def incr_counter(name):
+    """Increment a counter"""
+    if counter_exists(name):
+        COUNTERS[name] += 1
+        return jsonify({name: COUNTERS[name]}), status.HTTP_200_OK
+    else:
+        return '', status.HTTP_404_NOT_FOUND
+
