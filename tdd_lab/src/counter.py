@@ -12,12 +12,14 @@ def counter_exists(name):
   """Check if counter exists"""
   return name in COUNTERS
 
+
     ## ===========================
     # Test: Deleting counters that exist and dont exist
     # Author: Adrian Janda
     # Date: 2025-09-11
     # Description: creating deleteing function
     # ===========================
+
 @app.route('/counters/<name>', methods=['DELETE'])
 def delete_counter(name):
     """Delete a counter"""
@@ -67,3 +69,4 @@ def incr_counter(name):
         return jsonify({name: COUNTERS[name]}), status.HTTP_200_OK
     else:
         return '', status.HTTP_404_NOT_FOUND
+
