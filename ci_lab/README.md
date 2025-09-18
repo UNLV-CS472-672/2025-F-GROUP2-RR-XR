@@ -30,5 +30,7 @@ In this lab, you will:
 ✔️ Extend **test coverage** by adding **new test cases**.  
 
 
-## ** Badge Status **
-[![CI Workflow](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/ci_lab/ci.yml/badge.svg)](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/ci_lab/ci.yml)
+##  Badge Status 
+[![CI Workflow](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/actions/workflows/main.yml/badge.svg)](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/actions/workflows/main.yml)
+![Linting](https://img.shields.io/badge/linting-flake8-yellowgreen)
+![Coverage](https://img.shields.io/badge/Coverage-80%25-green)
