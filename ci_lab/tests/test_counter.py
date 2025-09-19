@@ -277,3 +277,14 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.BAD_REQUEST
 
         # TODO: Add an assertion to verify the error message specifically says 'Invalid counter name'S
+
+
+    # ===========================
+    # Test: Validation for error message
+    # Author: Adrian Janda
+    # ===========================        
+    def test_validation_error_msg(self, client):
+        response = client.post('/counters/test@123')
+
+        assert response.status_code == HTTPStatus.BAD_REQUEST
+        assert "Invalid counter name" in response.get_json()["error"]
