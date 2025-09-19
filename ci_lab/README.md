@@ -28,3 +28,9 @@ In this lab, you will:
 ✔️ Automate running **test cases** on every **push** and **pull request**.  
 ✔️ Enforce **code quality checks** using **Flake8** for Python linting.  
 ✔️ Extend **test coverage** by adding **new test cases**.  
+
+
+##  Badge Status 
+[![CI Workflow](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/actions/workflows/main.yml/badge.svg)](https://github.com/CrawlLaws/2025-F-GROUP2-RR-XR/actions/workflows/main.yml)
+![Linting](https://img.shields.io/badge/linting-flake8-yellowgreen)
+![Coverage](https://img.shields.io/badge/Coverage-89%25-green)
