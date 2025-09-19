@@ -27,6 +27,14 @@ jobs:
       - name: Run Tests with Pytest
         run: pytest --cov=src --cov-report=term-missing
 
+      - name: Runt Tests for coverage
+        run: pytest --cov=src --cov-report=json
+
+      - name: Generate coverage badge
+        run: tj-actions/coverage-badge-py@v1
+        with:
+          filename: coverage.json
+
       - name: Install Flake8
         run: pip install flake8
 
