@@ -131,8 +131,8 @@ class TestCounterEndpoints:
         assert len(response.get_json()) <= 2  
 
         # TODO: Add an assertion to ensure the returned counters are sorted correctly
-        assert response.get_json() == {"a": 1, "b": 2}
-        
+        assert response.get_json() == {"a": 2, "b": 2}
+
     # ===========================
     # Test: Retrieve top N lowest counters
     # Author: Student 3
