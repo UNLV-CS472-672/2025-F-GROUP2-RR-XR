@@ -110,10 +110,10 @@ class TestCounterEndpoints:
         assert response.status_code == HTTPStatus.OK
         
         # TODO: Add an assertion to check the correct total value
-
+        
     # ===========================
     # Test: Retrieve top N highest counters
-    # Author: Student 2
+    # Author: Gerhod Moreno
     # Modification: Ensure the API returns exactly N counters.
     # ===========================
     def test_top_n_counters(self, client):
@@ -131,7 +131,7 @@ class TestCounterEndpoints:
         assert len(response.get_json()) <= 2  
 
         # TODO: Add an assertion to ensure the returned counters are sorted correctly
-
+        assert response.get_json() == {"b": 3, "a": 2}
     # ===========================
     # Test: Retrieve top N lowest counters
     # Author: Student 3
