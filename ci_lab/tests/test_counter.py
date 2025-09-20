@@ -290,6 +290,6 @@ class TestCounterEndpoints:
         assert "Invalid counter name" in response.get_json()["error"]
 
 
-    def test_failure():
+    def test_failure(self,client):
         response = client.post('/counters/test_counter')
         assert response.status_code == HTTPStatus.CREATED
