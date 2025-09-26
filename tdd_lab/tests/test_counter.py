@@ -29,6 +29,7 @@ class TestCounterEndpoints:
         result = client.post('/counters/foo')
         assert result.status_code == status.HTTP_201_CREATED
 
+
     
     # ===========================
     # Test: check_duplicated_counter
@@ -43,6 +44,7 @@ class TestCounterEndpoints:
         assert result.status_code == status.HTTP_409_CONFLICT
         assert b"Already exists" in result.data
         
+
     # ===========================
     # Test: List All Counters
     # Author: Gerhod Moreno
@@ -59,7 +61,7 @@ class TestCounterEndpoints:
         assert len(counters) > 0
 
     ## ===========================
-    # Test: Deleting counters that exist and dont exist
+    # Test: Account email updated
     # Author: Adrian Janda
     # Date: 2025-09-11
     # Description: testing deleting counters
@@ -71,6 +73,7 @@ class TestCounterEndpoints:
 
         result = client.delete('/counters/foo')
         assert result.status_code == status.HTTP_404_NOT_FOUND
+
 
     ## ===========================
     # Test: Increment a counter
@@ -90,4 +93,3 @@ class TestCounterEndpoints:
         fail = client.put('/counters/foo2')
         assert fail.status_code == status.HTTP_404_NOT_FOUND
         
-

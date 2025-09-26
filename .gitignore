@@ -108,3 +108,7 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
+<<<<<<< HEAD
+=======
+Builds/Libraries/libiPhone-lib.a
+>>>>>>> dev-camera-feature
