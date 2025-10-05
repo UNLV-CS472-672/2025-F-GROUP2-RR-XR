@@ -10,7 +10,7 @@ import UIKit
     @objc public func getLatestText() -> String {
         return latestText
     }
-
+    //let simpleDigits = try Regex("[0-9]+")
     @objc(recognizeText:roiX:roiY:roiW:roiH:)
     public func recognizeText(from image: CGImage,
                               roiX: CGFloat,
@@ -29,7 +29,9 @@ import UIKit
             //print("OCR Result: \(self.latestText)")
         }
         request.recognitionLevel = .accurate
-        request.usesLanguageCorrection = false
+        request.usesLanguageCorrection = true
+        request.minimumTextHeight = 0.2
+        //request.customWords = ["AEB" , simpleDigits]
 
         // Prepare cropped image if ROI is valid
         var targetImage: CGImage? = image
