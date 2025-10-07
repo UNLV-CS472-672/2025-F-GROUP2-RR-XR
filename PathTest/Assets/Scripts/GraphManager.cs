@@ -4,12 +4,14 @@ using System.Collections.Generic;
 public class GraphManager : MonoBehaviour
 {
     public List<GraphMarker> markers = new List<GraphMarker>();
-    public List<GraphEdge> edges = new List<GraphEdge>();
+    public List<GraphMarker> path = new List<GraphMarker>();
+    public GraphMarker src;
+    public GraphMarker dst;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        CreateGraph();
+        FindPath();
     }
 
     // Update is called once per frame
@@ -18,15 +20,58 @@ public class GraphManager : MonoBehaviour
         
     }
 
-    void CreateGraph()
+    void FindPath()
     {
-        for (int i = 0; i < markers.Count; i++) 
+        Dictionary<GraphMarker, float> distances = new Dictionary<GraphMarker, float>();
+        Dictionary<GraphMarker, GraphMarker> prev = new Dictionary<GraphMarker, GraphMarker>();
+        HashSet<GraphMarker> visited = new HashSet<GraphMarker>();
+
+        for (int i = 0; i < markers.Count; i++)
         {
-            for (int j = i+1; j < markers.Count; j++) 
+            distances[markers[i]] = float.MaxValue;
+            prev[markers[i]] = null;
+        }
+
+        distances[src] = 0;
+        List<GraphMarker> unvisited = new List<GraphMarker>(markers);
+
+        while (unvisited.Count > 0)
+        {  
+            //sort to get closest unvisited marker
+            unvisited.Sort((a, b) => distances[a].CompareTo(distances[b]));
+            GraphMarker curr = unvisited[0];
+            unvisited.RemoveAt(0);
+
+            //break if it's the destination
+            if (curr == dst)
+                break;
+
+            visited.Add(curr);
+            for (int i = 0; i < curr.links.Count; i++)
             {
-                float dist = Vector3.Distance(markers[i].transform.position, markers[j].transform.position);
-                edges.Add(new GraphEdge(markers[i], markers[j], dist));
-                edges.Add(new GraphEdge(markers[j], markers[i], dist));
+                if (visited.Contains(curr.links[i]))
+                    continue;
+                
+                float dist = Vector3.Distance(curr.transform.position, curr.links[i].transform.position);
+                float totalDist = distances[curr] + dist;
+
+                if (totalDist < distances[curr.links[i]])
+                {
+                    distances[curr.links[i]] = totalDist;
+                    prev[curr.links[i]] = curr;
+                }
+            }
+
+        }
+
+        //form path backward from dst
+        GraphMarker step = dst;
+        if (prev[step] != null || step == src)
+        {
+            while (step != null)
+            {
+                path.Insert(0, step);
+                step = prev[step];
             }
         }
     }
