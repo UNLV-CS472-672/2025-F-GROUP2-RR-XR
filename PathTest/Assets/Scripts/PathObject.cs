@@ -27,9 +27,12 @@ public class PathObject : MonoBehaviour
         if (!initialized || path == null || index >= path.Count - 1)
             return;
 
+        // move towards next marker
         Vector3 target = path[index + 1].transform.position;
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        // when reaching the next marker, switch target to the next marker
+        // if it's the final marker in the path, destroy self
         if (Vector3.Distance(transform.position, target) < 0.01f)
         {
             index++;

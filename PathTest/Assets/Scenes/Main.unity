@@ -416,8 +416,8 @@ MonoBehaviour:
   - {fileID: 1773557859}
   - {fileID: 818236346}
   path: []
-  src: {fileID: 2061363047}
-  dst: {fileID: 613316302}
+  src: {fileID: 613316302}
+  dst: {fileID: 818236346}
 --- !u!4 &428022227
 Transform:
   m_ObjectHideFlags: 0
