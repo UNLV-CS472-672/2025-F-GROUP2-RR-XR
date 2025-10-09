@@ -21,7 +21,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-54466
+49154
 -job-worker-count
 4
 -background-job-worker-count
@@ -68,7 +68,7 @@ Successfully changed project path to: /Users/alyamas/Projects/2025-F-GROUP2-RR-X
     "memorysetup-temp-allocator-size-gfx=262144"
 Player connection [8511948800]  Target information:
 
-Player connection [8511948800]  * "[IP] 192.168.4.64 [Port] 0 [Flags] 2 [Guid] 3448601089 [EditorId] 3448601089 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8511948800]  * "[IP] 192.168.4.64 [Port] 0 [Flags] 2 [Guid] 929767565 [EditorId] 929767565 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8511948800] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8511948800] Host joined alternative multi-casting on [225.0.0.222:34997]...
@@ -83,8 +83,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 16.34 ms, found 11 plugins.
-Preloading 1 native plugins for Editor in 3.86 ms.
+Refreshing native plugins compatible for Editor in 16.05 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 92.03 ms.
 Initialize engine version: 6000.0.57f1 (b7b9860b7bbd)
 [Subsystems] Discovering subsystems at path /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup/Assets
@@ -98,52 +98,52 @@ Initialize mono
 Mono path[0] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56535
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56835
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.004541 seconds.
-- Loaded All Assemblies, in  0.236 seconds
+Registered in 0.005207 seconds.
+- Loaded All Assemblies, in  0.240 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 129 ms
+Android Extension - Scanning For ADB Devices 116 ms
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.402 seconds
+- Finished resetting the current domain, in  0.398 seconds
 Domain Reload Profiling: 638ms
-	BeginReloadAssembly (85ms)
+	BeginReloadAssembly (87ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (0ms)
-	RebuildCommonClasses (23ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (26ms)
-	LoadAllAssembliesAndSetupDomain (95ms)
-		LoadAssemblies (87ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (21ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (96ms)
+		LoadAssemblies (88ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
 		AnalyzeDomain (91ms)
 			TypeCache.Refresh (90ms)
-				TypeCache.ScanAssembly (79ms)
+				TypeCache.ScanAssembly (80ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (402ms)
+	FinalizeReload (398ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (374ms)
+		SetupLoadedEditorAssemblies (368ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (249ms)
+			InitializePlatformSupportModulesInManaged (247ms)
 			SetLoadedEditorAssemblies (2ms)
-			BeforeProcessingInitializeOnLoad (35ms)
-			ProcessInitializeOnLoadAttributes (60ms)
+			BeforeProcessingInitializeOnLoad (32ms)
+			ProcessInitializeOnLoadAttributes (58ms)
 			ProcessInitializeOnLoadMethodAttributes (28ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
@@ -153,8 +153,8 @@ Domain Reload Profiling: 638ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.490 seconds
-Refreshing native plugins compatible for Editor in 2.75 ms, found 11 plugins.
+- Loaded All Assemblies, in  0.492 seconds
+Refreshing native plugins compatible for Editor in 2.25 ms, found 11 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -190,36 +190,36 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.473 seconds
-Domain Reload Profiling: 959ms
-	BeginReloadAssembly (65ms)
+- Finished resetting the current domain, in  0.551 seconds
+Domain Reload Profiling: 1040ms
+	BeginReloadAssembly (68ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (4ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (14ms)
-	RebuildCommonClasses (19ms)
-	RebuildNativeTypeToScriptingClass (6ms)
+		CreateAndSetChildDomain (13ms)
+	RebuildCommonClasses (18ms)
+	RebuildNativeTypeToScriptingClass (7ms)
 	initialDomainReloadingComplete (18ms)
 	LoadAllAssembliesAndSetupDomain (377ms)
 		LoadAssemblies (236ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (168ms)
-			TypeCache.Refresh (130ms)
+		AnalyzeDomain (172ms)
+			TypeCache.Refresh (135ms)
 				TypeCache.ScanAssembly (119ms)
 			BuildScriptInfoCaches (29ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (474ms)
+	FinalizeReload (552ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (348ms)
+		SetupLoadedEditorAssemblies (404ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (15ms)
+			InitializePlatformSupportModulesInManaged (22ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (69ms)
-			ProcessInitializeOnLoadAttributes (177ms)
-			ProcessInitializeOnLoadMethodAttributes (85ms)
-			AfterProcessingInitializeOnLoad (0ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (202ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
+			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (1ms)
@@ -266,409 +266,507 @@ WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launching external process: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.04 seconds
-Refreshing native plugins compatible for Editor in 3.50 ms, found 11 plugins.
-Preloading 1 native plugins for Editor in 1.95 ms.
+Launched and connected shader compiler UnityShaderCompiler after 0.05 seconds
+Refreshing native plugins compatible for Editor in 2.23 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.17 ms.
 Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7732 unused Assets / (5.3 MB). Loaded Objects now: 8453.
-Memory consumption went from 149.6 MB to 144.3 MB.
-Total: 9.124792 ms (FindLiveObjects: 1.747958 ms CreateObjectMapping: 0.179500 ms MarkObjects: 4.041583 ms  DeleteObjects: 3.155083 ms)
+Unloading 7732 unused Assets / (7.2 MB). Loaded Objects now: 8473.
+Memory consumption went from 150.7 MB to 143.5 MB.
+Total: 8.140458 ms (FindLiveObjects: 1.397083 ms CreateObjectMapping: 0.255833 ms MarkObjects: 3.650875 ms  DeleteObjects: 2.836417 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 205254.317303 seconds.
-  path: Assets/InputSystem_Actions.inputactions
-  artifactKey: Guid(289c1b55c9541489481df5cc06664110) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/InputSystem_Actions.inputactions using Guid(289c1b55c9541489481df5cc06664110) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a9d9f6626708758604d39bd0f70affca') in 0.027834834 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+  Time since last request: 268850.086848 seconds.
+  path: Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc
+  artifactKey: Guid(3997e2241185407d80309a82f9148466) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Shaders/TMPro_Properties.cginc using Guid(3997e2241185407d80309a82f9148466) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '635f35604060816cbe44dd331d31be21') in 0.033107458 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.381760 seconds.
-  path: Assets/3D Map Models/134656-AEBFrontEntranceBryan-tex.glb
-  artifactKey: Guid(1fcda274cdebc75458a49eda49b00ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/134656-AEBFrontEntranceBryan-tex.glb using Guid(1fcda274cdebc75458a49eda49b00ffe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '896aecb5748396aa0a599a7bac24962b') in 1.342789583 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 51
+  Time since last request: 53927.107733 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/icon_navigation_sample.psd
+  artifactKey: Guid(91541aa9c22b88c4595b5676fa6e26c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/icon_navigation_sample.psd using Guid(91541aa9c22b88c4595b5676fa6e26c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd3f15748aa9898397bca42da424b4923') in 0.635288 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000082 seconds.
-  path: Assets/3D Map Models/134673-AEBMainLobbyBryan-tex.glb
-  artifactKey: Guid(b3a719a992a66c146a2a324e645129d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/134673-AEBMainLobbyBryan-tex.glb using Guid(b3a719a992a66c146a2a324e645129d4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3be39fb5520e89fdaa48e0671cc2fc0') in 0.504651125 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 55
+  Time since last request: 0.000057 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Path.mat
+  artifactKey: Guid(1f5a9ae0f2121ff4aaa6ea4ead3f1332) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Path.mat using Guid(1f5a9ae0f2121ff4aaa6ea4ead3f1332) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87a7c8ff073a58c07854add125629b3c') in 0.393388541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000054 seconds.
-  path: Assets/3D Map Models/134667-EntranceB1Adrian-tex.glb
-  artifactKey: Guid(f4b74d7f70aaa714e8418c12bc7e8173) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/134667-EntranceB1Adrian-tex.glb using Guid(f4b74d7f70aaa714e8418c12bc7e8173) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb7c52d3a03d6e960db617fbd3cfe07a') in 0.119424208 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 25
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation UI.prefab
+  artifactKey: Guid(54cb9a8b5c431e84ca2942c39c10b316) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation UI.prefab using Guid(54cb9a8b5c431e84ca2942c39c10b316) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f55129b2193fd52e279b039efae9ebd9') in 0.0503305 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 137
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Assets/3D Map Models/134659-AebhallwayGerhod-tex.glb
-  artifactKey: Guid(f8b1f58e8c071da4eb859a9560d328c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/134659-AebhallwayGerhod-tex.glb using Guid(f8b1f58e8c071da4eb859a9560d328c7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47ab74e98d564ff33790a3a86adf1d63') in 0.285497667 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 51
-
-========================================================================
-Received Import Request.
-  Time since last request: 2526.653482 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc
-  artifactKey: Guid(d930090c0cd643c7b55f19a38538c162) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMPro_Surface.cginc using Guid(d930090c0cd643c7b55f19a38538c162) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a3e0b960438747f28adec77fce6cf7df') in 0.070258333 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-[usbmuxd] Attached: 30 00008110-00010C6C0A08401E
-[usbmuxd] Detached: 30 00008110-00010C6C0A08401E
-[usbmuxd] Attached: 31 00008110-00010C6C0A08401E
-[usbmuxd] Detached: 31 00008110-00010C6C0A08401E
-[usbmuxd] Attached: 32 00008110-00010C6C0A08401E
-[usbmuxd] Detached: 32 00008110-00010C6C0A08401E
-========================================================================
-Received Import Request.
-  Time since last request: 28080.076757 seconds.
-  path: Assets/3D Map Models/135236-AEBnortheastentrance-tex.glb
-  artifactKey: Guid(360410afc7f0d4121955ee4e1f1f81f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/135236-AEBnortheastentrance-tex.glb using Guid(360410afc7f0d4121955ee4e1f1f81f9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '53dc65bd510fbfd66f99c929d737fa8b') in 1.469626125 seconds
-Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 45
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000441 seconds.
-  path: Assets/3D Map Models/135238-AEBhallway-tex.glb
-  artifactKey: Guid(d9422b85eb3be4178bfb651c7ab61262) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/3D Map Models/135238-AEBhallway-tex.glb using Guid(d9422b85eb3be4178bfb651c7ab61262) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25375c1d4b2d186d591f63c2089a4e85') in 1.085666833 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 69
-
-========================================================================
-Received Import Request.
-  Time since last request: 11254.826166 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/ImmersalLogos/IM_1 line white.png
-  artifactKey: Guid(8f7941c3d960b43448c58151204f2fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/ImmersalLogos/IM_1 line white.png using Guid(8f7941c3d960b43448c58151204f2fcf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97cf0f641dce358b85fe4e59df144a41') in 0.327376084 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 9.696348 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/icon_toggle_on.psd
-  artifactKey: Guid(76a02054f0027b44692000d98f9de61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/icon_toggle_on.psd using Guid(76a02054f0027b44692000d98f9de61e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66dbee2296375d1d780d74ece3d33f02') in 0.010041084 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_arrow_down_128.psd
-  artifactKey: Guid(ee6d9713e0c8b5b4f951ec99bb86cd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_arrow_down_128.psd using Guid(ee6d9713e0c8b5b4f951ec99bb86cd7b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8089c25e9044c1610695977544f4b2eb') in 0.004483792 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_cross_128.psd
-  artifactKey: Guid(fadc60e89c55c7f41bd9c8b689b62be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_cross_128.psd using Guid(fadc60e89c55c7f41bd9c8b689b62be1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '688089bfca93c2afe4268c5f4d411e9b') in 0.008349791 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000056 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_icon.psd
-  artifactKey: Guid(85b8fd7073f11d94db5d5b3d51832223) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_icon.psd using Guid(85b8fd7073f11d94db5d5b3d51832223) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '25d8fb49ae57ea49a844e5526214ee9b') in 0.005987542 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/icon_toggle_rgb_off.psd
-  artifactKey: Guid(45c041c5cbd61db489e50e5c3bc684cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/icon_toggle_rgb_off.psd using Guid(45c041c5cbd61db489e50e5c3bc684cb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c62c4b3a236681f7d6230c0495210f60') in 0.006437708 seconds
+  Time since last request: 0.000037 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/ui_navigation_target_256.psd
+  artifactKey: Guid(9ebe502385797aa4db3d25d0d7eaf4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/ui_navigation_target_256.psd using Guid(9ebe502385797aa4db3d25d0d7eaf4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72c09338296e4403b182c4e44a188b33') in 0.005654083 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000033 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_add_anchor_128.psd
-  artifactKey: Guid(bfc46d4aefe325b41ae736b7ea428742) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_add_anchor_128.psd using Guid(bfc46d4aefe325b41ae736b7ea428742) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e4b94fc635087a91ca1a64d518031b6') in 0.005439334 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_arrow_up_64.psd
-  artifactKey: Guid(eafec940a47039d409b68c3c8aff85fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_arrow_up_64.psd using Guid(eafec940a47039d409b68c3c8aff85fc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '839039d01171ce4fc864a12d969e08d3') in 0.005004958 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_icon_visibility.psd
-  artifactKey: Guid(9ce2ba4279a09a843839fb2548c61d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_icon_visibility.psd using Guid(9ce2ba4279a09a843839fb2548c61d7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '87c388705bc49f978136bf42233cf4c2') in 0.008229458 seconds
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_save_waypoints.psd
+  artifactKey: Guid(588748158cd0b0740815b75c3d4846c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_save_waypoints.psd using Guid(588748158cd0b0740815b75c3d4846c3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6767685ea6e96dcdba74d819387f86bd') in 0.00452675 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000040 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_success_icon.psd
-  artifactKey: Guid(12fdd5cb4d3bace4cb8cdb4a5c685408) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_success_icon.psd using Guid(12fdd5cb4d3bace4cb8cdb4a5c685408) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3ad3518b27965c664f8c09f778c2eceb') in 0.0084735 seconds
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_targets_list.psd
+  artifactKey: Guid(8134afc874eee5840ac83c960cc749e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_targets_list.psd using Guid(8134afc874eee5840ac83c960cc749e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8bfa75614c5f4bf8032673adb9825827') in 0.006303667 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_warning_icon.psd
-  artifactKey: Guid(8244a6756d7f0db438ff6660747b6f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_warning_icon.psd using Guid(8244a6756d7f0db438ff6660747b6f79) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c5fbdc22439b90c01a671d1b75b39f3a') in 0.00803675 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000036 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Arrow.mat
+  artifactKey: Guid(13a713cb6c6943a46904204954492a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Arrow.mat using Guid(13a713cb6c6943a46904204954492a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95f6a9135b0e2deaa4e68f2158ca40bb') in 0.181080917 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000048 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_capture_start.psd
-  artifactKey: Guid(9e632ed4813750544945f6af0330f80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_capture_start.psd using Guid(9e632ed4813750544945f6af0330f80d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fcb893de65c7a0a4379cf8594664b9fa') in 0.009414417 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000085 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_construct_128.psd
-  artifactKey: Guid(e84b061f40bc72644ad08b6da38e35ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_construct_128.psd using Guid(e84b061f40bc72644ad08b6da38e35ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '95cb2e01923ef9d0fe94894110866220') in 0.004724084 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_to_origin.psd
-  artifactKey: Guid(b31c82cde3ab6c34fab238113cdf1780) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_to_origin.psd using Guid(b31c82cde3ab6c34fab238113cdf1780) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb660fb70ada929e0b20ef60ab22a815') in 0.005281917 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000063 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_error_icon.psd
-  artifactKey: Guid(be671a1b102187f43968c90c51621039) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_notification_error_icon.psd using Guid(be671a1b102187f43968c90c51621039) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c16fba754ab49a77ae4cbdea33d53a8') in 0.006816541 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000051 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_download_map_128.psd
-  artifactKey: Guid(e43fb9718e5b5d5498c418b2734a921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_download_map_128.psd using Guid(e43fb9718e5b5d5498c418b2734a921f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf68cab9fc51c015220d2c8506c3ed87') in 0.00507175 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000054 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_rgb_256.png
-  artifactKey: Guid(2c55ad50e8371bc45bb2b06b08a5f34b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_rgb_256.png using Guid(2c55ad50e8371bc45bb2b06b08a5f34b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2bc017b7d6d1552b8283df22f2a793aa') in 0.00518775 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_axis.png
-  artifactKey: Guid(d819d0633be6b594e8f2dd6ce1e1ee1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_axis.png using Guid(d819d0633be6b594e8f2dd6ce1e1ee1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d0206a50e87ffb95b0a93d3e18dc086') in 0.004782792 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_upload_data.psd
-  artifactKey: Guid(68a8e2fa3f76ef946b1697e53343e73e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_upload_data.psd using Guid(68a8e2fa3f76ef946b1697e53343e73e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a1c2ad3eceb55ca9ab8ad9d01feb2059') in 0.008384292 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_capture_stop.psd
-  artifactKey: Guid(8ee3fe4c91b6f9b449912a7117e5176f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_capture_stop.psd using Guid(8ee3fe4c91b6f9b449912a7117e5176f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '63d0dbb8b58d0bb25bbbcf25289760fc') in 0.006042625 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_localize_256.psd
-  artifactKey: Guid(3553a6c57e573c340a66d4caa20d677e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_localize_256.psd using Guid(3553a6c57e573c340a66d4caa20d677e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '77808b18b950fcd77bd75c2f4710923d') in 0.0051205 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_localize_server_256.psd
-  artifactKey: Guid(69b41a895309c9849a003ad1eb3aa7ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_localize_server_256.psd using Guid(69b41a895309c9849a003ad1eb3aa7ba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2256ccd051c6b4f2bd2e1e6720ae926f') in 0.0038955 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_thrash_128.psd
-  artifactKey: Guid(91466a3f0315d164ca7d402401c9e3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Mapping/ui_thrash_128.psd using Guid(91466a3f0315d164ca7d402401c9e3eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1fa8b814b40ed6d2793e6e23e11cdef8') in 0.008666458 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.517952 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/icon_addContent.psd
-  artifactKey: Guid(1dc68e40a5a7936418cdde598280ddc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/icon_addContent.psd using Guid(1dc68e40a5a7936418cdde598280ddc0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91581bf2dacbd7db12ef89aae4e4e057') in 0.006240292 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/icon_contentPlacement_sample.psd
-  artifactKey: Guid(f798cb54723bf354182b9f666a85fc60) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/icon_contentPlacement_sample.psd using Guid(f798cb54723bf354182b9f666a85fc60) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a09a18d3a35b3414904a87b4d7e5f383') in 0.011730375 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/sprite_hex.psd
-  artifactKey: Guid(13eda642c9fadec4c8fc347df1d86c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/sprite_hex.psd using Guid(13eda642c9fadec4c8fc347df1d86c91) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9e0e11ef75dc0fef17167f6f4021e767') in 0.006447125 seconds
+  Time since last request: 4023.229068 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/tex_path.psd
+  artifactKey: Guid(24ec085052be1e442b5e2730a7bc62ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/tex_path.psd using Guid(24ec085052be1e442b5e2730a7bc62ea) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8eab6c9c40c05287ddc75e39519a2d80') in 0.046626458 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
+[usbmuxd] Attached: 33 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 33 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 34 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 34 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 35 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 35 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 36 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 36 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 37 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 37 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 38 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 38 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 39 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 39 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 40 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 40 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 41 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 41 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 42 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 42 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 43 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 43 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 44 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 44 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 45 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 45 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 46 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 46 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 47 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 47 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 48 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 48 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 49 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 49 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 50 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 50 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 51 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 51 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 52 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 52 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 53 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 53 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 54 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 54 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 55 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 55 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 56 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 56 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 57 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 57 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 58 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 58 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 59 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 59 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 60 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 60 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 61 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 61 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 62 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 62 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 63 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 63 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 64 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 64 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 65 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 65 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 66 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 66 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 67 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 67 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 68 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 68 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 69 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 69 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 70 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 70 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 71 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 71 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 72 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 72 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 73 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 73 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 74 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 74 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 75 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 75 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 76 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 76 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 77 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 77 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 78 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 78 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 79 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 79 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 80 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 80 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 81 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 81 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 82 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 82 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 83 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 83 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 84 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 84 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 85 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 85 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 86 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 86 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 87 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 87 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 88 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 88 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 89 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 89 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 90 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 90 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 91 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 91 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 92 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 92 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 93 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 93 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 94 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 94 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 95 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 95 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 96 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 96 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 97 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 97 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 98 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 98 00008110-00010C6C0A08401E
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/specular_dirt.psd
-  artifactKey: Guid(0992efd558ae1e944937e38c6a9d5838) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/specular_dirt.psd using Guid(0992efd558ae1e944937e38c6a9d5838) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4c2b7ea72d1810fa42466157e8c1dc99') in 0.007094125 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 14674.928212 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Localization Status Text.prefab
+  artifactKey: Guid(baa36db5f7dfb49798e05dc8477b0f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Localization Status Text.prefab using Guid(baa36db5f7dfb49798e05dc8477b0f5e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e491f091ea0e81df0d3de01aa13e0ad6') in 0.220916375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/pattern_noise.psd
-  artifactKey: Guid(7bc335e6a797a4040bd42d451a4a97b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Content Placement/pattern_noise.psd using Guid(7bc335e6a797a4040bd42d451a4a97b3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7cf0d0389de69c10c2010c9aa69cecc2') in 0.005688625 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.641842 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Shared UI/ui_circle_256.psd
-  artifactKey: Guid(0744b8e644a05dc43b276bbb4b94f8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Shared UI/ui_circle_256.psd using Guid(0744b8e644a05dc43b276bbb4b94f8dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ff10b4114c1faf04557a917b25a8c41f') in 0.012647834 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Shared UI/ui_scroll_list_mask_512.psd
-  artifactKey: Guid(5db45759de80f604d9b90462f70891c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Shared UI/ui_scroll_list_mask_512.psd using Guid(5db45759de80f604d9b90462f70891c9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '92cace450a9046f148974bd69499959d') in 0.005913708 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.604337 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/icon_toggle_off.psd
-  artifactKey: Guid(f2377839b6ec34355b7df9be942f29bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/icon_toggle_off.psd using Guid(f2377839b6ec34355b7df9be942f29bd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '18bed3a7f14e8e4f416a9311d7389848') in 0.00329675 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_main_poseIndicator_good.psd
-  artifactKey: Guid(45b8029e14d3140a58c016e6d405378d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_main_poseIndicator_good.psd using Guid(45b8029e14d3140a58c016e6d405378d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ee2b32b7150d0bd46f7e3c599f6925e3') in 0.006984542 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000084 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab
+  artifactKey: Guid(b06f0e6c1dfa4356ac918da1bb32c603) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Prefabs/Text Popup.prefab using Guid(b06f0e6c1dfa4356ac918da1bb32c603) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9cdb79f31d86cdf8af74c91334ecec15') in 0.092058625 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000041 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_checkmark_64.psd
-  artifactKey: Guid(b943babc2ed1142098d55de90c2de1e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_checkmark_64.psd using Guid(b943babc2ed1142098d55de90c2de1e5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b486a3298dec6da91c3caa12cf160125') in 0.008917334 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Localizer Settings Panel.prefab
+  artifactKey: Guid(aabb5de1a11007f4fb8a99ba94339216) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Localizer Settings Panel.prefab using Guid(aabb5de1a11007f4fb8a99ba94339216) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f79111e1c4ca305c277cbc9db20bb37c') in 0.122644792 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 214
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000050 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_progress_bar.psd
-  artifactKey: Guid(8c5b842f89fe94a189404fce19806e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_progress_bar.psd using Guid(8c5b842f89fe94a189404fce19806e30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2da284a514828bb591f0fab814ddbf7b') in 0.0054375 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 1.074430 seconds.
+  path: Assets/TextMesh Pro/Examples & Extras/Prefabs/TextMeshPro - Prefab 2.prefab
+  artifactKey: Guid(fdad9d952ae84cafb74c63f2e694d042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/TextMesh Pro/Examples & Extras/Prefabs/TextMeshPro - Prefab 2.prefab using Guid(fdad9d952ae84cafb74c63f2e694d042) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3eae880730acfc8eacfa1cfaeb6e516a') in 0.013519041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000049 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_settings_128.psd
-  artifactKey: Guid(c84a429fca63142d792535cf349cd700) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_settings_128.psd using Guid(c84a429fca63142d792535cf349cd700) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '93fefd920a215129b779143ed83c6c6c') in 0.002226333 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.487780 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/DebugConsoleCanvas.prefab
+  artifactKey: Guid(92e75aa9a730643458ae2beeee63cc5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/DebugConsoleCanvas.prefab using Guid(92e75aa9a730643458ae2beeee63cc5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fa3148e50c2edce8296fcadc0718e845') in 0.010544167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000075 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/uvgrid_grey.psd
-  artifactKey: Guid(bb5ac034366be9c478de03a648851324) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/uvgrid_grey.psd using Guid(bb5ac034366be9c478de03a648851324) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '110104c4cd70cd03d3ce78ead6e4f5a6') in 0.004441083 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+  Time since last request: 0.063753 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Axes.prefab
+  artifactKey: Guid(22434713f662be7489716f9241144b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Util/Axes.prefab using Guid(22434713f662be7489716f9241144b5d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3a1e361b9d355f839d3770b80ed42838') in 0.057939459 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
 
+[usbmuxd] Attached: 99 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 99 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 100 00008110-00010C6C0A08401E
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_notification_success_icon.psd
-  artifactKey: Guid(e48ea19341740414798806a09e86c058) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_notification_success_icon.psd using Guid(e48ea19341740414798806a09e86c058) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3653767e554e85cbfd67e16c1f929ea') in 0.003522459 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x1746a7000 may have been prematurely finalized
+- Loaded All Assemblies, in  1.250 seconds
+Refreshing native plugins compatible for Editor in 2.15 ms, found 11 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+The project currently uses the compatibility mode where the Render Graph API is disabled. Support for this mode will be removed in future Unity versions. Migrate existing ScriptableRenderPasses to the new RenderGraph API. After the migration, disable the compatibility mode in Edit > Projects Settings > Graphics > Render Graph.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEngine.Rendering.Universal.WarnUsingNonRenderGraph:EmitConsoleWarning () (at ./Library/PackageCache/com.unity.render-pipelines.universal@ba18377e2205/Runtime/Data/UniversalRenderPipelineAsset.cs:427)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:142)
 
+(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@ba18377e2205/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 427)
+
+Mono: successfully reloaded assembly
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.420 seconds
+Domain Reload Profiling: 1673ms
+	BeginReloadAssembly (575ms)
+		ExecutionOrderSort (1ms)
+		DisableScriptedObjects (75ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (1ms)
+		CreateAndSetChildDomain (199ms)
+	RebuildCommonClasses (19ms)
+	RebuildNativeTypeToScriptingClass (7ms)
+	initialDomainReloadingComplete (13ms)
+	LoadAllAssembliesAndSetupDomain (639ms)
+		LoadAssemblies (424ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (321ms)
+			TypeCache.Refresh (61ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (250ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (420ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (328ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (40ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (63ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 3.45 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7732 unused Assets / (7.4 MB). Loaded Objects now: 8555.
+Memory consumption went from 175.5 MB to 168.1 MB.
+Total: 5.912167 ms (FindLiveObjects: 0.308625 ms CreateObjectMapping: 0.153375 ms MarkObjects: 3.340500 ms  DeleteObjects: 2.109500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_cross_64.psd
-  artifactKey: Guid(1861c3b18234943feb4857bfb314ac02) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_cross_64.psd using Guid(1861c3b18234943feb4857bfb314ac02) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dfcad76e90b8faef3bbc2c95aeb92c0e') in 0.003715666 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+Received Prepare
+Begin MonoManager ReloadAssembly
+Thread 0x16b17b000 may have been prematurely finalized
+- Loaded All Assemblies, in  0.452 seconds
+Refreshing native plugins compatible for Editor in 1.91 ms, found 11 plugins.
+Native extension for iOS target not found
+Native extension for Android target not found
+Native extension for WindowsStandalone target not found
+Native extension for OSXStandalone target not found
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+The project currently uses the compatibility mode where the Render Graph API is disabled. Support for this mode will be removed in future Unity versions. Migrate existing ScriptableRenderPasses to the new RenderGraph API. After the migration, disable the compatibility mode in Edit > Projects Settings > Graphics > Render Graph.
+UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
+UnityEngine.StackTraceUtility:ExtractStackTrace () (at /Users/bokken/build/output/unity/unity/Runtime/Export/Scripting/StackTrace.cs:35)
+UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
+UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
+UnityEngine.Logger:Log (UnityEngine.LogType,object)
+UnityEngine.Debug:LogWarning (object)
+UnityEngine.Rendering.Universal.WarnUsingNonRenderGraph:EmitConsoleWarning () (at ./Library/PackageCache/com.unity.render-pipelines.universal@ba18377e2205/Runtime/Data/UniversalRenderPipelineAsset.cs:427)
+System.Reflection.RuntimeMethodInfo:Invoke (object,System.Reflection.BindingFlags,System.Reflection.Binder,object[],System.Globalization.CultureInfo)
+System.Reflection.MethodBase:Invoke (object,object[])
+UnityEditor.EditorAssemblies:ProcessInitializeOnLoadMethodAttributes () (at /Users/bokken/build/output/unity/unity/Editor/Mono/EditorAssemblies.cs:142)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_main_poseIndicator_weak.psd
-  artifactKey: Guid(b506e597815f14ecabc76310b7a0180c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_main_poseIndicator_weak.psd using Guid(b506e597815f14ecabc76310b7a0180c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66c2e690ecdbe7b7d2a910485fc806a8') in 0.008375792 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+(Filename: ./Library/PackageCache/com.unity.render-pipelines.universal@ba18377e2205/Runtime/Data/UniversalRenderPipelineAsset.cs Line: 427)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000031 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_notification_error_icon.psd
-  artifactKey: Guid(3eaf0942d6820441191c214e60fc25f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_notification_error_icon.psd using Guid(3eaf0942d6820441191c214e60fc25f0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4fcf57b44ba88c370d33fb95b5b31560') in 0.003476083 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+Mono: successfully reloaded assembly
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+- Finished resetting the current domain, in  0.479 seconds
+Domain Reload Profiling: 934ms
+	BeginReloadAssembly (123ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (5ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (17ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (11ms)
+	LoadAllAssembliesAndSetupDomain (297ms)
+		LoadAssemblies (197ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (126ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (109ms)
+			ResolveRequiredComponents (7ms)
+	FinalizeReload (479ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (390ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (20ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (120ms)
+			ProcessInitializeOnLoadAttributes (176ms)
+			ProcessInitializeOnLoadMethodAttributes (70ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Standard Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Hidden/Simulation/Synthetic Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Universal Render Pipeline/VR/SpatialMapping/Wireframe' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/Room X-Ray' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
+WARNING: Shader Did you use #pragma only_renderers and omit this platform?
+WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
+Refreshing native plugins compatible for Editor in 2.24 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.18 ms.
+Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7730 unused Assets / (8.2 MB). Loaded Objects now: 8558.
+Memory consumption went from 175.0 MB to 166.8 MB.
+Total: 5.955750 ms (FindLiveObjects: 0.339458 ms CreateObjectMapping: 0.134209 ms MarkObjects: 3.199791 ms  DeleteObjects: 2.282167 ms)
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_arrow_down_128.psd
-  artifactKey: Guid(873d49ac8e29f445686964fecf9dc9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Util/ui_arrow_down_128.psd using Guid(873d49ac8e29f445686964fecf9dc9e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fed4e5e4434c7a2165da0b95edcbafd9') in 0.002620583 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
+Prepare: number of updated asset objects reloaded= 0
+[usbmuxd] Detached: 100 00008110-00010C6C0A08401E
