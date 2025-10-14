@@ -10,10 +10,10 @@ PlayerSettings:
   AndroidEnableSustainedPerformanceMode: 0
   defaultScreenOrientation: 4
   targetDevice: 2
-  useOnDemandResources: 0
+  useOnDemandResources: 1
   accelerometerFrequency: 60
   companyName: DefaultCompany
-  productName: 2025-F-GROUP2-RR-XR
+  productName: 2025-F-GROUP2-RR-XR2
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
   m_SplashScreenBackgroundColor: {r: 0.12156863, g: 0.12156863, b: 0.1254902, a: 1}
@@ -82,7 +82,7 @@ PlayerSettings:
   androidApplicationEntry: 2
   defaultIsNativeResolution: 1
   macRetinaSupport: 1
-  runInBackground: 0
+  runInBackground: 1
   muteOtherAudioSources: 0
   Prepare IOS For Recording: 0
   Force IOS Speakers When Recording: 0
@@ -165,7 +165,7 @@ PlayerSettings:
   androidMaxAspectRatio: 2.4
   androidMinAspectRatio: 1
   applicationIdentifier:
-    iPhone: com.DefaultCompany.2025-F-GROUP2-RR-XR
+    iPhone: com.DefaultCompany.2025-F-GROUP2-RR-XR2
   buildNumber:
     Standalone: 0
     VisionOS: 0
@@ -247,8 +247,8 @@ PlayerSettings:
   iOSManualSigningProvisioningProfileType: 0
   tvOSManualSigningProvisioningProfileType: 0
   VisionOSManualSigningProvisioningProfileType: 0
-  appleEnableAutomaticSigning: 0
-  iOSRequireARKit: 0
+  appleEnableAutomaticSigning: 1
+  iOSRequireARKit: 1
   iOSAutomaticallyDetectAndAddCapabilities: 1
   appleEnableProMotion: 0
   shaderPrecisionModel: 0
@@ -519,8 +519,8 @@ PlayerSettings:
   logObjCUncaughtExceptions: 1
   enableCrashReportAPI: 0
   cameraUsageDescription: This app requires camera access for AR features.
-  locationUsageDescription: Required for satellite positioning support.
-  microphoneUsageDescription: 
+  locationUsageDescription: This app requires camera access for AR features.
+  microphoneUsageDescription: This app requires camera access for AR features.
   bluetoothUsageDescription: 
   macOSTargetOSVersion: 11.0
   switchNMETAOverride: 
