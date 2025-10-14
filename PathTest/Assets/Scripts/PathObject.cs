@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class PathObject : MonoBehaviour
 {
-    public float speed = 2.0f;
-    private List<GraphMarker> markers;
+    public float speed = 5.0f;
+    private List<GraphMarker> path;
     private int index = 0;
     private bool initialized = false;
 
-    public void Initialize(List<GraphMarker> markers)
+    public void Initialize(List<GraphMarker> path)
     {
-        this.markers = markers;
+        this.path = path;
         index = 0;
         initialized = true;
     }
@@ -24,16 +24,19 @@ public class PathObject : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!initialized || markers == null || index >= markers.Count - 1)
+        if (!initialized || path == null || index >= path.Count - 1)
             return;
 
-        Vector3 target = markers[index + 1].transform.position;
+        // move towards next marker
+        Vector3 target = path[index + 1].transform.position;
         transform.position = Vector3.MoveTowards(transform.position, target, speed * Time.deltaTime);
 
+        // when reaching the next marker, switch target to the next marker
+        // if it's the final marker in the path, destroy self
         if (Vector3.Distance(transform.position, target) < 0.01f)
         {
             index++;
-            if (index >= markers.Count - 1)
+            if (index >= path.Count - 1)
                 Destroy(gameObject);
         }
     }

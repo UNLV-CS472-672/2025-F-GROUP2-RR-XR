@@ -11,7 +11,7 @@ public class PathManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        StartCoroutine(FormPath());
+        StartCoroutine(FormVisualPath());
     }
 
     // Update is called once per frame
@@ -20,18 +20,22 @@ public class PathManager : MonoBehaviour
         
     }
 
-    IEnumerator FormPath()
+    // Creates the path particles from the 0th marker in path (from GraphManager)
+    IEnumerator FormVisualPath()
     {
         while (true)
         {
-            GameObject particle = Instantiate(pathParticle, graphManager.markers[0].transform.position, Quaternion.identity);
+            // create a path particle
+            GameObject particle = Instantiate(pathParticle, graphManager.path[0].transform.position, Quaternion.identity);
 
             PathObject pathObject = particle.GetComponent<PathObject>();
             if (pathObject != null) 
             {
-                pathObject.Initialize(graphManager.markers);
+                //instantiate with path
+                pathObject.Initialize(graphManager.path);
             } 
 
+            //wait a few seconds before making another
             yield return new WaitForSeconds(spawnSpeed);
         }
     }
