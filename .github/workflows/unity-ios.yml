@@ -24,7 +24,7 @@ jobs:
             Library-
 
       - name: Activate Unity
-        uses: game-ci/unity-activate@v3
+        uses: game-ci/unity-activate@v2
         with:
           unityLicense: ${{ secrets.UNITY_LICENSE }}
 
