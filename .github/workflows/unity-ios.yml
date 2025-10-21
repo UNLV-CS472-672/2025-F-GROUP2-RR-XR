@@ -22,11 +22,11 @@ jobs:
 
    
       - name: Activate Unity
-        uses: game-ci/unity-activate@v4
+        uses: game-ci/unity-activate@v3
         with:
           unityLicense: ${{ secrets.UNITY_LICENSE }}
       - name: Build iOS project
-        uses: game-ci/unity-builder@v4
+        uses: game-ci/unity-builder@v3
         with:
           targetPlatform: iOS
           buildName: "iOSBuild"
