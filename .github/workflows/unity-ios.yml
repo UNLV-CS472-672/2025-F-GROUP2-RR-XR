@@ -2,9 +2,9 @@ name: Unity Rebel Reality RR
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, feature/* ]
   pull_request:
-
+    braches:  [ main]
 jobs:
   build-ios:
     name: Build iOS Project
