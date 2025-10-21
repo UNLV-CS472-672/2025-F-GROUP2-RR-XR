@@ -2,16 +2,19 @@ name: Unity Rebel Reality RR
 
 on:
   push:
-    branches: [ main, feature/* ]
+    branches:
+      - main
+      - feature/*
   pull_request:
-    braches:  [ main]
+
 jobs:
   build-ios:
-    name: Build iOS Project
     runs-on: macos-latest
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
       - name: Cache Library
         uses: actions/cache@v4
         with:
@@ -20,11 +23,11 @@ jobs:
           restore-keys: |
             Library-
 
-   
       - name: Activate Unity
         uses: game-ci/unity-activate@v3
         with:
           unityLicense: ${{ secrets.UNITY_LICENSE }}
+
       - name: Build iOS project
         uses: game-ci/unity-builder@v3
         with:
@@ -37,4 +40,3 @@ jobs:
         with:
           name: iOS-XcodeProject
           path: build/iOSBuild
-
