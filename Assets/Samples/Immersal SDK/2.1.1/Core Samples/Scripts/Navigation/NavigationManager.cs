@@ -56,6 +56,7 @@ namespace Immersal.Samples.Navigation
         [Header("Settings")]
         [SerializeField]
         private NavigationMode m_navigationMode = NavigationMode.NavMesh;
+        
         public bool inEditMode = false;
         /*
         [SerializeField]
@@ -126,6 +127,7 @@ namespace Immersal.Samples.Navigation
                 UnityEngine.Object.DestroyImmediate(this);
                 return;
             }
+
         }
 
         private void Start()
@@ -136,6 +138,7 @@ namespace Immersal.Samples.Navigation
             {
                 m_TargetsListIcon.sprite = m_ShowListIcon;
                 m_TargetsListText.text = "Show Navigation Targets";
+              
             }
         }
 
@@ -154,7 +157,7 @@ namespace Immersal.Samples.Navigation
                 Debug.LogWarning("NavigationManager: Navigation Manager not properly initialized.");
                 return;
             }
-
+           
             m_targetTransform = button.targetObject.transform;
             m_NavigationTarget = button.targetObject.GetComponent<IsNavigationTarget>();
             TryToFindPath(m_NavigationTarget);
@@ -185,11 +188,12 @@ namespace Immersal.Samples.Navigation
             switch (m_navigationMode)
             {
                 case NavigationMode.NavMesh:
-
+                   
                     startPosition = XRSpaceToUnity(m_XRSpace.transform, m_XRSpace.InitialPose, startPosition);
                     targetPosition = XRSpaceToUnity(m_XRSpace.transform, m_XRSpace.InitialPose, targetPosition);
 
                     corners = FindPathNavMesh(startPosition, targetPosition);
+                    Debug.Log(corners.Count);
                     if (corners.Count >= 2)
                     {
                         m_navigationActive = true;
@@ -210,7 +214,8 @@ namespace Immersal.Samples.Navigation
                 case NavigationMode.Graph:
 
                     corners = m_NavigationGraphManager.FindPath(startPosition, targetPosition);
-
+                    
+              
                     if (corners.Count >= 2)
                     {
                         m_navigationActive = true;
