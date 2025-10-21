@@ -1,0 +1,40 @@
+name: Unity Rebel Reality RR
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+
+jobs:
+  build-ios:
+    name: Build iOS Project
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Cache Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+   
+      - name: Activate Unity
+        uses: game-ci/unity-activate@v4
+        with:
+          unityLicense: ${{ secrets.UNITY_LICENSE }}
+      - name: Build iOS project
+        uses: game-ci/unity-builder@v4
+        with:
+          targetPlatform: iOS
+          buildName: "iOSBuild"
+          customParameters: "-nographics -silent-crashes"
+
+      - name: Upload iOS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: iOS-XcodeProject
+          path: build/iOSBuild
+
