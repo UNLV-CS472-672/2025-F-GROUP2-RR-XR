@@ -21,7 +21,7 @@ AssetImportWorker1
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-61223
+56951
 -job-worker-count
 4
 -background-job-worker-count
@@ -68,7 +68,7 @@ Successfully changed project path to: /Users/alyamas/Projects/2025-F-GROUP2-RR-X
     "memorysetup-temp-allocator-size-gfx=262144"
 Player connection [8511948800]  Target information:
 
-Player connection [8511948800]  * "[IP] 10.82.74.1 [Port] 0 [Flags] 2 [Guid] 3342567042 [EditorId] 3342567042 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
+Player connection [8511948800]  * "[IP] 10.82.44.45 [Port] 0 [Flags] 2 [Guid] 649338683 [EditorId] 649338683 [Version] 1048832 [Id] OSXEditor(0,Alexs-MacBook-Air-2.local) [Debug] 1 [PackageName] OSXEditor [ProjectName] Editor" 
 
 Player connection [8511948800] Host joined multi-casting on [225.0.0.222:54997]...
 Player connection [8511948800] Host joined alternative multi-casting on [225.0.0.222:34997]...
@@ -83,8 +83,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 16.38 ms, found 11 plugins.
-Preloading 1 native plugins for Editor in 1.42 ms.
+Refreshing native plugins compatible for Editor in 8.62 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 1.34 ms.
 Initialize engine version: 6000.0.57f1 (b7b9860b7bbd)
 [Subsystems] Discovering subsystems at path /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path /Users/alyamas/Projects/2025-F-GROUP2-RR-XR-backup/Assets
@@ -98,53 +98,53 @@ Initialize mono
 Mono path[0] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Managed'
 Mono path[1] = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/lib/mono/unityjit-macos'
 Mono config path = '/Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56090
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56994
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/UnityEditor.OSXStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/AndroidPlayer/UnityEditor.Android.Extensions.dll
 Register platform support module: /Users/alyamas/Documents/6000.0.57f1/PlaybackEngines/iOSSupport/UnityEditor.iOS.Extensions.dll
-Registered in 0.004307 seconds.
-- Loaded All Assemblies, in  0.232 seconds
+Registered in 0.001547 seconds.
+- Loaded All Assemblies, in  0.162 seconds
 [usbmuxd] Start listen thread
 [usbmuxd] Listen thread started
 [usbmuxd] Send listen message
 Native extension for iOS target not found
 Native extension for Android target not found
-Android Extension - Scanning For ADB Devices 68 ms
+Android Extension - Scanning For ADB Devices 48 ms
 Native extension for WindowsStandalone target not found
 Native extension for OSXStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.345 seconds
-Domain Reload Profiling: 577ms
-	BeginReloadAssembly (95ms)
+- Finished resetting the current domain, in  0.294 seconds
+Domain Reload Profiling: 455ms
+	BeginReloadAssembly (35ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (0ms)
 	RebuildCommonClasses (18ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (25ms)
-	LoadAllAssembliesAndSetupDomain (86ms)
-		LoadAssemblies (97ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (21ms)
+	LoadAllAssembliesAndSetupDomain (81ms)
+		LoadAssemblies (35ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (83ms)
-			TypeCache.Refresh (82ms)
-				TypeCache.ScanAssembly (75ms)
+		AnalyzeDomain (80ms)
+			TypeCache.Refresh (79ms)
+				TypeCache.ScanAssembly (71ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (346ms)
+	FinalizeReload (294ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (319ms)
+		SetupLoadedEditorAssemblies (268ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (184ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (36ms)
-			ProcessInitializeOnLoadAttributes (61ms)
-			ProcessInitializeOnLoadMethodAttributes (36ms)
+			InitializePlatformSupportModulesInManaged (149ms)
+			SetLoadedEditorAssemblies (2ms)
+			BeforeProcessingInitializeOnLoad (32ms)
+			ProcessInitializeOnLoadAttributes (56ms)
+			ProcessInitializeOnLoadMethodAttributes (29ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -153,8 +153,8 @@ Domain Reload Profiling: 577ms
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Begin MonoManager ReloadAssembly
-- Loaded All Assemblies, in  0.501 seconds
-Refreshing native plugins compatible for Editor in 2.00 ms, found 11 plugins.
+- Loaded All Assemblies, in  0.387 seconds
+Refreshing native plugins compatible for Editor in 2.03 ms, found 11 plugins.
 Native extension for iOS target not found
 Native extension for Android target not found
 Native extension for WindowsStandalone target not found
@@ -190,39 +190,39 @@ Mono: successfully reloaded assembly
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-- Finished resetting the current domain, in  0.471 seconds
-Domain Reload Profiling: 972ms
-	BeginReloadAssembly (63ms)
+- Finished resetting the current domain, in  0.430 seconds
+Domain Reload Profiling: 817ms
+	BeginReloadAssembly (61ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (3ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (14ms)
 	RebuildCommonClasses (18ms)
-	RebuildNativeTypeToScriptingClass (7ms)
-	initialDomainReloadingComplete (19ms)
-	LoadAllAssembliesAndSetupDomain (394ms)
-		LoadAssemblies (249ms)
+	RebuildNativeTypeToScriptingClass (6ms)
+	initialDomainReloadingComplete (17ms)
+	LoadAllAssembliesAndSetupDomain (284ms)
+		LoadAssemblies (142ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (172ms)
-			TypeCache.Refresh (132ms)
-				TypeCache.ScanAssembly (117ms)
-			BuildScriptInfoCaches (30ms)
+		AnalyzeDomain (165ms)
+			TypeCache.Refresh (128ms)
+				TypeCache.ScanAssembly (115ms)
+			BuildScriptInfoCaches (29ms)
 			ResolveRequiredComponents (7ms)
-	FinalizeReload (471ms)
+	FinalizeReload (430ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (357ms)
+		SetupLoadedEditorAssemblies (320ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (17ms)
+			InitializePlatformSupportModulesInManaged (15ms)
 			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (78ms)
-			ProcessInitializeOnLoadAttributes (190ms)
-			ProcessInitializeOnLoadMethodAttributes (69ms)
+			BeforeProcessingInitializeOnLoad (67ms)
+			ProcessInitializeOnLoadAttributes (172ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (1ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (2ms)
+		AwakeInstancesAfterBackupRestoration (1ms)
 WARNING: Shader Unsupported: 'Hidden/Simulation/URP/Synthetic' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
@@ -266,311 +266,29 @@ WARNING: Shader Unsupported: 'Simulation/URP/Lit' - All subshaders removed
 WARNING: Shader Did you use #pragma only_renderers and omit this platform?
 WARNING: Shader If subshaders removal was intentional, you may have forgotten turning Fallback off?
 Launching external process: /Users/alyamas/Documents/6000.0.57f1/Unity.app/Contents/Tools/UnityShaderCompiler
-Launched and connected shader compiler UnityShaderCompiler after 0.03 seconds
-Refreshing native plugins compatible for Editor in 2.61 ms, found 11 plugins.
-Preloading 1 native plugins for Editor in 0.17 ms.
+Launched and connected shader compiler UnityShaderCompiler after 0.02 seconds
+Refreshing native plugins compatible for Editor in 2.27 ms, found 11 plugins.
+Preloading 1 native plugins for Editor in 0.14 ms.
 Unloading 27 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7733 unused Assets / (6.3 MB). Loaded Objects now: 8475.
-Memory consumption went from 146.5 MB to 140.2 MB.
-Total: 7.465625 ms (FindLiveObjects: 0.672250 ms CreateObjectMapping: 0.192125 ms MarkObjects: 3.699666 ms  DeleteObjects: 2.901125 ms)
+Unloading 7733 unused Assets / (6.9 MB). Loaded Objects now: 8478.
+Memory consumption went from 149.3 MB to 142.4 MB.
+Total: 6.319416 ms (FindLiveObjects: 0.680666 ms CreateObjectMapping: 0.172917 ms MarkObjects: 3.382958 ms  DeleteObjects: 2.082667 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 427589.636987 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Models/Navigation/navigation_target.fbx
-  artifactKey: Guid(58751a370f714574b9871f675fd8b54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Models/Navigation/navigation_target.fbx using Guid(58751a370f714574b9871f675fd8b54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '587c59fbf2e63c297a578e8b24647abe') in 0.192249792 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000043 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_waypoint_arrow.psd
-  artifactKey: Guid(86b28c7fe580351458fc5dca42b64e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_waypoint_arrow.psd using Guid(86b28c7fe580351458fc5dca42b64e1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '79aeba4ad861f2062dd4e656b786518c') in 0.006558167 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Path.prefab
-  artifactKey: Guid(3de49105f88532e459a60fdcbeaadcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Path.prefab using Guid(3de49105f88532e459a60fdcbeaadcd0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c24e710d08d19f3c645bccbfde234b77') in 0.001298208 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@128.png
-  artifactKey: Guid(1b6bf0e7b03fea94987a73d0cb14781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@128.png using Guid(1b6bf0e7b03fea94987a73d0cb14781b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'af19e0c928026806da05606a04898214') in 0.002768625 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000045 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Target Mesh.mat
-  artifactKey: Guid(edb4eaabd649a364fb4fc5d7e35cb92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Target Mesh.mat using Guid(edb4eaabd649a364fb4fc5d7e35cb92a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c3e58062e5e8f75e6410370a6aba5842') in 0.006576125 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000070 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@128.png
-  artifactKey: Guid(44837f46c53a42246a6de7fa161e0d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@128.png using Guid(44837f46c53a42246a6de7fa161e0d00) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '626bace73d7625b40f8d0fe05836a8c9') in 0.003720541 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000042 seconds.
-  path: Packages/com.unity.ai.navigation/Tests/VerifyEditorInPlaymode/Unity.AI.Navigation.Tests.EditorInPlaymode.asmdef
-  artifactKey: Guid(100055fbb0e2acd4a835038b0f7cd2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/Tests/VerifyEditorInPlaymode/Unity.AI.Navigation.Tests.EditorInPlaymode.asmdef using Guid(100055fbb0e2acd4a835038b0f7cd2f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c66bd1f80787407ae57b10870a79716d') in 0.000282333 seconds
+  Time since last request: 525346.804205 seconds.
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Scenes/ContentPlacementSample.unity
+  artifactKey: Guid(a5347933d518cc34ba0c72bc19f2f118) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Scenes/ContentPlacementSample.unity using Guid(a5347933d518cc34ba0c72bc19f2f118) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3fd7e8fbb558cf3452695a98042c5e13') in 0.001711625 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/d_NavigationWindowIcon.asset
-  artifactKey: Guid(df6a6289992d3406cb4cad0c522e4adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/d_NavigationWindowIcon.asset using Guid(df6a6289992d3406cb4cad0c522e4adf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3d1b48836a5b1afb951c44726d6a9392') in 0.002536375 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000079 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@16.png
-  artifactKey: Guid(1c89fbe185cd30b4584ab3d5476807eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@16.png using Guid(1c89fbe185cd30b4584ab3d5476807eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4df151f9c0a85e1d1640f41d5bd1b250') in 0.002686333 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000078 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@256.png
-  artifactKey: Guid(b05e7d8dc2bdbb14ab5b1da240ac65d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@256.png using Guid(b05e7d8dc2bdbb14ab5b1da240ac65d5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c599258882dd5205f7cd183bee31609b') in 0.0044515 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000089 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Target Button.prefab
-  artifactKey: Guid(5fc004a3707f2f2468ae109dce11dde5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Target Button.prefab using Guid(5fc004a3707f2f2468ae109dce11dde5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ded283d3e4f1d4772724d3a132940548') in 0.012736958 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@2x.png
-  artifactKey: Guid(9d244ceb235342e4c8f308aa1f71be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@2x.png using Guid(9d244ceb235342e4c8f308aa1f71be7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '60d2f196148333d9e374c93b63a4642b') in 0.005927042 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000064 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@2x.png
-  artifactKey: Guid(7d5867654fa2bf448b06f384143ceca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@2x.png using Guid(7d5867654fa2bf448b06f384143ceca7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c8c287503489e5778903c9fe9f38052e') in 0.002855584 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On.png
-  artifactKey: Guid(c136efa5cc6d99a4d9e7bad0209aea25) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On.png using Guid(c136efa5cc6d99a4d9e7bad0209aea25) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '18e7a885dcbeea7063c654bbe2208442') in 0.0020505 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000039 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png
-  artifactKey: Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@16.png using Guid(96c9a57d95a712d44978703ea9dd7f4e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '580a71f856fe62ed743aad41611d85be') in 0.002249042 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Packages/com.unity.ai.navigation/Editor/ConversionSystem/Unity.AI.Navigation.Editor.ConversionSystem.asmdef
-  artifactKey: Guid(c57630adab7a340ec94f10e4fcac12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/Editor/ConversionSystem/Unity.AI.Navigation.Editor.ConversionSystem.asmdef using Guid(c57630adab7a340ec94f10e4fcac12f1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c0822299b90fa57f2b33eca1b7a47ddb') in 0.00026175 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@64.png
-  artifactKey: Guid(1dacc9e843ef1444fad71e40913ef05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@64.png using Guid(1dacc9e843ef1444fad71e40913ef05c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5b4affee062e2bd42a5b7566565f068e') in 0.002562792 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000046 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@16.png
-  artifactKey: Guid(8d8d1929f2279804e8a744d3da25e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay@16.png using Guid(8d8d1929f2279804e8a744d3da25e23b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '422929b9939d4e5404a409f704e494c4') in 0.003470125 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Packages/com.unity.ai.navigation/Tests/Runtime/Unity.AI.Navigation.Tests.asmdef
-  artifactKey: Guid(455cd750f394b1c41b963b3335eae29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/Tests/Runtime/Unity.AI.Navigation.Tests.asmdef using Guid(455cd750f394b1c41b963b3335eae29c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'adb4df6f7e3f0bf40af4866b82f59cd9') in 0.000311042 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000055 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_targets_list.psd
-  artifactKey: Guid(8134afc874eee5840ac83c960cc749e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_targets_list.psd using Guid(8134afc874eee5840ac83c960cc749e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8bfa75614c5f4bf8032673adb9825827') in 0.009569 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Packages/com.unity.ai.navigation/Editor/Unity.AI.Navigation.Editor.asmdef
-  artifactKey: Guid(86c9d8e67265f41469be06142c397d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/Editor/Unity.AI.Navigation.Editor.asmdef using Guid(86c9d8e67265f41469be06142c397d17) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6f82ea8707f42273a4ca06b313e8fcf') in 0.000274708 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000053 seconds.
-  path: Packages/com.unity.ai.navigation/Tests/Runtime/OffMeshLinkTests/Unity.AI.Navigation.LegacyOffMeshLink.Tests.asmdef
-  artifactKey: Guid(68d7ff144262c9148888e665efa8692c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/Tests/Runtime/OffMeshLinkTests/Unity.AI.Navigation.LegacyOffMeshLink.Tests.asmdef using Guid(68d7ff144262c9148888e665efa8692c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c5fb97945876388770f8fd738029aa0') in 0.000251291 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png
-  artifactKey: Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@64.png using Guid(b3cd430fb0ffe164fa829262bb9e1d4b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '838441e2270fae8a7acc350b60ab7441') in 0.003126417 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@256.png
-  artifactKey: Guid(1497075210b6dcd4c8f31ecfc6c5c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay@256.png using Guid(1497075210b6dcd4c8f31ecfc6c5c79c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '593cb98b42145e0352f2c3d671a0bd88') in 0.002858916 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000068 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Arrow.prefab
-  artifactKey: Guid(5a297c6822cc79747b598b01ee25c258) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Prefabs/Navigation/Navigation Arrow.prefab using Guid(5a297c6822cc79747b598b01ee25c258) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2732c59af5c19701464afaa3822fee1a') in 0.004313167 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_waypoints_settings.psd
-  artifactKey: Guid(7fed289fa6bbb2c43877dde2b7a9dcc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_waypoints_settings.psd using Guid(7fed289fa6bbb2c43877dde2b7a9dcc7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1de0ca5a2cc7fb27bf8dbe0a28930ed0') in 0.003862583 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000059 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/NavigationWindowIcon.asset
-  artifactKey: Guid(13a8a84f37ede4760a590fd13172bdd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/NavigationWindowIcon.asset using Guid(13a8a84f37ede4760a590fd13172bdd4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '708e3605f8573064facaf51e85dac028') in 0.002535459 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000037 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png
-  artifactKey: Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay.png using Guid(6a986a181c9bc6043b057a3d15edbaad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '54b192b5421f6404a6da7ce99aef060a') in 0.002200875 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@2x.png
-  artifactKey: Guid(334589c596cc053418f700189f91111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@2x.png using Guid(334589c596cc053418f700189f91111c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4a19b1ecd3ba659042b7236a02a5728b') in 0.003590375 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000035 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/ui_navigation_target_256.psd
-  artifactKey: Guid(9ebe502385797aa4db3d25d0d7eaf4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/ui_navigation_target_256.psd using Guid(9ebe502385797aa4db3d25d0d7eaf4c1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '72c09338296e4403b182c4e44a188b33') in 0.004768291 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000067 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@32.png
-  artifactKey: Guid(f7a3e2b3beab29040bc1a68f0ad0045c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@32.png using Guid(f7a3e2b3beab29040bc1a68f0ad0045c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5edf4a44a7d3a4a18bf37890edaf605b') in 0.002634708 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000044 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png
-  artifactKey: Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/d_NavigationOverlay On@2x.png using Guid(a206ff0ddc681e642a2e62fc57a7d51c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bd9a27347dc37bc239f0898594bb5862') in 0.002572375 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000065 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_add_target.psd
-  artifactKey: Guid(8f9f5bfdb6984a04384dfc2f2f72e4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/Graph/ui_navigation_graph_add_target.psd using Guid(8f9f5bfdb6984a04384dfc2f2f72e4e2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cad91300e5c36c394cc7a59f39a6e368') in 0.004845583 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000040 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@64.png
-  artifactKey: Guid(151753cf3d5916d4fbf624668c268675) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/Overlay/NavigationOverlay On@64.png using Guid(151753cf3d5916d4fbf624668c268675) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ce88bf681ca392d8921984e89443900') in 0.0029055 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000038 seconds.
-  path: Packages/com.unity.ai.navigation/EditorResources/d_NavigationWindowIcon.png
-  artifactKey: Guid(425f55e9ef81a5e48b87c5d6b1bbf35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Packages/com.unity.ai.navigation/EditorResources/d_NavigationWindowIcon.png using Guid(425f55e9ef81a5e48b87c5d6b1bbf35c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6bc7f08873190f2bb31d55663b8cd44') in 0.002295917 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000058 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Arrow.mat
-  artifactKey: Guid(13a713cb6c6943a46904204954492a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Materials/Navigation/Navigation Arrow.mat using Guid(13a713cb6c6943a46904204954492a13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '897a1f1076a97e1045be16affa8f638d') in 0.004101125 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Scenes/MapDownloadSample.unity
+  artifactKey: Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Scenes/MapDownloadSample.unity using Guid(99c9720ab356a0642a771bea13969a05) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cf2dc3203849d4650c4c90d26b1b4f5b') in 0.000228708 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000066 seconds.
-  path: Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_target_select.psd
-  artifactKey: Guid(e3bd3e3948552cd4199ae4902a3f9796) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Samples/Immersal SDK/2.1.1/Core Samples/Textures/Navigation/navigation_target_select.psd using Guid(e3bd3e3948552cd4199ae4902a3f9796) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f9be9a8287067e930023f47786717d38') in 0.004106167 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-[usbmuxd] Attached: 115 00008110-00010C6C0A08401E
-[usbmuxd] Detached: 115 00008110-00010C6C0A08401E
-[usbmuxd] Attached: 116 00008110-00010C6C0A08401E
-[usbmuxd] Detached: 116 00008110-00010C6C0A08401E
+[usbmuxd] Attached: 126 00008110-00010C6C0A08401E
+[usbmuxd] Detached: 126 00008110-00010C6C0A08401E
