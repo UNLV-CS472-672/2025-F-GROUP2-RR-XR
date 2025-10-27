@@ -2,18 +2,19 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.EventSystems;
 using TMPro;
 
-public class ClassSearchFunction : MonoBehaviour
+public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
 {
     [Serializable]
     public class RoomItem
     {
-        // room labels for users
-        public string label;
-        
+        // room names for users
+        public string roomName;
+
         // keys for routing
-        public string destinationId;
+        public string roomID;
     }
 
     [SerializeField] private List<RoomItem> items = new List<RoomItem>();
@@ -30,67 +31,94 @@ public class ClassSearchFunction : MonoBehaviour
             // list of rooms with corresponding IDs
             items = new List<RoomItem>
             {
-                new RoomItem { label = "100 COLLABORATORIUM", destinationId = "100" },
-                new RoomItem { label = "130 FLEXATORIUM",    destinationId = "130"    },
-                new RoomItem { label = "140 CLASSROOM",      destinationId = "140"      },
-                new RoomItem { label = "145 CLASSROOM",      destinationId = "145"      },
-                new RoomItem { label = "160 MAKER SPACE",    destinationId = "160"    },
-                new RoomItem { label = "150 FLEXIBLE CLASSROOM", destinationId = "150" }
+                new RoomItem { roomName = "100 COLLABORATORIUM", roomID = "100" },
+                new RoomItem { roomName = "130 FLEXATORIUM", roomID = "130" },
+                new RoomItem { roomName = "140 CLASSROOM", roomID = "140" },
+                new RoomItem { roomName = "145 CLASSROOM", roomID = "145" },
+                new RoomItem { roomName = "160 MAKER SPACE", roomID = "160" },
+                new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", roomID = "150" }
             };
+        }
+
+        // show matches to entered query
+        // results update live on each keystroke
+        if (searchBox != null)
+        {
+            searchBox.onValueChanged.AddListener(UpdateResultsList);
+
+            // update the results list with the current text in the searchbox
+            UpdateResultsList((searchBox.text ?? string.Empty).Trim());
         }
     }
 
-    // called by search button
-    // show matches to entered query
-    public void OnSearchClicked()
+    //createes list of clickable results
+    private void UpdateResultsList(string raw)
     {
-        string query = (searchBox.text ?? string.Empty).Trim();
+        string query = (raw ?? string.Empty).Trim();
         if (string.IsNullOrEmpty(query))
         {
-            Show("No search query was entered...");
+            Show("");
             return;
         }
 
+        // call function to search rooms 
         var matches = SearchRooms(query);
         if (matches.Count == 0)
         {
-            Show($"No match for: {query}...");
+            Show($"No match found for: {query}");
             return;
         }
 
-        Show(PrintRooms(matches));
+        // display the results as links
+        Show(CreateLinks(matches));
     }
 
-    // called by go button
-    // attempts an exact selection based on input
-    public void OnConfirmSelection()
+    // when a result is clicked in the list, select that room item
+    public void OnPointerClick(PointerEventData eventData)
     {
-        string label = (searchBox.text ?? string.Empty).Trim();
-        if (string.IsNullOrEmpty(label))
+        if (resultLabel == null)
         {
-            Show("No search query was entered...");
             return;
         }
-        SelectByLabel(label);
+
+        // check if a result was clicked based on mouse position on the list
+        int linkIndex = TMP_TextUtilities.FindIntersectingLink(resultLabel, eventData.position, eventData.enterEventCamera);
+        if (linkIndex != -1)
+        {
+            // gets data about the selected result from its index
+            var linkInfo = resultLabel.textInfo.linkInfo[linkIndex];
+            
+            // get the result ID of the selected result 
+            string linkId = linkInfo.GetLinkID();
+
+            // convert id string into an int
+            if (int.TryParse(linkId, out int actualIndex))
+            {
+                // look up room at the index
+                SelectByIndex(actualIndex);
+            }
+        }
     }
 
-    // select a room by its exact label
-    public void SelectByLabel(string label)
+    // select a room by its name
+    public void SelectByName(string label)
     {
-        // get the index of the given label
+        // get the index of the given room name
         int labelIndex = FindIndex(label);
-        
+
         // validate index
         if (labelIndex >= 0)
         {
             // get the room from the index
             SelectByIndex(labelIndex);
-        }else{
-            Show($"No match for: {label}...");
+        }
+        else
+        {
+            Show($"No match found for: {label}");
         }
     }
 
-    // select a room by its index
+     // select a room by its index
     public void SelectByIndex(int index)
     {
         // check if out of bounds
@@ -98,38 +126,41 @@ public class ClassSearchFunction : MonoBehaviour
         {
             return;
         }
-        
+
         // get the room value using the index
         var chosen = items[index];
 
         // get the destination ID if it exists otherwise use the label
-        var id = string.IsNullOrEmpty(chosen.destinationId) ? chosen.label : chosen.destinationId;
+        var id = string.IsNullOrEmpty(chosen.roomID) ? chosen.roomName : chosen.roomID;
 
         // return key for routing
         OnDestinationSelected?.Invoke(id);
 
         // print user messages
-        Show($"Match found: {chosen.label}");
+        Show($"Room selected: {chosen.roomName}");
     }
 
     // finds room labels that contains the search query
     private List<int> SearchRooms(string query)
     {
+        // list to store matches
         var matches = new List<int>();
+  
+        // error checking
         if (items == null || items.Count == 0)
         {
             return matches;
         }
-        
+
         // for every room
         for (int i = 0; i < items.Count; i++)
         {
             // get label of current room
-            string s = items[i].label ?? string.Empty;
+            string s = items[i].roomName ?? string.Empty;
 
-            // compare it to the query
-            if (s.Contains(query))
-            {   
+            // compare it to the query to see if it contains it (not case sensitive)
+            if (s.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
+            {
                 // add to list of matches if match
                 matches.Add(i);
             }
@@ -141,37 +172,49 @@ public class ClassSearchFunction : MonoBehaviour
     // find an index using the label
     private int FindIndex(string label)
     {
+        // error check
         if (items == null || items.Count == 0)
         {
             return -1;
         }
 
-        // loop through list of rooms
+        // for each room
         for (int i = 0; i < items.Count; i++)
         {
-            string s = items[i].label ?? string.Empty;
-            
-            // compare each label to search queary 
-            if (string.Equals(s, label, StringComparison.Ordinal))
+
+            // get the room name
+            string s = items[i].roomName ?? string.Empty;
+
+            // compare each name to the search query (not case sensitive)
+            if (string.Equals(s, label, StringComparison.OrdinalIgnoreCase))
                 return i;
         }
         return -1;
     }
 
-    // print a list of matches to the search query
-    private string PrintRooms(List<int> indices)
+    // build the list of clickable results
+    private string CreateLinks(List<int> indices)
     {
+        // error check
         if (indices.Count == 0)
         {
-            return "No matches...";
+            return "No matches found...";
         }
 
-        var lines = new List<string>();
+        // list of result lines
+        var lines = new List<string>(indices.Count);
 
-        // for each index add its label to the list to print
+        // for every matching index in the results
         for (int i = 0; i < indices.Count; i++)
         {
-            lines.Add($"{i + 1}. {items[indices[i]].label}");
+            // get the actual position of the matching room from the rooms list
+            int actualIndex = indices[i];
+
+            // get the actual room name from that index
+            string label = items[actualIndex].roomName;
+
+            // create a clickable link to be used as an item in the results list
+            lines.Add($"<link={actualIndex}>{label}</link>");
         }
         return string.Join("\n", lines);
     }
@@ -181,6 +224,8 @@ public class ClassSearchFunction : MonoBehaviour
     {
         if (resultLabel != null)
         {
+            // parse result tags as rich text
+            resultLabel.richText = true;
             resultLabel.text = message;
         }
     }
