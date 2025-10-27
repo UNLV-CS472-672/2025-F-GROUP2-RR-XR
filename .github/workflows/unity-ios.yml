@@ -1,0 +1,38 @@
+name: Unity Rebel Reality RR
+
+on:
+  push:
+    branches:
+      - main
+      - feature/*
+  pull_request:
+
+jobs:
+  build-ios:
+    runs-on: macos-latest
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Cache Library
+        uses: actions/cache@v4
+        with:
+          path: Library
+          key: Library-${{ hashFiles('Assets/**', 'Packages/**', 'ProjectSettings/**') }}
+          restore-keys: |
+            Library-
+
+      - name: Build iOS project
+        uses: game-ci/unity-builder@main
+        with:
+          unityVersion: 6000.0.57f1
+          targetPlatform: iOS
+          buildName: "iOSBuild"
+          customParameters: "-nographics -silent-crashes"
+
+      - name: Upload iOS build
+        uses: actions/upload-artifact@v4
+        with:
+          name: iOS-XcodeProject
+          path: build/iOSBuild

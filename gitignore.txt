@@ -1,0 +1,30 @@
+# Ignore Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+Obj/
+UserSettings/
+ServerData/
+
+# IDE / editor settings
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.booproj
+
+# Unity auto-generated cache / export files
+*.unitypackage
+*.apk
+*.aab
+
+# System files
+.DS_Store
+Thumbs.db
