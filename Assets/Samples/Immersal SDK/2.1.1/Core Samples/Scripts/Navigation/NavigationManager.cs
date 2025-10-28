@@ -92,6 +92,9 @@ namespace Immersal.Samples.Navigation
         private NavigationState m_navigationState = NavigationState.NotNavigating;
 
         private static NavigationManager instance = null;
+
+        [SerializeField]
+        private hideMarkers markerManager;
         public static NavigationManager Instance
         {
             get
@@ -157,9 +160,14 @@ namespace Immersal.Samples.Navigation
                 Debug.LogWarning("NavigationManager: Navigation Manager not properly initialized.");
                 return;
             }
-           
+
             m_targetTransform = button.targetObject.transform;
             m_NavigationTarget = button.targetObject.GetComponent<IsNavigationTarget>();
+            if(markerManager != null)
+            {
+                //Debug.Log("test");
+                markerManager.showMarker(m_targetTransform);
+            }
             TryToFindPath(m_NavigationTarget);
         }
 
@@ -193,7 +201,7 @@ namespace Immersal.Samples.Navigation
                     targetPosition = XRSpaceToUnity(m_XRSpace.transform, m_XRSpace.InitialPose, targetPosition);
 
                     corners = FindPathNavMesh(startPosition, targetPosition);
-                    Debug.Log(corners.Count);
+                    //Debug.Log(corners.Count);
                     if (corners.Count >= 2)
                     {
                         m_navigationActive = true;
@@ -332,7 +340,10 @@ namespace Immersal.Samples.Navigation
 
             m_navigationState = NavigationState.NotNavigating;
             UpdateNavigationUI(m_navigationState);
-
+            if(markerManager != null && m_targetTransform != null)
+            {
+                m_targetTransform.gameObject.SetActive(false);
+            }
             NotificationManager.Instance.GenerateNotification("Navigation stopped.");
         }
 
