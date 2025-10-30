@@ -166,7 +166,7 @@ namespace Immersal.Samples.Navigation
             if(markerManager != null)
             {
                 //Debug.Log("test");
-                markerManager.showMarker(m_targetTransform);
+                markerManager.showMarker(m_targetTransform, true);
             }
             TryToFindPath(m_NavigationTarget);
         }
@@ -342,7 +342,8 @@ namespace Immersal.Samples.Navigation
             UpdateNavigationUI(m_navigationState);
             if(markerManager != null && m_targetTransform != null)
             {
-                m_targetTransform.gameObject.SetActive(false);
+                markerManager.setnavActive();
+                markerManager.hideMarkersVisual();
             }
             NotificationManager.Instance.GenerateNotification("Navigation stopped.");
         }

@@ -9,10 +9,24 @@ public class hideMarkers : MonoBehaviour
     //variable tag
     [SerializeField]
     private string markerTag = "markerMesh";
+
+    //variables
+    private bool navActive = false;
+
     void Start()
     {
 
         hideMarkersVisual();
+    }
+    public bool setnavActive()
+    {
+     
+        return !navActive;
+         
+    }
+    public bool getnavActive()
+    {
+        return navActive;
     }
     public void hideMarkersVisual()
     {
@@ -31,15 +45,20 @@ public class hideMarkers : MonoBehaviour
 
         }
     }
-    public void showMarker(Transform target)
+    public void showMarker(Transform target, bool navOption)
     {
+        //call in the function to hide all the markers
+
         hideMarkersVisual();
-      
+        
+        if (navOption)
+            setnavActive();
         //show the selected one and make it show.
-        foreach(Transform child in target)
+        foreach (Transform child in target)
         {
             child.gameObject.SetActive(true);
         }
     }
+
  
 }
