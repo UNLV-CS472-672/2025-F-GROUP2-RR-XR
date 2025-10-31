@@ -12,7 +12,7 @@ Contact sales@immersal.com for licensing requests.
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-
+using System.Linq;
 namespace Immersal.Samples.Navigation
 {
     [RequireComponent(typeof(RectTransform))]
@@ -37,9 +37,12 @@ namespace Immersal.Samples.Navigation
             // loops through all navigation categories
             foreach (KeyValuePair<NavigationTargets.NavigationCategory, List<GameObject>> entry in NavigationTargets.NavigationTargetsDict)
             {
+                List<GameObject> sortedTargets = entry.Value
+                                                      .OrderBy(go => go.GetComponent<IsNavigationTarget>().targetName)
+                                                      .ToList();
 
                 // loops through all targets in each category
-                foreach (GameObject go in entry.Value)
+                foreach (GameObject go in sortedTargets)
                 {
                     IsNavigationTarget isNavigationTarget = go.GetComponent<IsNavigationTarget>();
                     string targetName = isNavigationTarget.targetName;

@@ -7,6 +7,8 @@ public class appearMarkerRad : MonoBehaviour
     SphereCollider collider;
     [SerializeField]
     private hideMarkers markerManager;
+
+   
     void Start()
     {
         //componenet of spherecollider
@@ -37,7 +39,7 @@ public class appearMarkerRad : MonoBehaviour
         //Debug.Log(markerManager.getnavActive)
         if(!markerManager.getnavActive())
         {
-            Debug.Log("TRIGGERED");
+            //Debug.Log("TRIGGERED");
             markerManager.hideMarkersVisual();
         }
     }

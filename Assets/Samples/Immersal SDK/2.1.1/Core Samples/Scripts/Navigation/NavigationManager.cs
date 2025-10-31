@@ -342,7 +342,7 @@ namespace Immersal.Samples.Navigation
             UpdateNavigationUI(m_navigationState);
             if(markerManager != null && m_targetTransform != null)
             {
-                markerManager.setnavActive();
+                markerManager.toggleNavActive();
                 markerManager.hideMarkersVisual();
             }
             NotificationManager.Instance.GenerateNotification("Navigation stopped.");

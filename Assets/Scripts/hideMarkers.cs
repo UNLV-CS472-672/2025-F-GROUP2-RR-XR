@@ -18,10 +18,10 @@ public class hideMarkers : MonoBehaviour
 
         hideMarkersVisual();
     }
-    public bool setnavActive()
+    public void toggleNavActive()
     {
-     
-        return !navActive;
+        navActive = !navActive;
+       
          
     }
     public bool getnavActive()
@@ -52,7 +52,7 @@ public class hideMarkers : MonoBehaviour
         hideMarkersVisual();
         
         if (navOption)
-            setnavActive();
+            toggleNavActive();
         //show the selected one and make it show.
         foreach (Transform child in target)
         {
