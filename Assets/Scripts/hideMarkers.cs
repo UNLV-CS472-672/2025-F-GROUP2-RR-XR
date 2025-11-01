@@ -22,7 +22,6 @@ public class hideMarkers : MonoBehaviour
     {
         navActive = !navActive;
        
-         
     }
     public bool getnavActive()
     {
@@ -35,7 +34,6 @@ public class hideMarkers : MonoBehaviour
         foreach (Transform child in parentObj.transform)
         {
             //Find sub-children containing the tag of "markerMesh"
-            if (child.CompareTag(markerTag))
             {
                 foreach (Transform subchild in child)
                 {
@@ -48,9 +46,8 @@ public class hideMarkers : MonoBehaviour
     public void showMarker(Transform target, bool navOption)
     {
         //call in the function to hide all the markers
-
         hideMarkersVisual();
-        
+
         if (navOption)
             toggleNavActive();
         //show the selected one and make it show.

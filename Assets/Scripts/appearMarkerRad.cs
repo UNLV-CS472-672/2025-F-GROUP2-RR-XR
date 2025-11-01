@@ -7,7 +7,15 @@ public class appearMarkerRad : MonoBehaviour
     SphereCollider collider;
     [SerializeField]
     private hideMarkers markerManager;
+    /*
+        ARCHIVED: This is for the prototype of signs/labels being rendered
+        based on user proximity, except for users markers/waypoints.
+        ASSUMPTION: It will be horrible practice to make waypoint appear whenever
+                    user is just venturing through the building when Navigation mode
+                    is OFF. 
+                    It will cause clutter/confusion messed towards navigation.
 
+    */
    
     void Start()
     {
@@ -24,10 +32,10 @@ public class appearMarkerRad : MonoBehaviour
         //Debug.Log("TEST");
         //if navigation isn't active, we can make an assumption that it can popup
         //when user is closed to the object-radius
-        if (!markerManager.getnavActive())
-        {
-            markerManager.showMarker(transform, false);
-        }
+        //if (!markerManager.getnavActive())
+        //{
+        //    markerManager.showMarker(transform, false);
+        ///}
 
 
     }
@@ -37,11 +45,11 @@ public class appearMarkerRad : MonoBehaviour
     {
         //Debug.Log("HIDE");
         //Debug.Log(markerManager.getnavActive)
-        if(!markerManager.getnavActive())
-        {
+        //if(!markerManager.getnavActive())
+        //{
             //Debug.Log("TRIGGERED");
-            markerManager.hideMarkersVisual();
-        }
+        //    markerManager.hideMarkersVisual();
+        //}
     }
     // Update is called once per frame
     void Update()

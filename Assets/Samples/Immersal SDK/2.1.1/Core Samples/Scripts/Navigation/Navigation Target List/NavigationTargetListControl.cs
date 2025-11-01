@@ -37,6 +37,7 @@ namespace Immersal.Samples.Navigation
             // loops through all navigation categories
             foreach (KeyValuePair<NavigationTargets.NavigationCategory, List<GameObject>> entry in NavigationTargets.NavigationTargetsDict)
             {
+                //sort out the navigation list by a provided library/algorithm in alphabetical order
                 List<GameObject> sortedTargets = entry.Value
                                                       .OrderBy(go => go.GetComponent<IsNavigationTarget>().targetName)
                                                       .ToList();

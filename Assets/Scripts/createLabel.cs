@@ -11,19 +11,27 @@ public class createLabel : MonoBehaviour
     public GameObject labelPrefab;
     private GameObject currentLabel;
     public float labelHeightOffset = 0.3f;
+    private hideMarkers parentManager;
+    
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-
+        parentManager = GetComponentInParent<hideMarkers>();
     }
 
     //CreateLabel - To create/initialize label object to Unity, 
     private void labelCreate(Transform target)
     {
         //Create the object
+        // that will store the sign(shape)
+        // text will be dynamic based on target information
         GameObject label = Instantiate(labelPrefab, target);
         label.name = "Label_" + target.name;
+
         label.transform.localPosition = Vector3.up * labelHeightOffset;
+        label.transform.localRotation = Quaternion.identity;
+        label.tag = "LabelSign";
+       
 
         //label.SetActive(true);
         GameObject textObj = new GameObject("Text");
@@ -32,9 +40,10 @@ public class createLabel : MonoBehaviour
         textObj.transform.localRotation = Quaternion.identity;
         textObj.transform.localScale = Vector3.one * 0.01f;
 
+        //Create text
         TextMeshPro tmp = textObj.AddComponent<TextMeshPro>();
         tmp.text = target.name;
-        tmp.transform.localPosition = new Vector3(0f, 0f, -0.5f);
+        tmp.transform.localPosition = new Vector3(0f, 0f, -0.65f);
         tmp.fontSize = 1;
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.enableAutoSizing = true;
@@ -42,18 +51,33 @@ public class createLabel : MonoBehaviour
         tmp.color = Color.black;
         tmp.rectTransform.sizeDelta = new Vector2(100f, 100f);
 
+        labelOrbit orbit = label.AddComponent<labelOrbit>();
+        orbit.center = target;
+        orbit.radius = 0.3f;
+        orbit.speed = 40f;
+        
+
+        
+
     }
     private void labelDestroy(Transform target)
     {
-        Transform labelChild = target.Find("Label_ " + target.name);
+        foreach(Transform child in target)
+        {
+            if(child.CompareTag("LabelSign"))
+                Destroy(child.gameObject);
+        }
     }
-    public void OnTriggerEnter()
+    public void OnTriggerEnter(Collider other)
     {
-        labelCreate(parentObject.transform);
+
+        if(!parentManager.getnavActive())
+            labelCreate(parentObject.transform);
     }
-    public void OnTriggerExit()
+    public void OnTriggerExit(Collider other)
     {
         labelDestroy(parentObject.transform);
+        
     }
     // Update is called once per frame
     void Update()
