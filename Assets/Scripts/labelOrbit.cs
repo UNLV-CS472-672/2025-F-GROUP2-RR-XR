@@ -17,7 +17,8 @@ public class labelOrbit : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        //  when player is close enough, run the signLabelLook script and 
+        //  ignore this script.
         if (lookScript != null && lookScript.getPlayerIsClose())
             return;
         
