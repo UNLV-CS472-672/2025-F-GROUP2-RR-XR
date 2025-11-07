@@ -12,7 +12,7 @@ public class createLabel : MonoBehaviour
     private GameObject currentLabel;
     public float labelHeightOffset = 0.3f;
     private hideMarkers parentManager;
-    
+   
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -31,7 +31,7 @@ public class createLabel : MonoBehaviour
         label.transform.localPosition = Vector3.up * labelHeightOffset;
         label.transform.localRotation = Quaternion.identity;
         label.tag = "LabelSign";
-        label.transform.localScale = new Vector3(0.6f, 0.485f, 0.01318f);
+        label.transform.localScale = new Vector3(100f, 100f, 100f);
        
 
         //label.SetActive(true);
@@ -43,23 +43,30 @@ public class createLabel : MonoBehaviour
 
         //Create text
         TextMeshPro tmp = textObj.AddComponent<TextMeshPro>();
+        TMP_FontAsset monsterrateFont = Resources.Load<TMP_FontAsset>("Fonts & Materials/montserratFont");
+        //if (monsterrateFont == null)
+        //    Debug.Log("TEST");
+
+        tmp.fontWeight = FontWeight.Bold;
         tmp.text = target.name;
-        tmp.transform.localPosition = new Vector3(0f, 0f, -0.65f);
+        tmp.font = monsterrateFont;
+        tmp.transform.localPosition = new Vector3(0f, 0f, -0.0005f);
+        tmp.transform.localScale = new Vector3(0.004f, 0.004f, 0.01f);
         tmp.alignment = TextAlignmentOptions.Center;
         tmp.enableAutoSizing = true;
-        tmp.fontSizeMin = 18f;
-        tmp.fontSizeMax = 150f;
+        tmp.fontSizeMin = 2f;
+        tmp.fontSizeMax = 65f;
 
         tmp.color = Color.black;
-        tmp.rectTransform.sizeDelta = new Vector2(100f, 100f);
-
+        tmp.rectTransform.sizeDelta = new Vector2(4f, 4f);
+       
         //rotate the sign around based on the script
         labelOrbit orbit = label.AddComponent<labelOrbit>();
         //variables initialized from the script.
         orbit.center = target;
-        orbit.radius = 0.3f;
+        orbit.radius = 0.85f;
         orbit.speed = 40f;
-        
+
         //look at based on player (camera) based on distance.
         signLabelLook look = label.AddComponent<signLabelLook>();
         
