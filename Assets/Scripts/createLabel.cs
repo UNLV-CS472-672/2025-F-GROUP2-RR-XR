@@ -70,9 +70,6 @@ public class createLabel : MonoBehaviour
         //look at based on player (camera) based on distance.
         signLabelLook look = label.AddComponent<signLabelLook>();
         
-        
-
-        
 
     }
     private void labelDestroy(Transform target)
@@ -85,7 +82,7 @@ public class createLabel : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-
+        //Debug.Log(parentManager.getnavActive());
         if(!parentManager.getnavActive())
             labelCreate(parentObject.transform);
     }
@@ -97,6 +94,9 @@ public class createLabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(parentManager.getnavActive())
+        {
+            labelDestroy(parentObject.transform);
+        }
     }
 }
