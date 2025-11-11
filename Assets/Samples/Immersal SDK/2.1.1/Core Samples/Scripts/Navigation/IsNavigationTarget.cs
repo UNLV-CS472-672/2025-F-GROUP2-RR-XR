@@ -36,6 +36,7 @@ namespace Immersal.Samples.Navigation
 
         private void Start()
         {
+            
             NavigationGraphManager.Instance?.AddTarget(this);
         }
 
