@@ -2,10 +2,10 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.EventSystems;
+using UnityEngine.UI;
 using TMPro;
 
-public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
+public class ClassSearchFunction : MonoBehaviour
 {
     [Serializable]
     public class RoomItem
@@ -14,12 +14,14 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
         public string roomName;
 
         // keys for routing
-        public string roomID;
+        public string buildingName;
     }
 
     [SerializeField] private List<RoomItem> items = new List<RoomItem>();
     [SerializeField] private TMP_InputField searchBox;
     [SerializeField] private TextMeshProUGUI resultLabel;
+    [SerializeField] private RectTransform resultsContainer;
+    [SerializeField] private Button resultButtonPrefab;
 
     // event to use for id, destinationID updated when a valid destination is selected
     [SerializeField] private UnityEvent<string> OnDestinationSelected;
@@ -31,12 +33,18 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
             // list of rooms with corresponding IDs
             items = new List<RoomItem>
             {
-                new RoomItem { roomName = "100 COLLABORATORIUM", roomID = "100" },
-                new RoomItem { roomName = "130 FLEXATORIUM", roomID = "130" },
-                new RoomItem { roomName = "140 CLASSROOM", roomID = "140" },
-                new RoomItem { roomName = "145 CLASSROOM", roomID = "145" },
-                new RoomItem { roomName = "160 MAKER SPACE", roomID = "160" },
-                new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", roomID = "150" }
+                // AEB rooms
+                new RoomItem { roomName = "100 COLLABORATORIUM", buildingName = "AEB" },
+                new RoomItem { roomName = "130 FLEXATORIUM", buildingName = "AEB" },
+                new RoomItem { roomName = "140 CLASSROOM", buildingName = "AEB" },
+                new RoomItem { roomName = "145 CLASSROOM", buildingName = "AEB" },
+                new RoomItem { roomName = "160 MAKER SPACE", buildingName = "AEB" },
+                new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", buildingName = "AEB" },
+                // TBE-A rooms
+                new RoomItem { roomName = "test", buildingName = "TBE-A" },
+                // TBE-B rooms
+                new RoomItem { roomName = "test", buildingName = "TBE-B" }
+
             };
         }
 
@@ -49,12 +57,21 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
             // update the results list with the current text in the searchbox
             UpdateResultsList((searchBox.text ?? string.Empty).Trim());
         }
+
+        // ensure results area is clean on start
+        if (resultsContainer != null)
+        {
+            ClearResults();
+        }
     }
 
-    //createes list of clickable results
     private void UpdateResultsList(string raw)
     {
         string query = (raw ?? string.Empty).Trim();
+
+        // clear previous buttons
+        ClearResults();
+
         if (string.IsNullOrEmpty(query))
         {
             Show("");
@@ -69,35 +86,8 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
             return;
         }
 
-        // display the results as links
-        Show(CreateLinks(matches));
-    }
-
-    // when a result is clicked in the list, select that room item
-    public void OnPointerClick(PointerEventData eventData)
-    {
-        if (resultLabel == null)
-        {
-            return;
-        }
-
-        // check if a result was clicked based on mouse position on the list
-        int linkIndex = TMP_TextUtilities.FindIntersectingLink(resultLabel, eventData.position, eventData.enterEventCamera);
-        if (linkIndex != -1)
-        {
-            // gets data about the selected result from its index
-            var linkInfo = resultLabel.textInfo.linkInfo[linkIndex];
-            
-            // get the result ID of the selected result 
-            string linkId = linkInfo.GetLinkID();
-
-            // convert id string into an int
-            if (int.TryParse(linkId, out int actualIndex))
-            {
-                // look up room at the index
-                SelectByIndex(actualIndex);
-            }
-        }
+        // create buttons for matched searches
+        CreateButtons(matches);
     }
 
     // select a room by its name
@@ -130,11 +120,8 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
         // get the room value using the index
         var chosen = items[index];
 
-        // get the destination ID if it exists otherwise use the label
-        var id = string.IsNullOrEmpty(chosen.roomID) ? chosen.roomName : chosen.roomID;
-
         // return key for routing
-        OnDestinationSelected?.Invoke(id);
+        OnDestinationSelected?.Invoke(chosen.roomName);
 
         // print user messages
         Show($"Room selected: {chosen.roomName}");
@@ -192,31 +179,47 @@ public class ClassSearchFunction : MonoBehaviour, IPointerClickHandler
         return -1;
     }
 
-    // build the list of clickable results
-    private string CreateLinks(List<int> indices)
+    // delete existing results under the results container
+    private void ClearResults()
     {
         // error check
-        if (indices.Count == 0)
+        if (resultsContainer == null) return;
+
+        // for each result delete it
+        for (int i = resultsContainer.childCount - 1; i >= 0; i--)
         {
-            return "No matches found...";
+            Destroy(resultsContainer.GetChild(i).gameObject);
         }
+    }
 
-        // list of result lines
-        var lines = new List<string>(indices.Count);
-
-        // for every matching index in the results
+    // create a button for each match
+    private void CreateButtons(List<int> indices)
+    {
+        // for each item in the list
         for (int i = 0; i < indices.Count; i++)
         {
-            // get the actual position of the matching room from the rooms list
+            // get the actual index of the room from the list
             int actualIndex = indices[i];
 
-            // get the actual room name from that index
-            string label = items[actualIndex].roomName;
+            // make a new button using the prefab button template in the results list container
+            var btn = Instantiate(resultButtonPrefab, resultsContainer);
 
-            // create a clickable link to be used as an item in the results list
-            lines.Add($"<link={actualIndex}>{label}</link>");
+            // find and set the labels of the button to the actual room and building name
+            var labelTexts = btn.GetComponentsInChildren<TextMeshProUGUI>(true);
+            foreach (var text in labelTexts)
+            {
+                if (text.name.Contains("RoomName", StringComparison.OrdinalIgnoreCase))
+                    text.text = items[actualIndex].roomName;
+                else if (text.name.Contains("BuildingName", StringComparison.OrdinalIgnoreCase))
+                    text.text = items[actualIndex].buildingName;
+            }
+
+            // clear existing listeners
+            btn.onClick.RemoveAllListeners();
+            
+            // set to call select by index function on button click
+            btn.onClick.AddListener(() => SelectByIndex(actualIndex));
         }
-        return string.Join("\n", lines);
     }
 
     // print user messages
