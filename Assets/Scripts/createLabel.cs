@@ -64,7 +64,7 @@ public class createLabel : MonoBehaviour
         labelOrbit orbit = label.AddComponent<labelOrbit>();
         //variables initialized from the script.
         orbit.center = target;
-        orbit.radius = 0.85f;
+        orbit.radius = 0.95f;
         orbit.speed = 40f;
 
         //look at based on player (camera) based on distance.
