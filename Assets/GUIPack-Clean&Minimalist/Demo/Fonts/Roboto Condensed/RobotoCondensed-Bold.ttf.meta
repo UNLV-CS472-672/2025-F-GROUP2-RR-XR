@@ -8,12 +8,9 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
-  fontName: Roboto Condensed
   fontNames:
   - Roboto Condensed
-  fallbackFontReferences:
-  - {fileID: 12800000, guid: c96dc386e2b1c42bc81fde91c443aed3, type: 3}
-  - {fileID: 12800000, guid: 47a42c1ba64b3471da745dfaec152681, type: 3}
+  fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
@@ -22,10 +19,3 @@ TrueTypeFontImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
-AssetOrigin:
-  serializedVersion: 1
-  productId: 75123
-  packageName: Clean & Minimalist GUI Pack
-  packageVersion: 3.0.6
-  assetPath: Assets/GUIPack-Clean&Minimalist/Demo/Fonts/Roboto Condensed/RobotoCondensed-Bold.ttf
-  uploadId: 673355

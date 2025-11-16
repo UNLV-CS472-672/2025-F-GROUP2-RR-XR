@@ -283,7 +283,7 @@ GameObject:
   - component: {fileID: 547547467336452930}
   - component: {fileID: 2087960873477498253}
   - component: {fileID: 6188698463412270739}
-  - component: {fileID: 5652311387664070924}
+  - component: {fileID: 6904151212905674354}
   m_Layer: 5
   m_Name: ResultButton
   m_TagString: Untagged
@@ -350,7 +350,7 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &5652311387664070924
+--- !u!114 &6904151212905674354
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -359,7 +359,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6823053053853584420}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
+  m_Script: {fileID: 11500000, guid: 707842da506f6874fa9735381d80c55f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
@@ -394,3 +394,6 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls: []
+  targetObject: {fileID: 0}
+  m_TextMeshProUGUI: {fileID: 0}
+  m_Image: {fileID: 0}

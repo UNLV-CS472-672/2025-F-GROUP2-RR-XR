@@ -6,49 +6,105 @@ public class XRToggle : MonoBehaviour
 {
 
     //variables
-    public List<Button> toggleButtons;
-    public GameObject arSessionOrigin;
-    public ARSession arSession;
-    private bool arModeActive = false;
+       private bool arModeActive = false;
     public GameObject userUI;
     public GameObject navUI;
+
+    public GameObject searchUI;
+
+    public GameObject bottomButtons;
     public GameObject immersalSDK;
     public GameObject xrSpace;
-   
+    public static XRToggle Instance;
+
     [SerializeField]
     private ARCameraBackground arCameraBackground;
+
+    //THIS SCRIPT TOOK ME HOURS TO MAKE AND THINK ABOUT
+    //NEVER IN MY LIFE I HAVE SPENT SOO MUCH TIME DEBUGGING CODE
+    //WITH THIS SIMPLE TOGGLE OFF AND ON SWITCH.
+
+    //I HAD TROUBLE COMPHRENDING AND GOT CONFUSED OF HOW IT WORKS
+    //BUT IT WORKS. WITH SIMPLE LOGIC AND BREAKING IT DOWN SLOWLY INVOLVED
+    //SOLVING THIS PROBLEM.
+    void Awake()
+    {
+        Instance = this;
+    }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-    
-
         //when program starts, make camera hidden
         setARMode(false);
-        for(int i = 0; i < toggleButtons.Count; i++)
-        {
-            int index = i;
-            toggleButtons[i].onClick.AddListener(toggleARMode);
-        }
+ 
     }
-    void toggleARMode()
+    //This function will change the UI to navigation Mode
+    public void enableNavigationMode()
     {
+        //DEBUGGING
+        //BRUTE FORCING METHOD
+        //WHEN USER PRESSES BUTTON IT WILL REMOVE USER UI
+        //AND MAKE SEARCHBAR APPEAR AND MAKE THE HOMESCREEN BOTTOM BUTTON APPEAR
+        arModeActive = true;
+        userUI.SetActive(false);
+        setChildrenActive(searchUI, false);
+        setChildrenActive(bottomButtons, true);
+
+
+    }
+    //This function will change to the UI to user UI mode
+    public void DisableNavigationMode()
+    {
+    
+        arModeActive = false;
+        setChildrenActive(navUI, true);
+        setChildrenActive(bottomButtons, false);
+        userUI.SetActive(true);
+    }
+    //This function will set to userUI when program starts
+    public void toggleARMode()
+    {
+         
         arModeActive = !arModeActive;
         setARMode(arModeActive);
     }
 
-    private void setARMode(bool enable)
+    public void setARMode(bool enable)
     {
-   
-
+     
         if (arCameraBackground != null)
             arCameraBackground.enabled = enable;
-
+        //will make the screen appear when startup
         if (userUI != null)
+        {
             userUI.SetActive(!enable);
-            
+            //setChildrenActive(navUI, true);
+        }
         if (navUI != null)
-            navUI.SetActive(enable);
- 
+        {
+            navUI.SetActive(!enable);
+        }
+
+       
+    }
+    //Void function that will set child objects appear/disappear
+    public void setChildrenActive(GameObject parent, bool state)
+    {
+        
+        if (parent == null)
+            return;
+        for(int i = 0; i < parent.transform.childCount; i++)
+        {
+            //if certain objects doesn't have tag ignore
+            //then it will hide
+            if (!parent.transform.GetChild(i).CompareTag("ignore"))
+            {
+              
+                Transform childTransform = parent.transform.GetChild(i);
+                childTransform.gameObject.SetActive(state);
+            }
+        
+        }
     }
     // Update is called once per frame
     void Update()

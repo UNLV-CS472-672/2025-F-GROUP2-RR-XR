@@ -29,10 +29,10 @@ namespace Immersal.Samples.Navigation
 
         public void GenerateButtons()
         {
-            if (m_Buttons.Count > 0)
-            {
-                DestroyButtons();
-            }
+           // if (m_Buttons.Count > 0)
+           // {
+           //     DestroyButtons();
+           // }
             
             // loops through all navigation categories
             foreach (KeyValuePair<NavigationTargets.NavigationCategory, List<GameObject>> entry in NavigationTargets.NavigationTargetsDict)
@@ -54,20 +54,14 @@ namespace Immersal.Samples.Navigation
                     button.SetActive(true);
                     button.name = string.Format("button {0}", targetName);
 
-                    NavigationTargetListButton navigationTargetListButton = button.GetComponent<NavigationTargetListButton>();
-                    navigationTargetListButton.SetText(targetName);
-                    navigationTargetListButton.SetIcon(icon);
-                    navigationTargetListButton.SetTarget(go);
+                    //NavigationTargetListButton navigationTargetListButton = button.GetComponent<NavigationTargetListButton>();
+                    //navigationTargetListButton.SetText(targetName);
+                    //navigationTargetListButton.SetIcon(icon);
+                    //navigationTargetListButton.SetTarget(go);
                 }
             }
 
-            // calculate lists RectTransform size
-            float x = m_ButtonTemplate.GetComponent<RectTransform>().sizeDelta.x;
-            float y = m_ButtonTemplate.GetComponent<RectTransform>().sizeDelta.y * Mathf.Min(m_Buttons.Count, m_MaxButtonsOnScreen);
-            RectTransform rectTransform = GetComponent<RectTransform>();
-            rectTransform.sizeDelta = new Vector2(x, y);
-
-            ScrollToTop();
+       
         }
 
         private void DestroyButtons()
