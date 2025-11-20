@@ -30,7 +30,7 @@ public class ClassSearchFunction : MonoBehaviour
     {
         if (items == null || items.Count == 0)
         {
-            // list of rooms with corresponding IDs
+            // list of rooms with corresponding building names
             items = new List<RoomItem>
             {
                 // AEB rooms
@@ -41,10 +41,18 @@ public class ClassSearchFunction : MonoBehaviour
                 new RoomItem { roomName = "160 MAKER SPACE", buildingName = "AEB" },
                 new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", buildingName = "AEB" },
                 // TBE-A rooms
-                new RoomItem { roomName = "test", buildingName = "TBE-A" },
+                new RoomItem { roomName = "101 GREAT HALL", buildingName = "TBE-A" },
+                new RoomItem { roomName = "107 CLASSROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "120 MEETING ROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "305 DATA CENTER", buildingName = "TBE-A" },
+                new RoomItem { roomName = "307 CONFERENCE ROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "311 COMPUTER LAB", buildingName = "TBE-A" },
                 // TBE-B rooms
-                new RoomItem { roomName = "test", buildingName = "TBE-B" }
-
+                new RoomItem { roomName = "170 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "172 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "174 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "176 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "178 CLASSROOM", buildingName = "TBE-B" }
             };
         }
 
@@ -142,11 +150,13 @@ public class ClassSearchFunction : MonoBehaviour
         // for every room
         for (int i = 0; i < items.Count; i++)
         {
-            // get label of current room
-            string s = items[i].roomName ?? string.Empty;
+            // get label of current room and its building name
+            string room = items[i].roomName ?? string.Empty;
+            string building = items[i].buildingName ?? string.Empty;
 
-            // compare it to the query to see if it contains it (not case sensitive)
-            if (s.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
+            // compare both fields to the query (not case sensitive)
+            if (room.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                building.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 // add to list of matches if match
                 matches.Add(i);
