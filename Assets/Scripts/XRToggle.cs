@@ -2,19 +2,20 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using System.Collections.Generic;
+using TMPro;
 public class XRToggle : MonoBehaviour
 {
 
     //variables
-       private bool arModeActive = false;
+    private bool arModeActive = false;
     public GameObject userUI;
     public GameObject navUI;
 
     public GameObject searchUI;
+    [SerializeField] private TMP_InputField searchBox;
 
     public GameObject bottomButtons;
-    public GameObject immersalSDK;
-    public GameObject xrSpace;
+ 
     public static XRToggle Instance;
 
     [SerializeField]
@@ -41,10 +42,15 @@ public class XRToggle : MonoBehaviour
     //This function will change the UI to navigation Mode
     public void enableNavigationMode()
     {
+
         //DEBUGGING
         //BRUTE FORCING METHOD
         //WHEN USER PRESSES BUTTON IT WILL REMOVE USER UI
         //AND MAKE SEARCHBAR APPEAR AND MAKE THE HOMESCREEN BOTTOM BUTTON APPEAR
+
+        //This will empty the search box once user enters UI mode. 
+        if (searchBox != null)
+            searchBox.text = string.Empty;
         arModeActive = true;
         userUI.SetActive(false);
         setChildrenActive(searchUI, false);

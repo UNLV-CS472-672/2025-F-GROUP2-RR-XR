@@ -191,11 +191,12 @@ namespace Immersal.Samples.Navigation
 
             if (distanceToTarget < m_ArrivedDistanceThreshold)
             {
+                //This is the part when user arrives destination
                 m_navigationActive = false;
 
                 m_navigationState = NavigationState.NotNavigating;
                 UpdateNavigationUI(m_navigationState);
-
+               
                 DisplayArrivedNotification();
                 return;
             }
@@ -221,6 +222,7 @@ namespace Immersal.Samples.Navigation
                     }
                     else
                     {
+
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
                     }
@@ -338,6 +340,8 @@ namespace Immersal.Samples.Navigation
 
         public void DisplayArrivedNotification()
         {
+            if (XRToggle != null)
+                XRToggle.DisableNavigationMode();
 #if !(UNITY_STANDALONE)
             Handheld.Vibrate();
 #endif
@@ -360,7 +364,7 @@ namespace Immersal.Samples.Navigation
                 markerManager.toggleNavActive();
                 markerManager.hideMarkersVisual();
             }
-            //NotificationManager.Instance.GenerateNotification("Navigation stopped.");
+            NotificationManager.Instance.GenerateNotification("Navigation stopped.");
             
             if (XRToggle != null)
                 XRToggle.DisableNavigationMode();

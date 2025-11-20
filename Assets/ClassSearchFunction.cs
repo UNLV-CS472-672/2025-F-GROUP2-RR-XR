@@ -153,7 +153,7 @@ public class ClassSearchFunction : MonoBehaviour
        
         // return key for routing
         OnDestinationSelected?.Invoke(chosen.roomName);
-
+        
         // print user messages
         Show($"Room selected: {chosen.roomName}");
     }
@@ -209,7 +209,7 @@ public class ClassSearchFunction : MonoBehaviour
         }
         return -1;
     }
-
+    
     // delete existing results under the results container
     private void ClearResults()
     {
@@ -234,7 +234,7 @@ public class ClassSearchFunction : MonoBehaviour
 
             // make a new button using the prefab button template in the results list container
             var btn = Instantiate(resultButtonPrefab, resultsContainer);
-            
+
             // find and set the labels of the button to the actual room and building name
             var labelTexts = btn.GetComponentsInChildren<TextMeshProUGUI>(true);
             foreach (var text in labelTexts)
@@ -246,20 +246,24 @@ public class ClassSearchFunction : MonoBehaviour
             }
 
             //Debug.Log(items[actualIndex].targetObject);
-            btn.SetTarget(items[actualIndex].targetObject);
+            if (items[actualIndex].targetObject != null)
+                btn.SetTarget(items[actualIndex].targetObject);
+                
             // clear existing listeners
             btn.onClick.RemoveAllListeners();
-            
+
             // set to call select by index function on button click
             btn.onClick.AddListener(() =>
             {
+             
                 SelectByIndex(actualIndex);
-    
+                
                 if (arToggle != null)
                     arToggle.enableNavigationMode();
-                 
+
             });
         }
+   
     }
 
     // print user messages
