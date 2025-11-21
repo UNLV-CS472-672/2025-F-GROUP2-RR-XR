@@ -340,6 +340,9 @@ namespace Immersal.Samples.Navigation
 
         public void DisplayArrivedNotification()
         {
+            if(markerManager != null)
+                markerManager.hideMarkersVisual();
+                
             if (XRToggle != null)
                 XRToggle.DisableNavigationMode();
 #if !(UNITY_STANDALONE)
