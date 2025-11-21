@@ -21,7 +21,7 @@ public class signLabelLook : MonoBehaviour
     }
     void Start()
     {
-        Debug.Log("FUCK");
+        
         if (player == null && Camera.main != null)
             player = Camera.main.transform;
     }
