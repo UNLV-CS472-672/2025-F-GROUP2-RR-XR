@@ -22,6 +22,7 @@ public class createLabel : MonoBehaviour
     //CreateLabel - To create/initialize label object to Unity, 
     private void labelCreate(Transform target)
     {
+        Debug.Log("SDFLKJSFD");
         //Create the object
         // that will store the sign(shape)
         // text will be dynamic based on target information

@@ -21,6 +21,7 @@ public class signLabelLook : MonoBehaviour
     }
     void Start()
     {
+        Debug.Log("FUCK");
         if (player == null && Camera.main != null)
             player = Camera.main.transform;
     }
@@ -43,7 +44,7 @@ public class signLabelLook : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.transform == player);
-        if (player != null & other.transform == player)
+        if (player != null && other.transform == player)
         {
             playerIsClose = true;
         }
