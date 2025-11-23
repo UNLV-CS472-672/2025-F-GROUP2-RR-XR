@@ -18,7 +18,7 @@ public class XRToggle : MonoBehaviour
     public static XRToggle Instance;
 
     [SerializeField]
-    private ARCameraBackground arCameraBackground;
+    internal ARCameraBackground arCameraBackground;
 
     //THIS SCRIPT TOOK ME HOURS TO MAKE AND THINK ABOUT
     //NEVER IN MY LIFE I HAVE SPENT SOO MUCH TIME DEBUGGING CODE

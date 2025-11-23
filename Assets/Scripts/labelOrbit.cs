@@ -38,4 +38,29 @@ public class labelOrbit : MonoBehaviour
         //euler.x = 0f;
         //transform.eulerAngles = euler;
     }
+
+    // internal method to emulate start
+    internal void initializeOrbit()
+    {
+        offset = new Vector3(0, 0.2f, radius);
+        transform.position = center.position + offset;
+    }
+
+    // internal method to emulate update
+    internal void rotateOrbitIfAllowed()
+    {
+        if (lookScript != null && lookScript.getPlayerIsClose())
+            return;
+
+        if (center == null)
+            return;
+
+        transform.Rotate(rotationAxis * speed * Time.deltaTime, Space.Self);
+    }
+
+    // allows test to access signLabelLook
+    internal void setLookScript(signLabelLook look)
+    {
+        lookScript = look;
+    }
 }

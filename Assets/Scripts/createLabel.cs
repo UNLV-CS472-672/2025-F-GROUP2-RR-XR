@@ -20,7 +20,7 @@ public class createLabel : MonoBehaviour
     }
 
     //CreateLabel - To create/initialize label object to Unity, 
-    private void labelCreate(Transform target)
+    internal void labelCreate(Transform target)
     {
         //Create the object
         // that will store the sign(shape)
@@ -72,7 +72,7 @@ public class createLabel : MonoBehaviour
         
 
     }
-    private void labelDestroy(Transform target)
+    internal void labelDestroy(Transform target)
     {
         foreach(Transform child in target)
         {

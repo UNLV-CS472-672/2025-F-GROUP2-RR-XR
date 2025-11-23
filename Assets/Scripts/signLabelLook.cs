@@ -40,7 +40,7 @@ public class signLabelLook : MonoBehaviour
             transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation*Quaternion.Euler(0, 180f, 0), Time.deltaTime * 3f);
         }
     }
-    void OnTriggerEnter(Collider other)
+    internal void OnTriggerEnter(Collider other)
     {
         //Debug.Log(other.transform == player);
         if (player != null & other.transform == player)
@@ -48,11 +48,23 @@ public class signLabelLook : MonoBehaviour
             playerIsClose = true;
         }
     }
-    void OnTriggerExit(Collider other)
+    internal void OnTriggerExit(Collider other)
     {
         if(player != null && other.transform == player)
         {
             playerIsClose = false;
+        }
+    }
+
+    //internal function to emulate update
+    internal void rotateTowardPlayer()
+    {
+        if (playerIsClose && player != null)
+        {
+            Vector3 lookDir = player.position - transform.position;
+            lookDir.y = 0f;
+            Quaternion targetRotation = Quaternion.LookRotation(lookDir);
+            transform.rotation = Quaternion.Slerp(transform.rotation, targetRotation*Quaternion.Euler(0, 180f, 0), Time.deltaTime * 3f);
         }
     }
 }
