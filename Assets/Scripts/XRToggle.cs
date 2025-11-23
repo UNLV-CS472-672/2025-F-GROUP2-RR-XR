@@ -37,7 +37,7 @@ public class XRToggle : MonoBehaviour
     {
         //when program starts, make camera hidden
         setARMode(false);
- 
+
     }
     //This function will change the UI to navigation Mode
     public void enableNavigationMode()
@@ -74,10 +74,13 @@ public class XRToggle : MonoBehaviour
         arModeActive = !arModeActive;
         setARMode(arModeActive);
     }
-
+    public bool getARMode()
+    {
+        return arModeActive;
+    }
     public void setARMode(bool enable)
     {
-     
+        arModeActive = false;
         if (arCameraBackground != null)
             arCameraBackground.enabled = enable;
         //will make the screen appear when startup
