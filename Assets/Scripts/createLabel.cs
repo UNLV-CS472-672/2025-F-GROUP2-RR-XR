@@ -12,7 +12,8 @@ public class createLabel : MonoBehaviour
     private GameObject currentLabel;
     public float labelHeightOffset = 0.3f;
     private hideMarkers parentManager;
-   
+    [SerializeField]
+    private XRToggle XRToggle;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -22,6 +23,7 @@ public class createLabel : MonoBehaviour
     //CreateLabel - To create/initialize label object to Unity, 
     private void labelCreate(Transform target)
     {
+       
         //Create the object
         // that will store the sign(shape)
         // text will be dynamic based on target information
@@ -82,12 +84,14 @@ public class createLabel : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(parentManager.getnavActive());
-        if(!parentManager.getnavActive())
-            labelCreate(parentObject.transform);
+        //Debug.Log(XRToggle.getARMode());
+        if(XRToggle.getARMode())
+            if(!parentManager.getnavActive())
+                labelCreate(parentObject.transform);
     }
     public void OnTriggerExit(Collider other)
     {
+
         labelDestroy(parentObject.transform);
         
     }
@@ -95,6 +99,10 @@ public class createLabel : MonoBehaviour
     void Update()
     {
         if(parentManager.getnavActive())
+        {
+            labelDestroy(parentObject.transform);
+        }
+        else if(!XRToggle.getARMode())
         {
             labelDestroy(parentObject.transform);
         }
