@@ -8,9 +8,11 @@ TrueTypeFontImporter:
   characterSpacing: 0
   characterPadding: 1
   includeFontData: 1
+  fontName: Roboto
   fontNames:
   - Roboto
-  fallbackFontReferences: []
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: d1e0095e0fe9d44b99e4798a77b210dc, type: 3}
   customCharacters: 
   fontRenderingMode: 0
   ascentCalculationMode: 1
@@ -19,3 +21,10 @@ TrueTypeFontImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Demo/Fonts/Roboto/Roboto-Bold.ttf
+  uploadId: 673355

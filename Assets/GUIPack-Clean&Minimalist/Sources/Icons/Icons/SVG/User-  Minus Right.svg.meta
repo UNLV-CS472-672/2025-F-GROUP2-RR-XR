@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 28c0ef138b8d4484fb958e84fc3127c4
+guid: 09146c543000940219016eb7e2703008
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/User-  Minus
+    Right.svg
+  uploadId: 673355

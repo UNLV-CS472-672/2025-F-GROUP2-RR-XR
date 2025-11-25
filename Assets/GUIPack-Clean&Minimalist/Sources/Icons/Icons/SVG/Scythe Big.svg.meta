@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 1f29112c58ca645fe9ff6e53a0905579
+guid: 053227fcc4c0d4584b1dc1f3b9a185d3
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Scythe Big.svg
+  uploadId: 673355

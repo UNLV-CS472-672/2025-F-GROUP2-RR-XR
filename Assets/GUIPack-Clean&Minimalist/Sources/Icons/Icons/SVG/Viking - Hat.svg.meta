@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 30d325ed8e28b437f8790a0d4e258756
+guid: 07c643b6c5df649aeb3469975711bc10
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Viking - Hat.svg
+  uploadId: 673355

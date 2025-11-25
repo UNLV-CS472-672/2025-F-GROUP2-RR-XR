@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: ef4c7dfdf1d4f4bf29c18e7ffc74ca4e
+guid: 52362ad26e0e84c828a88ab2b5ac305a
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Potion - Skull.svg
+  uploadId: 673355

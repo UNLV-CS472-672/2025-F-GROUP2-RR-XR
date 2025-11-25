@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 3e20953ab793646d9be5e1c6d57c32be
+guid: 02fa6461224ad451daf621e82bd22151
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Pinterest.svg
+  uploadId: 673355

@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: e057b16884e57487c8bd130c69384ab0
+guid: 741b4bbb7dc774373b2d42e4eb57ffdd
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Hammer.svg
+  uploadId: 673355

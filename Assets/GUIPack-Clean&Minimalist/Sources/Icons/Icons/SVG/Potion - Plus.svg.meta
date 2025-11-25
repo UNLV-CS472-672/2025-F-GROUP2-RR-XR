@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: abe9f3a8733b44c6ea7124c9c7751b00
+guid: c55ee125f08e1454b80fb39f8c0c23b8
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Potion - Plus.svg
+  uploadId: 673355

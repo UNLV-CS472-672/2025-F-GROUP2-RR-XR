@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 191ca1817c5994a138d2238dfb5be7b7
+guid: d7c9bfb1bb5c14a97814ca4039c5367d
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Previous.svg
+  uploadId: 673355

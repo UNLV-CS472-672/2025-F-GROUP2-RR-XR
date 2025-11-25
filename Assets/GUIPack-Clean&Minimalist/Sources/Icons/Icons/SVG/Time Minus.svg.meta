@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 37f4a7e069e124f7da99f4bdcd42a0b9
+guid: 77d19ad516f5d454ca1773143e514ae5
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Time Minus.svg
+  uploadId: 673355

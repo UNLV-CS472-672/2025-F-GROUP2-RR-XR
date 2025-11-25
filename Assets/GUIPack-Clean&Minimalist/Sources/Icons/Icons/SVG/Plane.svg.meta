@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 785210c91d1a14f25b1472a55ff3a36e
+guid: 06ea7425f42ba48d8ae2da4bccbe542b
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Plane.svg
+  uploadId: 673355
