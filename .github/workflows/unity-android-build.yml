@@ -1,0 +1,58 @@
+name: Unity Android Build
+
+on:
+  push:
+    branches: [ main, dev ]
+  pull_request:
+    branches: [ main, dev ]
+
+jobs:
+  build-android:
+    name: Build Android
+    runs-on: ubuntu-latest
+
+    env:
+      UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
+      UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
+      UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
+      # For Unity free license activation with game-ci you can alternatively use UNITY_LICENSE
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          lfs: true  # if you use Git LFS for big assets
+
+      - name: Cache Unity Library
+        uses: actions/cache@v4
+        with:
+          path: |
+            Library
+            **/Library
+          key: Library-${{ runner.os }}-${{ hashFiles('**/Packages/manifest.json') }}
+          restore-keys: |
+            Library-${{ runner.os }}-
+
+      # OPTIONAL: If your project is in a subfolder, set working-directory
+      # - name: Set project path
+      #   run: echo "PROJECT_PATH=UnityProject" >> $GITHUB_ENV
+
+      - name: Unity Android Build
+        uses: game-ci/unity-builder@v4
+        with:
+          unityVersion: 2022.3.14f1          # <-- put your Unity version here
+          targetPlatform: Android
+          projectPath: .                     # or ./UnityProject if needed
+          buildName: RebelReality
+          buildPath: build
+          buildFile: RebelReality.apk
+        env:
+          UNITY_EMAIL: ${{ env.UNITY_EMAIL }}
+          UNITY_PASSWORD: ${{ env.UNITY_PASSWORD }}
+          UNITY_SERIAL: ${{ env.UNITY_SERIAL }}
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: android-apk
+          path: build/**/*.apk
