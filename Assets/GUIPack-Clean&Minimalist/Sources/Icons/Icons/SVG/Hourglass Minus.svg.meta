@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: c2c6feb7984aa4f499c6ec7a382d9e5e
+guid: d170b7cf63fbd4123a2f1065832045a9
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Hourglass Minus.svg
+  uploadId: 673355

@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: d43a59174f1824ac7891e6084c20aa96
+guid: b6ff1c296399242c08a60ced8f4b3843
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Shopping Cart
+    - Amount.svg
+  uploadId: 673355

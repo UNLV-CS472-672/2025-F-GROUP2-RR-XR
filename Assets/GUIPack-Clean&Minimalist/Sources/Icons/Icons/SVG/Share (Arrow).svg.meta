@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 4a1259a2c590944409a8917ab5b09b43
+guid: f0eea1cbe657146938c58defb21cf2ae
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Share (Arrow).svg
+  uploadId: 673355

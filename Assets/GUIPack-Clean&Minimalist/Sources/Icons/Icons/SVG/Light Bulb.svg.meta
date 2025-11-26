@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: a309f24b22cd54b608b648ae35b8cf7f
+guid: de3149830c7ff4c43b09d8d370065870
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Light Bulb.svg
+  uploadId: 673355

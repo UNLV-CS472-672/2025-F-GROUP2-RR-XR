@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 974d1739d23134979b63b59848d87394
+guid: ff0e041f0a24e4227a4ea73bfa9a45c5
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Repeat.svg
+  uploadId: 673355

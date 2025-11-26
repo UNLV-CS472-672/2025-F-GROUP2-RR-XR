@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: 1039cb766f64d48aba069bab58c6be7f
+guid: f6c02e5c3166143c295a876d712addfb
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/List x3.svg
+  uploadId: 673355

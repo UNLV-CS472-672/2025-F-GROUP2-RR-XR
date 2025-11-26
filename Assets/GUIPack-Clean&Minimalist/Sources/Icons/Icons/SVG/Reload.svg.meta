@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: e8840bbf5c2ce499ea23904377c0474e
+guid: c9a62181c644e44d683031c81b5b6d31
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Reload.svg
+  uploadId: 673355
