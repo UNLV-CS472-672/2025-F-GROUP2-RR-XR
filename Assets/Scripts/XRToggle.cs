@@ -83,8 +83,8 @@ public class XRToggle : MonoBehaviour
     public void setARMode(bool enable)
     {
         arModeActive = false;
-        if (arCameraBackground != null)
-            arCameraBackground.enabled = enable;
+        //if (arCameraBackground != null)
+        //    arCameraBackground.enabled = enable;
         //will make the screen appear when startup
         if (userUI != null)
         {
