@@ -4,9 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/RebelReality.unity
+    guid: 302e5a217b5a14e16a0b2a6962e8812a
   m_configObjects:
-    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 2bfcf2b8be60946a092116eb392d8cea, type: 2}
-    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: 799dea8e7e3524104b16c043e7559e9a, type: 2}
-    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: cbdc3fc38b3a64d018e5771946ffe2d4, type: 2}
+    UnityEditor.XR.ARCore.ARCoreSettings: {fileID: 11400000, guid: 309ab1062c551f844a1e5bfe22c865cf, type: 2}
+    UnityEditor.XR.ARKit.ARKitSettings: {fileID: 11400000, guid: 5a5bbaad75362554888457c53d70b871, type: 2}
+    com.unity.xr.arfoundation.simulation_settings: {fileID: 11400000, guid: c868ac24fb3690a41bcdce6ae75248d1, type: 2}
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 3c968216c773ac04cb6b0a9d2d93d6dc, type: 2}
+    com.unity.xr.openxr.settings4: {fileID: 11400000, guid: 5677eba62843dd543886a51f09e49c32, type: 2}
   m_UseUCBPForAssetBundles: 0
