@@ -55,6 +55,7 @@ public class XRToggle : MonoBehaviour
         userUI.SetActive(false);
         setChildrenActive(searchUI, false);
         setChildrenActive(bottomButtons, true);
+        
 
 
     }
@@ -66,6 +67,7 @@ public class XRToggle : MonoBehaviour
         setChildrenActive(navUI, true);
         setChildrenActive(bottomButtons, false);
         userUI.SetActive(true);
+        
     }
     //This function will set to userUI when program starts
     public void toggleARMode()
