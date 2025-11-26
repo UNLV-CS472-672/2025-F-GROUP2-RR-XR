@@ -152,8 +152,10 @@ namespace Immersal.Samples.Navigation
 
         private void Update()
         {
+            
             if(m_managerInitialized && m_navigationState == NavigationState.Navigating)
             {
+              
                 TryToFindPath(m_NavigationTarget);
             }
         }
@@ -176,6 +178,7 @@ namespace Immersal.Samples.Navigation
                 markerManager.showMarker(m_targetTransform, true);
             }
             TryToFindPath(m_NavigationTarget);
+            XRToggle.enableNavigationMode();
         }
 
         public void TryToFindPath(IsNavigationTarget navigationTarget)
@@ -225,6 +228,7 @@ namespace Immersal.Samples.Navigation
 
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
+                        
                     }
                     break;
 
@@ -247,6 +251,7 @@ namespace Immersal.Samples.Navigation
                     {
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
+                         
                     }
                     break;
             }
