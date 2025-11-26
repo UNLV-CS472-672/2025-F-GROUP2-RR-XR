@@ -176,6 +176,7 @@ namespace Immersal.Samples.Navigation
                 markerManager.showMarker(m_targetTransform, true);
             }
             TryToFindPath(m_NavigationTarget);
+            XRToggle.enableNavigationMode();
         }
 
         public void TryToFindPath(IsNavigationTarget navigationTarget)
