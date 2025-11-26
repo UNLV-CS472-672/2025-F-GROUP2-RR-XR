@@ -48,10 +48,16 @@ namespace Immersal.Samples.Navigation
         public void SetTarget(GameObject go)
         {
             targetObject = go;
+           
         }
 
         override public void OnPointerClick(PointerEventData pointerEventData)
         {
+            //Toggle to the menu
+            XRToggle toggle = FindObjectOfType<XRToggle>();
+            if (toggle != null)
+                toggle.enableNavigationMode();
+
             NavigationManager.Instance.InitializeNavigation(this);
             NavigationManager.Instance.ToggleTargetsList();
             base.OnPointerClick(pointerEventData);

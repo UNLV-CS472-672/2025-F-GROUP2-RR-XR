@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.Events;
 using UnityEngine.UI;
 using TMPro;
+using Immersal.Samples.Navigation;
 
 public class ClassSearchFunction : MonoBehaviour
 {
@@ -15,36 +16,52 @@ public class ClassSearchFunction : MonoBehaviour
 
         // keys for routing
         public string buildingName;
+        //ADDED BY ALEX
+        //maker name
+        public string markerName;
+        public GameObject targetObject=null;
     }
 
     [SerializeField] private List<RoomItem> items = new List<RoomItem>();
     [SerializeField] private TMP_InputField searchBox;
     [SerializeField] private TextMeshProUGUI resultLabel;
     [SerializeField] private RectTransform resultsContainer;
-    [SerializeField] private Button resultButtonPrefab;
+    [SerializeField] private NavigationTargetListButton resultButtonPrefab;
 
     // event to use for id, destinationID updated when a valid destination is selected
     [SerializeField] private UnityEvent<string> OnDestinationSelected;
-
+    [SerializeField] private XRToggle arToggle;
     private void Awake()
     {
+        items.Clear();
         if (items == null || items.Count == 0)
         {
-            // list of rooms with corresponding IDs
+            // list of rooms with corresponding building names
             items = new List<RoomItem>
             {
                 // AEB rooms
-                new RoomItem { roomName = "100 COLLABORATORIUM", buildingName = "AEB" },
-                new RoomItem { roomName = "130 FLEXATORIUM", buildingName = "AEB" },
-                new RoomItem { roomName = "140 CLASSROOM", buildingName = "AEB" },
-                new RoomItem { roomName = "145 CLASSROOM", buildingName = "AEB" },
-                new RoomItem { roomName = "160 MAKER SPACE", buildingName = "AEB" },
-                new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", buildingName = "AEB" },
-                // TBE-A rooms
-                new RoomItem { roomName = "test", buildingName = "TBE-A" },
-                // TBE-B rooms
-                new RoomItem { roomName = "test", buildingName = "TBE-B" }
+                new RoomItem { roomName = "100 COLLABORATORIUM", buildingName = "AEB", markerName="100 Collaboration"},
+                new RoomItem { roomName = "130 FLEXATORIUM", buildingName = "AEB", markerName="130 Flexatorium"},
+                new RoomItem { roomName = "140 CLASSROOM", buildingName = "AEB", markerName="140 Classroom"},
+                //new RoomItem { roomName = "145 CLASSROOM", buildingName = "AEB", markerName=""},
+                new RoomItem { roomName = "150 FLEXIBLE CLASSROOM", buildingName = "AEB", markerName="150 flexible classroom "},
+                new RoomItem { roomName = "160 MAKER SPACE", buildingName = "AEB", markerName="160 Maker Space" },
 
+                new RoomItem { roomName = "RESTROOM", buildingName = "AEB", markerName="Restroom" },
+                new RoomItem { roomName = "ELEVATORS", buildingName = "AEB", markerName="Elevators" },
+                // TBE-A rooms
+                new RoomItem { roomName = "101 GREAT HALL", buildingName = "TBE-A" },
+                new RoomItem { roomName = "107 CLASSROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "120 MEETING ROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "305 DATA CENTER", buildingName = "TBE-A" },
+                new RoomItem { roomName = "307 CONFERENCE ROOM", buildingName = "TBE-A" },
+                new RoomItem { roomName = "311 COMPUTER LAB", buildingName = "TBE-A" },
+                // TBE-B rooms
+                new RoomItem { roomName = "170 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "172 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "174 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "176 CLASSROOM", buildingName = "TBE-B" },
+                new RoomItem { roomName = "178 CLASSROOM", buildingName = "TBE-B" }
             };
         }
 
@@ -64,7 +81,27 @@ public class ClassSearchFunction : MonoBehaviour
             ClearResults();
         }
     }
+    
+    //ADDED BY: ALEX YAMASAKI
+    //Purpose:
+    //Based on the name of the markerName, 
+    // it would check and see if the object exists
 
+    private void Start()
+    {
+        //Debug.Log(items[0].markerName);
+        for(int i = 0; i < items.Count; i++)
+        {
+            if(!string.IsNullOrEmpty(items[i].markerName))
+            {
+                items[i].targetObject = GameObject.Find(items[i].markerName);
+                if(items[i].targetObject == null)
+                {
+                    Debug.LogWarning($"Warning: Couldn't find gameObject: {items[i].markerName}");
+                }
+            }
+        }
+    }
     private void UpdateResultsList(string raw)
     {
         string query = (raw ?? string.Empty).Trim();
@@ -111,6 +148,7 @@ public class ClassSearchFunction : MonoBehaviour
      // select a room by its index
     public void SelectByIndex(int index)
     {
+        
         // check if out of bounds
         if (index < 0 || index >= items.Count)
         {
@@ -119,10 +157,11 @@ public class ClassSearchFunction : MonoBehaviour
 
         // get the room value using the index
         var chosen = items[index];
-
+        
+       
         // return key for routing
         OnDestinationSelected?.Invoke(chosen.roomName);
-
+        
         // print user messages
         Show($"Room selected: {chosen.roomName}");
     }
@@ -142,11 +181,13 @@ public class ClassSearchFunction : MonoBehaviour
         // for every room
         for (int i = 0; i < items.Count; i++)
         {
-            // get label of current room
-            string s = items[i].roomName ?? string.Empty;
+            // get label of current room and its building name
+            string room = items[i].roomName ?? string.Empty;
+            string building = items[i].buildingName ?? string.Empty;
 
-            // compare it to the query to see if it contains it (not case sensitive)
-            if (s.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
+            // compare both fields to the query (not case sensitive)
+            if (room.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0 ||
+                building.IndexOf(query, StringComparison.OrdinalIgnoreCase) >= 0)
             {
                 // add to list of matches if match
                 matches.Add(i);
@@ -178,7 +219,7 @@ public class ClassSearchFunction : MonoBehaviour
         }
         return -1;
     }
-
+    
     // delete existing results under the results container
     private void ClearResults()
     {
@@ -214,12 +255,25 @@ public class ClassSearchFunction : MonoBehaviour
                     text.text = items[actualIndex].buildingName;
             }
 
+            //Debug.Log(items[actualIndex].targetObject);
+            if (items[actualIndex].targetObject != null)
+                btn.SetTarget(items[actualIndex].targetObject);
+                
             // clear existing listeners
             btn.onClick.RemoveAllListeners();
-            
+
             // set to call select by index function on button click
-            btn.onClick.AddListener(() => SelectByIndex(actualIndex));
+            btn.onClick.AddListener(() =>
+            {
+             
+                SelectByIndex(actualIndex);
+                
+                if (arToggle != null)
+                    arToggle.enableNavigationMode();
+
+            });
         }
+   
     }
 
     // print user messages
@@ -230,6 +284,7 @@ public class ClassSearchFunction : MonoBehaviour
             // parse result tags as rich text
             resultLabel.richText = true;
             resultLabel.text = message;
+            
         }
     }
 }

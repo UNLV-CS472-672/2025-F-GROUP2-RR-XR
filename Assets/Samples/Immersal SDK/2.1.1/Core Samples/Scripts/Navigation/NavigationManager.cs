@@ -51,6 +51,9 @@ namespace Immersal.Samples.Navigation
         [SerializeField]
         private GameObject m_StopNavigationButton = null;
 
+        [SerializeField]
+        private GameObject userUI;
+
         // Navigation Settings
         private enum NavigationMode { NavMesh, Graph};
         [Header("Settings")]
@@ -90,9 +93,10 @@ namespace Immersal.Samples.Navigation
 
         private enum NavigationState { NotNavigating, Navigating};
         private NavigationState m_navigationState = NavigationState.NotNavigating;
-
+        [SerializeField] 
+        private XRToggle XRToggle;
         private static NavigationManager instance = null;
-
+        
         [SerializeField]
         private hideMarkers markerManager;
         public static NavigationManager Instance
@@ -135,12 +139,13 @@ namespace Immersal.Samples.Navigation
 
         private void Start()
         {
+            
             InitializeNavigationManager();
 
             if (m_managerInitialized)
             {
-                m_TargetsListIcon.sprite = m_ShowListIcon;
-                m_TargetsListText.text = "Show Navigation Targets";
+                //m_TargetsListIcon.sprite = m_ShowListIcon;
+                //m_TargetsListText.text = "Show Navigation Targets";
               
             }
         }
@@ -161,7 +166,9 @@ namespace Immersal.Samples.Navigation
                 return;
             }
 
+            //MAKE THE PARENT OF STOP NAVIGATION BUTTON APPEAR HERE
             m_targetTransform = button.targetObject.transform;
+            //Debug.Log(m_targetTransform);
             m_NavigationTarget = button.targetObject.GetComponent<IsNavigationTarget>();
             if(markerManager != null)
             {
@@ -184,11 +191,12 @@ namespace Immersal.Samples.Navigation
 
             if (distanceToTarget < m_ArrivedDistanceThreshold)
             {
+                //This is the part when user arrives destination
                 m_navigationActive = false;
 
                 m_navigationState = NavigationState.NotNavigating;
                 UpdateNavigationUI(m_navigationState);
-
+               
                 DisplayArrivedNotification();
                 return;
             }
@@ -214,6 +222,7 @@ namespace Immersal.Samples.Navigation
                     }
                     else
                     {
+
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
                     }
@@ -278,15 +287,19 @@ namespace Immersal.Samples.Navigation
 
         public void ToggleTargetsList()
         {
+            
             if (!m_managerInitialized)
             {
                 Debug.LogWarning("NavigationManager: Navigation Manager not properly initialized.");
                 return;
             }
-
+            
             if (m_TargetsList.activeInHierarchy)
             {
-                m_TargetsList.SetActive(false);
+                if (userUI != null)
+                    userUI.SetActive(false);
+                    
+                m_TargetsList.SetActive(true);
                 if (m_ShowListIcon != null && m_TargetsListIcon != null)
                 {
                     m_TargetsListIcon.sprite = m_ShowListIcon;
@@ -327,6 +340,13 @@ namespace Immersal.Samples.Navigation
 
         public void DisplayArrivedNotification()
         {
+            if(markerManager != null){
+                markerManager.hideMarkersVisual();
+                markerManager.toggleNavActive();
+            }
+            if (XRToggle != null)
+                XRToggle.DisableNavigationMode();
+            
 #if !(UNITY_STANDALONE)
             Handheld.Vibrate();
 #endif
@@ -336,20 +356,28 @@ namespace Immersal.Samples.Navigation
 
         public void StopNavigation()
         {
+            if (m_targetTransform == null)
+                return;
+
             m_navigationActive = false;
 
             m_navigationState = NavigationState.NotNavigating;
             UpdateNavigationUI(m_navigationState);
-            if(markerManager != null && m_targetTransform != null)
+
+            if (markerManager != null && m_targetTransform != null)
             {
                 markerManager.toggleNavActive();
                 markerManager.hideMarkersVisual();
             }
             NotificationManager.Instance.GenerateNotification("Navigation stopped.");
+            
+            if (XRToggle != null)
+                XRToggle.DisableNavigationMode();
         }
 
         private void UpdateNavigationUI(NavigationState navigationState)
         {
+            
             switch(navigationState)
             {
                 case NavigationState.NotNavigating:
@@ -357,8 +385,10 @@ namespace Immersal.Samples.Navigation
                     m_navigationPathObject.SetActive(false);
                     break;
                 case NavigationState.Navigating:
+                    
                     m_StopNavigationButton.SetActive(true);
                     m_navigationPathObject.SetActive(true);
+                    //XRToggle.enableNavigationMode();
                     break;
             }
         }
@@ -421,34 +451,35 @@ namespace Immersal.Samples.Navigation
             if (m_ShowListIcon == null)
             {
                 Debug.LogWarning("NavigationManager: \"Show List\" icon is missing.");
-                return;
+                //return;
             }
 
             if (m_SelectTargetIcon == null)
             {
                 Debug.LogWarning("NavigationManager: \"Select Target\" icon is missing.");
-                return;
+                //return;
             }
 
             if (m_TargetsListIcon == null)
             {
                 Debug.LogWarning("NavigationManager: \"Targets List\" icon reference is missing.");
-                return;
+                //return;
             }
 
             if (m_TargetsListText == null)
             {
                 Debug.LogWarning("NavigationManager: \"Targets List\" text reference is missing.");
-                return;
+                //return;
             }
 
             if (m_StopNavigationButton == null)
             {
                 Debug.LogWarning("NavigationManager: Stop Navigation Button reference is missing.");
-                return;
+                //return;
             }
 
             m_managerInitialized = true;
+            //Debug.Log(m_managerInitialized);
         }
 
         private Vector3 XRSpaceToUnity(Transform XRSpace, Matrix4x4 XRSpaceOffset, Vector3 pos)

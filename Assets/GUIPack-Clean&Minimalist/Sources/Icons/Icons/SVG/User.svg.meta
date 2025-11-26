@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: a1edd93a8e1bc4a56b2186218a79113f
+guid: d92fcee3879804b2788542886a858a68
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/User.svg
+  uploadId: 673355

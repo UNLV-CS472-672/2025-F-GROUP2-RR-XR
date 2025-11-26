@@ -1,7 +1,14 @@
 fileFormatVersion: 2
-guid: dc44e3363313c447fb18a88147da8c74
+guid: 149cf540b7d224064afc6577e5824cd4
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Link.svg
+  uploadId: 673355

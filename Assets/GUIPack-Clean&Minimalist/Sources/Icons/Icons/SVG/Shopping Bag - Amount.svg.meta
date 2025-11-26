@@ -1,7 +1,15 @@
 fileFormatVersion: 2
-guid: 924b80861815a45f4aaf9c7541c3b8da
+guid: 7427e53416eeb4b309c66f8af957a745
 DefaultImporter:
   externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 75123
+  packageName: Clean & Minimalist GUI Pack
+  packageVersion: 3.0.6
+  assetPath: Assets/GUIPack-Clean&Minimalist/Sources/Icons/Icons/SVG/Shopping Bag
+    - Amount.svg
+  uploadId: 673355
