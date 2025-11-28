@@ -1,3 +1,4 @@
+ 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
 # Get latest from https://github.com/github/gitignore/blob/main/Unity.gitignore
@@ -14,7 +15,6 @@ Logs/
 [Bb]uild/
 [Bb]uilds/
 [Ll]ogs/
-[Uu]ser[Ss]ettings/
 *.log
 
 # By default unity supports Blender asset imports, *.blend1 blender files do not need to be commited to version control.
@@ -108,7 +108,36 @@ InitTestScene*.unity*
 # Auto-generated scenes by play mode tests
 /[Aa]ssets/[Ii]nit[Tt]est[Ss]cene*.unity*
 
-<<<<<<< HEAD
-=======
-Builds/Libraries/libiPhone-lib.a
->>>>>>> dev-camera-feature
+
+# Ignore Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+Obj/
+ServerData/
+
+# IDE / editor settings
+.vs/
+.vscode/
+.idea/
+*.csproj
+*.sln
+*.user
+*.unityproj
+*.pidb
+*.booproj
+
+# Unity auto-generated cache / export files
+*.unitypackage
+*.apk
+*.aab
+
+# System files
+.DS_Store
+Thumbs.db
+ 
+UserSettings/EditorUserSettings.asset
+UserSettings/Layouts/default-6000.dwlt

@@ -16,6 +16,9 @@ namespace Immersal.Samples.Util
 {
     public class NotificationManager : MonoBehaviour
     {
+        private float errorY = -1300;
+
+        private float defaultVal = 0;
         [SerializeField]
         private GameObject m_Notification = null;
         private CreateNotification m_CreateNotification = null;
@@ -61,7 +64,24 @@ namespace Immersal.Samples.Util
         {
             m_Notification.SetActive(true);
             m_CreateNotification.SetIconAndText(type, text);
-        }
+         
+            //Change positions of the notification
+            RectTransform rt = m_Notification.GetComponent<RectTransform>();
+            Vector2 newPos = rt.anchoredPosition;
+            switch(type)
+            {
+                case CreateNotification.NotificationType.Info:
+                    newPos = new Vector2(defaultVal, defaultVal);
+                    break;
+                default:
+                    newPos = new Vector2(defaultVal, defaultVal);
+                    break;
+                
+
+            }
+            rt.anchoredPosition = newPos;
+        }   
+
 
         public void GenerateNotification(string text)
         {
