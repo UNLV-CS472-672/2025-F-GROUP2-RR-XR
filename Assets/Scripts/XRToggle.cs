@@ -17,6 +17,10 @@ public class XRToggle : MonoBehaviour
     public GameObject bottomButtons;
  
     public static XRToggle Instance;
+    private hideMarkers parentManager;
+
+    [SerializeField]
+    private GameObject background;
 
     [SerializeField]
     private ARCameraBackground arCameraBackground;
@@ -37,7 +41,7 @@ public class XRToggle : MonoBehaviour
     {
         //when program starts, make camera hidden
         setARMode(false);
-
+        arCameraBackground.enabled = true;
     }
     //This function will change the UI to navigation Mode
     public void enableNavigationMode()
@@ -47,12 +51,13 @@ public class XRToggle : MonoBehaviour
         //BRUTE FORCING METHOD
         //WHEN USER PRESSES BUTTON IT WILL REMOVE USER UI
         //AND MAKE SEARCHBAR APPEAR AND MAKE THE HOMESCREEN BOTTOM BUTTON APPEAR
-
+ 
         //This will empty the search box once user enters UI mode. 
         if (searchBox != null)
             searchBox.text = string.Empty;
         arModeActive = true;
         userUI.SetActive(false);
+        background.SetActive(false);
         setChildrenActive(searchUI, false);
         setChildrenActive(bottomButtons, true);
         
