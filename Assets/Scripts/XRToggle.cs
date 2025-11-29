@@ -10,7 +10,8 @@ public class XRToggle : MonoBehaviour
     private bool arModeActive = false;
     public GameObject userUI;
     public GameObject navUI;
-
+    [SerializeField]
+    private GameObject background;
     public GameObject searchUI;
     [SerializeField] private TMP_InputField searchBox;
 
@@ -55,7 +56,7 @@ public class XRToggle : MonoBehaviour
         userUI.SetActive(false);
         setChildrenActive(searchUI, false);
         setChildrenActive(bottomButtons, true);
-        
+        background.SetActive(false);
 
 
     }
