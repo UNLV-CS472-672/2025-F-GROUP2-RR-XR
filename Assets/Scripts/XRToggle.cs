@@ -13,11 +13,14 @@ public class XRToggle : MonoBehaviour
     [SerializeField]
     private GameObject background;
     public GameObject searchUI;
-    [SerializeField] private TMP_InputField searchBox;
+    [SerializeField] 
+    private TMP_InputField searchBox;
 
     public GameObject bottomButtons;
  
     public static XRToggle Instance;
+    [SerializeField]
+    private GameObject searchVarient;
 
     [SerializeField]
     private ARCameraBackground arCameraBackground;
@@ -54,9 +57,9 @@ public class XRToggle : MonoBehaviour
             searchBox.text = string.Empty;
         arModeActive = true;
         userUI.SetActive(false);
-        setChildrenActive(searchUI, false);
-        setChildrenActive(bottomButtons, true);
-        background.SetActive(false);
+        setChildrenActiveFilter(searchUI, false);
+        setChildrenActiveFilter(bottomButtons, true);
+        setChildrenActiveFilter(searchVarient, false);
 
 
     }
@@ -65,9 +68,13 @@ public class XRToggle : MonoBehaviour
     {
     
         arModeActive = false;
-        setChildrenActive(navUI, true);
-        setChildrenActive(bottomButtons, false);
+        setChildrenActiveFilter(navUI, true);
+        setChildrenActiveFilter(bottomButtons, false);
+        Transform child = searchVarient.transform.Find("MainMenuBackground");
+        if(child != null)
+            child.gameObject.SetActive(true);
         userUI.SetActive(true);
+        
         
     }
     //This function will set to userUI when program starts
@@ -100,7 +107,7 @@ public class XRToggle : MonoBehaviour
        
     }
     //Void function that will set child objects appear/disappear
-    public void setChildrenActive(GameObject parent, bool state)
+    public void setChildrenActiveFilter(GameObject parent, bool state)
     {
         
         if (parent == null)
