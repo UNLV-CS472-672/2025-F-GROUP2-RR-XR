@@ -223,7 +223,7 @@ namespace Immersal.Samples.Navigation
                     }
                     else
                     {
-
+                        XRToggle.setArMode(false);
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
                     }
