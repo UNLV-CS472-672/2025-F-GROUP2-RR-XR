@@ -176,7 +176,7 @@ namespace Immersal.Samples.Navigation
                 markerManager.showMarker(m_targetTransform, true);
             }
             TryToFindPath(m_NavigationTarget);
-            XRToggle.enableNavigationMode();
+            //XRToggle.enableNavigationMode();
         }
 
         public void TryToFindPath(IsNavigationTarget navigationTarget)
@@ -223,7 +223,7 @@ namespace Immersal.Samples.Navigation
                     }
                     else
                     {
-                        XRToggle.setArMode(false);
+                        //XRToggle.setArMode(false);
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
                     }
