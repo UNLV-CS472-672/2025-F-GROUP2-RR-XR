@@ -90,8 +90,13 @@ public class XRToggle : MonoBehaviour
     //This function will set to userUI when program starts
     public void toggleARMode()
     {
+        Transform child = searchVarient.transform.Find("MainMenuBackground");
+        if (child != null)
+            child.gameObject.SetActive(arModeActive);
         arModeActive = !arModeActive;
+        
         setARMode(arModeActive);
+        
     }
     public void setArMode(bool enable)
     {
@@ -109,6 +114,7 @@ public class XRToggle : MonoBehaviour
         if (userUI != null)
         {
             userUI.SetActive(!enable);
+
             //setChildrenActive(navUI, true);
             
         } 
