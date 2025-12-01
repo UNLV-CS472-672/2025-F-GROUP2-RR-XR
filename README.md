@@ -72,11 +72,6 @@
 - **GitHub Actions** - CI/CD automation for iOS builds
 - **Unity Input System 1.14.2** - Modern input handling
 
-### Testing & Education
-- **Python 3.8+** - Backend testing framework
-- **Flask** - REST API for TDD labs
-- **pytest** - Unit testing framework
-- **SQLAlchemy** - ORM for coverage testing labs
 
 ---
 
@@ -91,11 +86,6 @@
 - **macOS** (for iOS builds) with Xcode 14.0+
 - **iOS Device** with ARKit support (iPhone 6S or later recommended)
 - **Apple Developer Account** (for device deployment)
-
-### For Python Testing Labs
-- **Python 3.8+**
-- **pip** package manager
-- **virtualenv** or **venv**
 
 ### System Requirements
 - **OS**: macOS 12.0+ (for iOS builds) or Windows 10+ (for Unity Editor)
@@ -144,30 +134,6 @@ Dependencies are managed via Unity Package Manager and should auto-resolve on pr
    - Unity Input System
    - glTF Runtime
 
-### Python Testing Labs Setup (Optional)
-For the TDD and coverage testing labs:
-
-```bash
-# Navigate to TDD lab
-cd tdd_lab
-
-# Create virtual environment
-python3 -m venv venv
-
-# Activate virtual environment
-# On macOS/Linux:
-source venv/bin/activate
-# On Windows:
-# venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-
-# Run tests
-pytest
-```
-
----
 
 ## Project Structure
 
@@ -197,17 +163,6 @@ pytest
 │   └── GUIPack-Clean&Minimalist/   # UI component kit
 ├── ProjectSettings/                # Unity engine configuration
 ├── Packages/                       # Package manifest and dependencies
-├── tdd_lab/                        # Test-Driven Development learning module
-│   ├── src/                        # Flask counter API
-│   ├── tests/                      # Pytest test cases
-│   └── doc/                        # TDD documentation
-├── test_coverage_lab/              # Code coverage testing module
-│   ├── models/                     # SQLAlchemy models
-│   ├── tests/                      # Coverage test cases
-│   └── migrations/                 # Database migrations
-├── .github/
-│   └── workflows/
-│       └── unity-ios.yml           # iOS build automation
 ├── Poster/                         # Project promotional materials
 ├── contributors.txt                # Team member information
 └── README.md                       # This file
@@ -228,18 +183,18 @@ Rebel Reality follows a modular architecture with clear separation of concerns:
                     │
 ┌───────────────────▼─────────────────────────────────────┐
 │                 Application Logic Layer                 │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │ Search       │  │ Navigation   │  │ XR Control   │  │
-│  │ Management   │  │ Management   │  │ Management   │  │
-│  └──────────────┘  └──────────────┘  └──────────────┘  │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │
+│  │ Search       │  │ Navigation   │  │ XR Control   │   │
+│  │ Management   │  │ Management   │  │ Management   │   │
+│  └──────────────┘  └──────────────┘  └──────────────┘   │
 └───────────────────┬─────────────────────────────────────┘
                     │
 ┌───────────────────▼─────────────────────────────────────┐
 │                  AR/Vision Layer                        │
-│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐  │
-│  │ ARFoundation │  │ QR Scanner   │  │ OCR Bridge   │  │
-│  │ (ARKit)      │  │ (ZXing)      │  │ (iOS Native) │  │
-│  └──────────────┘  └──────────────┘  └──────────────┘  │
+│  ┌──────────────┐  ┌──────────────┐  ┌──────────────┐   │
+│  │ ARFoundation │  │ QR Scanner   │  │ OCR Bridge   │   │
+│  │ (ARKit)      │  │ (ZXing)      │  │ (iOS Native) │   │
+│  └──────────────┘  └──────────────┘  └──────────────┘   │
 └───────────────────┬─────────────────────────────────────┘
                     │
 ┌───────────────────▼─────────────────────────────────────┐
@@ -380,23 +335,6 @@ Minimum iOS: 14.0
 # Click "Run All" in Play Mode tab
 ```
 
-### Python TDD Lab
-```bash
-cd tdd_lab
-source venv/bin/activate  # Activate virtual environment
-pytest                     # Run all tests
-pytest -v                  # Verbose output
-pytest --cov=src           # With coverage report
-```
-
-### Code Coverage Lab
-```bash
-cd test_coverage_lab
-source venv/bin/activate
-pytest --cov=models --cov-report=html
-# Open htmlcov/index.html for coverage report
-```
-
 ### Integration Testing
 - **AR Session**: Test AR tracking in real-world environments
 - **QR Codes**: Scan sample QR codes to verify detection
@@ -404,10 +342,6 @@ pytest --cov=models --cov-report=html
 - **Navigation**: Walk through campus buildings to verify marker placement
 
 ---
-
-## Contributing
-
-We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ### Quick Start
 1. Fork the repository
@@ -429,19 +363,18 @@ We welcome contributions! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guid
 
 **Rebel Reality Development Team - UNLV CS472/672**
 
-| Name | Email | Role |
-|------|-------|------|
-| **Gerhod Moreno** | moreng2@unlv.nevada.edu | Developer |
-| **Bryan Duran** | duranb@unlv.nevada.edu | Developer |
-| **Adrian Janda** | jandaa1@unlv.nevada.edu | Developer |
-| **Eshan Ahmad** | ahmade1@unlv.nevada.edu | Developer |
-| **Alex Yamasaki** | yamasa1@unlv.nevada.edu | Developer |
+| Name                  | Email                   | Role      |
+|-----------------------|-------------------------|-----------|
+| **Gerhod Moreno**     | moreng2@unlv.nevada.edu | Developer |
+| **Bryan Duran**       | duranb@unlv.nevada.edu  | Developer |
+| **Adrian Janda**      | jandaa1@unlv.nevada.edu | Developer |
+| **Eshan Ahmad**       | ahmade1@unlv.nevada.edu | Developer |
+| **Alex Yamasaki**     | yamasa1@unlv.nevada.edu | Developer |
 | **Christopher Vuong** | vuongc2@unlv.nevada.edu | Developer |
 
 ---
 
 ## Acknowledgments
-
 - **UNLV Computer Science Department** - Project sponsorship and support
 - **Immersal** - Visual localization SDK
 - **Unity Technologies** - Game engine and AR frameworks
@@ -500,7 +433,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 For questions, issues, or support:
 - **GitHub Issues**: [Report a Bug](https://github.com/UNLV-CS472-672/2025-F-GROUP2-RR-XR/issues)
 - **Email**: Contact team members listed above
-- **Documentation**: Check [ARCHITECTURE.md](ARCHITECTURE.md) and inline code comments
 
 ---
 
