@@ -149,6 +149,7 @@ public class ClassSearchFunction : MonoBehaviour
     public void SelectByIndex(int index)
     {
         
+   
         // check if out of bounds
         if (index < 0 || index >= items.Count)
         {
@@ -200,6 +201,7 @@ public class ClassSearchFunction : MonoBehaviour
     // find an index using the label
     private int FindIndex(string label)
     {
+
         // error check
         if (items == null || items.Count == 0)
         {
@@ -268,8 +270,8 @@ public class ClassSearchFunction : MonoBehaviour
              
                 SelectByIndex(actualIndex);
                 
-                if (arToggle != null)
-                    arToggle.enableNavigationMode();
+                //if (arToggle != null)
+                //    arToggle.enableNavigationMode();
 
             });
         }

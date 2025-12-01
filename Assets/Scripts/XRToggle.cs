@@ -8,15 +8,22 @@ public class XRToggle : MonoBehaviour
 
     //variables
     private bool arModeActive = false;
+    [SerializeField]
     public GameObject userUI;
+    [SerializeField]
     public GameObject navUI;
-
+    [SerializeField]
+    private GameObject background;
+    [SerializeField]
     public GameObject searchUI;
-    [SerializeField] private TMP_InputField searchBox;
-
+    [SerializeField] 
+    private TMP_InputField searchBox;
+    [SerializeField]
     public GameObject bottomButtons;
  
     public static XRToggle Instance;
+    [SerializeField]
+    private GameObject searchVarient;
 
     [SerializeField]
     private ARCameraBackground arCameraBackground;
@@ -30,6 +37,13 @@ public class XRToggle : MonoBehaviour
     //SOLVING THIS PROBLEM.
     void Awake()
     {
+        if (Instance != null && Instance != this)
+        {
+        //Debug.LogWarning("Duplicate XRToggle detected! Destroying extra copy.");
+            Destroy(gameObject);
+            return;
+        }
+
         Instance = this;
     }
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -51,11 +65,11 @@ public class XRToggle : MonoBehaviour
         //This will empty the search box once user enters UI mode. 
         if (searchBox != null)
             searchBox.text = string.Empty;
-        arModeActive = true;
+        arModeActive = false;
         userUI.SetActive(false);
-        setChildrenActive(searchUI, false);
-        setChildrenActive(bottomButtons, true);
-        
+        setChildrenActiveFilter(searchUI, false);
+        setChildrenActiveFilter(bottomButtons, true);
+        setChildrenActiveFilter(searchVarient, false);
 
 
     }
@@ -64,17 +78,29 @@ public class XRToggle : MonoBehaviour
     {
     
         arModeActive = false;
-        setChildrenActive(navUI, true);
-        setChildrenActive(bottomButtons, false);
+        setChildrenActiveFilter(navUI, true);
+        setChildrenActiveFilter(bottomButtons, false);
+        Transform child = searchVarient.transform.Find("MainMenuBackground");
+        if(child != null)
+            child.gameObject.SetActive(true);
         userUI.SetActive(true);
+        
         
     }
     //This function will set to userUI when program starts
     public void toggleARMode()
     {
-         
+        Transform child = searchVarient.transform.Find("MainMenuBackground");
+        if (child != null)
+            child.gameObject.SetActive(arModeActive);
         arModeActive = !arModeActive;
+        
         setARMode(arModeActive);
+        
+    }
+    public void setArMode(bool enable)
+    {
+        arModeActive = enable;
     }
     public bool getARMode()
     {
@@ -82,24 +108,23 @@ public class XRToggle : MonoBehaviour
     }
     public void setARMode(bool enable)
     {
-        arModeActive = false;
         //if (arCameraBackground != null)
         //    arCameraBackground.enabled = enable;
         //will make the screen appear when startup
         if (userUI != null)
         {
             userUI.SetActive(!enable);
+
             //setChildrenActive(navUI, true);
-        }
+            
+        } 
         if (navUI != null)
         {
             navUI.SetActive(!enable);
         }
-
-       
     }
     //Void function that will set child objects appear/disappear
-    public void setChildrenActive(GameObject parent, bool state)
+    public void setChildrenActiveFilter(GameObject parent, bool state)
     {
         
         if (parent == null)

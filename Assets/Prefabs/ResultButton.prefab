@@ -394,10 +394,10 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 7303463128594955988, guid: 4ae2fe5a5db16474697fcd339fc2e9c5, type: 3}
-        m_TargetAssemblyTypeName: ClassSearchFunction, Assembly-CSharp
-        m_MethodName: clearSearchBar
-        m_Mode: 1
+      - m_Target: {fileID: 6713751159983918722, guid: beb2abf6de96c584799f0818434c2314, type: 3}
+        m_TargetAssemblyTypeName: UnityEngine.GameObject, UnityEngine
+        m_MethodName: SetActive
+        m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
@@ -406,6 +406,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 1
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: ClassSearchFunction, Assembly-CSharp
+        m_MethodName: 
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: 
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
   targetObject: {fileID: 0}
   m_TextMeshProUGUI: {fileID: 0}
   m_Image: {fileID: 0}

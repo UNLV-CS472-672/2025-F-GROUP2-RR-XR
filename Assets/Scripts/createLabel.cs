@@ -84,7 +84,8 @@ public class createLabel : MonoBehaviour
     }
     public void OnTriggerEnter(Collider other)
     {
-        //Debug.Log(XRToggle.getARMode());
+        Debug.Log(XRToggle.getARMode());
+        Debug.Log(parentManager.getnavActive());
         if(XRToggle.getARMode())
             if(!parentManager.getnavActive())
                 labelCreate(parentObject.transform);

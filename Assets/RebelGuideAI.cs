@@ -7,8 +7,8 @@ using UnityEngine.UI;
 
 public class RebelGuideAI : MonoBehaviour
 {
-    [Header("API Settings")]
-    [SerializeField] private string apiKey = "YOUR_API_KEY_HERE";
+    [Header("API Configuration")]
+    [SerializeField] private TMP_InputField apiKeyInputField; // Drag your new API Key input box here
     private string apiUrl = "https://generativelanguage.googleapis.com/v1beta/models/gemini-2.5-flash-preview-09-2025:generateContent";
 
     [Header("UI Components")]
@@ -17,8 +17,8 @@ public class RebelGuideAI : MonoBehaviour
     [SerializeField] private Button sendButton;
     [SerializeField] private GameObject loadingIndicator; // Optional: A spinner or text
 
-    // System prompt to give the AI its personality
-    private string systemPrompt = "You are Rebel Guide, the enthusiastic AI assistant for the Rebel Reality AR navigation app at UNLV. Your goal is to help students navigate campus (especially Advanced Engineering Building (AEB) or Thomas Beam Engineering Complex (TBE)). Do not provide guidance for routes you do not know how to navigate. Keep answers concise (under 45 words) and friendly. Do not use emojis.";
+    // Preserved your specific system prompt
+    private string systemPrompt = "You are Rebel Guide, the enthusiastic AI assistant for the Rebel Reality AR navigation app at UNLV. Your goal is to help students navigate the campus (especially Advanced Engineering Building (AEB) or Thomas Beam Engineering Complex (TBE)). You can route people to locations on campus outside of these places as well. Do not provide guidance for routes you do not know how to navigate (do not make up routes). Try to give steps to get to the route in addition to a suggestion to use the rebel reality ar navigation mode to navigate, especially for AEB and TBE locaitons. Keep answers concise (under 45 words) and friendly. Do not use emojis.";
 
     void Start()
     {
@@ -28,6 +28,23 @@ public class RebelGuideAI : MonoBehaviour
             
         if (loadingIndicator != null) 
             loadingIndicator.SetActive(false);
+
+        // --- NEW: Load the API Key from local storage ---
+        if (apiKeyInputField != null)
+        {
+            // 1. Check if we saved it before
+            string savedKey = PlayerPrefs.GetString("GeminiAPIKey", "");
+            apiKeyInputField.text = savedKey;
+
+            // 2. Listen for changes so we save automatically when you type
+            apiKeyInputField.onValueChanged.AddListener(SaveApiKey);
+        }
+    }
+    // Helper function to save key to computer registry
+    public void SaveApiKey(string newKey)
+    {
+        PlayerPrefs.SetString("GeminiAPIKey", newKey);
+        PlayerPrefs.Save();
     }
 
     public void OnSendClicked()
@@ -40,20 +57,32 @@ public class RebelGuideAI : MonoBehaviour
 
     private IEnumerator SendRequestToGemini(string userMessage)
     {
-        // 1. Show user message in UI immediately
+        // 1. Get Key from the UI Field (NOT hardcoded)
+        string currentApiKey = "";
+        if (apiKeyInputField != null)
+        {
+            currentApiKey = apiKeyInputField.text.Trim();
+        }
+
+        if (string.IsNullOrEmpty(currentApiKey))
+        {
+            chatDisplayOutput.text += $"\n<color=red>Error: API Key is missing! Please input it in settings.</color>";
+            yield break; // Stop execution
+        }
+
+        // 2. Show user message in UI immediately
         chatDisplayOutput.text += $"\n\n<color=#007AFF><b>You:</b></color> {userMessage}";
         inputField.text = ""; // Clear input
         
         // --- AUTO-SCROLL (User Message) ---
-        // Force the canvas to update the text size immediately, then scroll to bottom
         Canvas.ForceUpdateCanvases();
         var scrollRect = chatDisplayOutput.GetComponentInParent<ScrollRect>();
-        if (scrollRect != null) scrollRect.verticalNormalizedPosition = -10f; 
+        if (scrollRect != null) scrollRect.verticalNormalizedPosition = 0f; 
         // ----------------------------------
 
         if (loadingIndicator != null) loadingIndicator.SetActive(true);
 
-        // 2. Construct the JSON payload using wrapper classes
+        // 3. Construct the JSON payload
         GeminiRequest request = new GeminiRequest();
         request.contents = new Content[] { 
             new Content { parts = new Part[] { new Part { text = userMessage } } } 
@@ -64,15 +93,15 @@ public class RebelGuideAI : MonoBehaviour
 
         string jsonPayload = JsonUtility.ToJson(request);
 
-        // 3. Create the Web Request
-        string url = $"{apiUrl}?key={apiKey}";
+        // 4. Create the Web Request
+        string url = $"{apiUrl}?key={currentApiKey}";
         var webRequest = new UnityWebRequest(url, "POST");
         byte[] jsonToSend = new UTF8Encoding().GetBytes(jsonPayload);
         webRequest.uploadHandler = new UploadHandlerRaw(jsonToSend);
         webRequest.downloadHandler = new DownloadHandlerBuffer();
         webRequest.SetRequestHeader("Content-Type", "application/json");
 
-        // 4. Send and Wait
+        // 5. Send and Wait
         yield return webRequest.SendWebRequest();
 
         if (loadingIndicator != null) loadingIndicator.SetActive(false);
@@ -80,11 +109,11 @@ public class RebelGuideAI : MonoBehaviour
         if (webRequest.result != UnityWebRequest.Result.Success)
         {
             Debug.LogError("Gemini API Error: " + webRequest.error);
-            chatDisplayOutput.text += $"\n<color=red>Error: Could not connect to AI.</color>";
+            chatDisplayOutput.text += $"\n<color=red>Error: {webRequest.error}</color>";
         }
         else
         {
-            // 5. Parse Response
+            // 6. Parse Response
             GeminiResponse response = JsonUtility.FromJson<GeminiResponse>(webRequest.downloadHandler.text);
             
             if (response != null && response.candidates != null && response.candidates.Length > 0)
@@ -102,7 +131,7 @@ public class RebelGuideAI : MonoBehaviour
     }
 }
 
-// --- JSON Data Structures (Required for Unity JsonUtility) ---
+// --- JSON Data Structures ---
 
 [System.Serializable]
 public class GeminiRequest
