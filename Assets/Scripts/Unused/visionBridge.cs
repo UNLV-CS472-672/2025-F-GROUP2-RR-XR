@@ -1,6 +1,8 @@
 using System.Runtime.InteropServices;
 using UnityEngine;
 using System;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 public static class visionBridge
 {
 #if UNITY_IOS && !UNITY_EDITOR

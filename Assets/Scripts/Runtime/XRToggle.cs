@@ -2,9 +2,14 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
 using System.Collections.Generic;
+<<<<<<< Updated upstream:Assets/Scripts/XRToggle.cs
+=======
+using TMPro;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/XRToggle.cs
 public class XRToggle : MonoBehaviour
 {
-
     //variables
        private bool arModeActive = false;
     public GameObject userUI;
@@ -17,8 +22,13 @@ public class XRToggle : MonoBehaviour
     public GameObject xrSpace;
     public static XRToggle Instance;
 
+<<<<<<< Updated upstream:Assets/Scripts/XRToggle.cs
     [SerializeField]
     internal ARCameraBackground arCameraBackground;
+=======
+    //[SerializeField]
+    //private ARCameraBackground arCameraBackground;
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/XRToggle.cs
 
     //THIS SCRIPT TOOK ME HOURS TO MAKE AND THINK ABOUT
     //NEVER IN MY LIFE I HAVE SPENT SOO MUCH TIME DEBUGGING CODE
@@ -64,7 +74,17 @@ public class XRToggle : MonoBehaviour
     //This function will set to userUI when program starts
     public void toggleARMode()
     {
+<<<<<<< Updated upstream:Assets/Scripts/XRToggle.cs
          
+=======
+        if (searchVarient != null)
+        {
+            Transform child = searchVarient.transform.Find("MainMenuBackground");
+            if (child != null)
+                child.gameObject.SetActive(arModeActive);
+        }
+        
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/XRToggle.cs
         arModeActive = !arModeActive;
         setARMode(arModeActive);
     }
@@ -110,6 +130,12 @@ public class XRToggle : MonoBehaviour
     void Update()
     {
 
+    }
+
+    //testing method to imitate start()
+    internal void hideCamera()
+    {
+        setARMode(false);
     }
     
 }

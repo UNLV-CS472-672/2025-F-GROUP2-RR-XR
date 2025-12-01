@@ -1,7 +1,10 @@
 using UnityEngine;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 
 public class labelOrbit : MonoBehaviour
 {
+
     public Transform center;
     public float radius = 1f;
     public float speed = 30f;
@@ -12,11 +15,16 @@ public class labelOrbit : MonoBehaviour
     void Start()
     {
         offset = new Vector3(0, 0.2f, radius); 
-        transform.position = center.position + offset;
+        if (center != null)
+            transform.position = center.position + offset;
     }
+
     // Update is called once per frame
     void Update()
     {
+        if (lookScript == null)
+            return;
+
         //  when player is close enough, run the signLabelLook script and 
         //  ignore this script.
         if (lookScript != null && lookScript.getPlayerIsClose())

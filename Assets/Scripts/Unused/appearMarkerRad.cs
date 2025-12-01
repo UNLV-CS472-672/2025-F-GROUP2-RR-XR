@@ -1,5 +1,7 @@
 using UnityEngine;
 using System.Collections;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 //Script created by Alex Yamasaki
 public class appearMarkerRad : MonoBehaviour
 {

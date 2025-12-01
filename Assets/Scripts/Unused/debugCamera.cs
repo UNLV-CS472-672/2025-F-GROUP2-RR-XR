@@ -1,3 +1,4 @@
+/*
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.XR.ARFoundation;
@@ -18,3 +19,4 @@ public class debugCamera : MonoBehaviour
 
     }
 }
+*/

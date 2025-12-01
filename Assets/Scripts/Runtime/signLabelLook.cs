@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 
 public class signLabelLook : MonoBehaviour
 {
@@ -11,6 +13,11 @@ public class signLabelLook : MonoBehaviour
     void Awake()
     {
         sphere = GetComponent<SphereCollider>();
+
+        if (sphere == null)
+        {
+            sphere = gameObject.AddComponent<SphereCollider>();
+        }
         
         sphere.isTrigger = true;
         sphere.radius = radius;
@@ -56,7 +63,11 @@ public class signLabelLook : MonoBehaviour
         }
     }
 
+<<<<<<< Updated upstream:Assets/Scripts/signLabelLook.cs
     //internal function to emulate update
+=======
+     //internal function to emulate update
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/signLabelLook.cs
     internal void rotateTowardPlayer()
     {
         if (playerIsClose && player != null)

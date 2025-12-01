@@ -1,13 +1,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 //Created by: Alex Yamasaki
 public class createLabel : MonoBehaviour
 {
     [SerializeField]
     public GameObject parentObject;
 
-
+    internal bool disableRuntimeBehaviour = false;
     public GameObject labelPrefab;
     private GameObject currentLabel;
     public float labelHeightOffset = 0.3f;
@@ -72,19 +74,42 @@ public class createLabel : MonoBehaviour
         
 
     }
+<<<<<<< Updated upstream:Assets/Scripts/createLabel.cs
     internal void labelDestroy(Transform target)
+=======
+    internal void labelDestroy(Transform parent)
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/createLabel.cs
     {
-        foreach(Transform child in target)
+        if (parent == null)
+            return;
+
+        for (int i = parent.childCount - 1; i >= 0; i--)
         {
-            if(child.CompareTag("LabelSign"))
-                Destroy(child.gameObject);
+            Transform child = parent.GetChild(i);
+            if (child.CompareTag("LabelSign"))
+                DestroyImmediate(child.gameObject);
         }
     }
+
+
     public void OnTriggerEnter(Collider other)
     {
+<<<<<<< Updated upstream:Assets/Scripts/createLabel.cs
         //Debug.Log(parentManager.getnavActive());
         if(!parentManager.getnavActive())
             labelCreate(parentObject.transform);
+=======
+        if (disableRuntimeBehaviour) return; 
+
+        if (XRToggle == null || !XRToggle.getARMode())
+            return;
+
+        Debug.Log(XRToggle.getARMode());
+        Debug.Log(parentManager.getnavActive());
+        if(XRToggle.getARMode())
+            if(!parentManager.getnavActive())
+                labelCreate(parentObject.transform);
+>>>>>>> Stashed changes:Assets/Scripts/Runtime/createLabel.cs
     }
     public void OnTriggerExit(Collider other)
     {
@@ -94,9 +119,18 @@ public class createLabel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        if (disableRuntimeBehaviour) return; 
+
+        if (XRToggle == null) return;
+
         if(parentManager.getnavActive())
         {
             labelDestroy(parentObject.transform);
         }
+    }
+
+    internal void getParent()
+    {
+        parentManager = GetComponentInParent<hideMarkers>();
     }
 }

@@ -1,4 +1,6 @@
 using UnityEngine;
+using System.Runtime.CompilerServices;
+[assembly: InternalsVisibleTo("Tests_PlayMode")]
 
 public class hideMarkers : MonoBehaviour
 {
@@ -23,7 +25,7 @@ public class hideMarkers : MonoBehaviour
         navActive = !navActive;
        
     }
-    public bool getnavActive()
+    public virtual bool getnavActive()
     {
         return navActive;
     }
