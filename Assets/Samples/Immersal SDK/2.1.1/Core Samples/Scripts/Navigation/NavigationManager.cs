@@ -99,6 +99,9 @@ namespace Immersal.Samples.Navigation
         
         [SerializeField]
         private hideMarkers markerManager;
+        [SerializeField]
+        public GameObject refreshButton;
+
         public static NavigationManager Instance
         {
             get
@@ -168,6 +171,7 @@ namespace Immersal.Samples.Navigation
 
             //MAKE THE PARENT OF STOP NAVIGATION BUTTON APPEAR HERE
             m_targetTransform = button.targetObject.transform;
+
             //Debug.Log(m_targetTransform);
             m_NavigationTarget = button.targetObject.GetComponent<IsNavigationTarget>();
             if(markerManager != null)
@@ -178,7 +182,17 @@ namespace Immersal.Samples.Navigation
             TryToFindPath(m_NavigationTarget);
             //XRToggle.enableNavigationMode();
         }
-
+        public void showRefreshButton(bool show)
+        {
+        
+            if(refreshButton != null)
+                refreshButton.SetActive(show);
+        }
+        public void onRefreshPathButton()
+        {
+            showRefreshButton(false);
+            TryToFindPath(m_NavigationTarget);
+        }
         public void TryToFindPath(IsNavigationTarget navigationTarget)
         {
             List<Vector3> corners;
@@ -223,6 +237,13 @@ namespace Immersal.Samples.Navigation
                     }
                     else
                     {
+                         
+                        //if navigation isn't navigating and m_initialize is true
+                        if(m_navigationState == NavigationState.NotNavigating && m_managerInitialized)
+                        {
+                            
+                            showRefreshButton(true);
+                        }
                         //XRToggle.setArMode(false);
                         NotificationManager.Instance.GenerateNotification("Path to target not found.");
                         UpdateNavigationUI(m_navigationState);
@@ -382,7 +403,7 @@ namespace Immersal.Samples.Navigation
             switch(navigationState)
             {
                 case NavigationState.NotNavigating:
-                    m_StopNavigationButton.SetActive(false);
+                    m_StopNavigationButton.SetActive(true);
                     m_navigationPathObject.SetActive(false);
                     break;
                 case NavigationState.Navigating:
