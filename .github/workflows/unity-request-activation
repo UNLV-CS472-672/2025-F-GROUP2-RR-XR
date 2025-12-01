@@ -1,0 +1,20 @@
+name: Unity - Request Activation File
+
+on:
+  workflow_dispatch:
+
+jobs:
+  activation:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Request Unity activation file
+        uses: game-ci/unity-request-activation-file@v4
+        with:
+          unityVersion: 2022.3.14f1
+
+      - name: Upload activation file
+        uses: actions/upload-artifact@v4
+        with:
+          name: Unity-Activation-File
+          path: Unity_*.alf
